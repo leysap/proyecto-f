@@ -1,0 +1,92 @@
+@import "colores";
+@mixin background($color) {
+    background-color: $color;
+    //APLICANDO CONDICIONALES//
+    @if $color == $colorheader {
+        color: black;
+    }
+        @else if $color == $colorprincipal{
+            color: black;
+        }
+            @else if $color == $colorfooter{
+                color: $colortitulo;
+            }
+            @else if $color == $colordestacado{
+                color: black;
+            }
+                @else if $color == $clientes{
+                    color: black;
+                }
+                    @else{
+                        color: black;
+                    }
+}
+/*PAGINA QUIENES SOMOS*/
+.main{
+    @include background($colorheader);
+    margin: 2em;
+    border-top-left-radius: 0.8em ;
+    border-top-right-radius: 0.8em;
+    .titulo-quien{
+        font-family:'Thasadith', sans-serif;
+        text-align: center;
+        padding: 0.8em;
+        font-size:2em;
+        border-top-left-radius: 0.5em ;
+        border-top-right-radius: 0.5em;
+        @include background($colorfooter);
+    }
+    .contenedor{
+        margin: 0.5em;
+        .textoLargo{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            margin-bottom:1em;
+            margin: 0.5em;
+            .alexiaImg{
+                img{
+                    margin-top: 0.5em;
+                    width: 600px;
+                    height: auto;
+                    border-radius: 0.3em;
+                }
+            }           
+            .historia1{
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                p{
+                    margin-top: 2.5em;
+                    margin-left: 0.5em;
+                    margin-right: 0.5em;
+                    text-align: justify;
+                    font-family: 'Thasadith', sans-serif;
+                    font-size: 1.2em;
+                    line-height: 2em;
+                }
+            }
+        }
+        .historia2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1em;
+            div{
+                p{
+                    font-family:'Thasadith', sans-serif;
+                    color:rgb(14, 9, 10);
+                    text-align: justify;
+                    padding: 2em;
+                    font-size: 1.2em;
+                    line-height: 2em;
+                }
+            }
+            img{
+                width:300px;
+                height: 300px;
+                border-radius: 50em;
+            }  
+        } 
+    }
+}

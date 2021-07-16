@@ -1,0 +1,653 @@
+@import "delicias";
+@import "pedido";
+@import "informacion";
+@import "quienes";
+@import "colores";
+$size: 4em;
+@mixin flex ($justify){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: $justify;
+}
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin background($color) {
+    background-color: $color;
+    //APLICANDO CONDICIONALES//
+    @if $color == $colorheader {
+        font-family:'Thasadith', sans-serif;
+        color: black;
+    }
+        @else if $color == $colorprincipal{
+            font-family:'Thasadith', sans-serif;
+            color: black;
+        }
+            @else if $color == $colorfooter{
+                font-family:'Thasadith', sans-serif;
+                color: $colortitulo;
+            }
+            @else if $color == $colordestacado{
+                font-family:'Thasadith', sans-serif;
+                color: black;
+            }
+                @else if $color == $clientes{
+                    font-family:'Thasadith', sans-serif;
+                    color: black;
+                }
+                    @else{
+                        color: black;
+                    }
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/* BODY*/
+
+/* PAGINA INDEX */
+/*HEADER*/
+header{
+    .header-nav{
+        padding-right: 0;
+        a{
+            .logo{
+                @include sizes(150px, auto);          
+            }
+        }
+        div{
+            .menuPrincipal{
+                border-bottom-left-radius: 1em;
+                border-top-left-radius: 1em;
+                padding: 1em;
+                @include background($colorfooter);
+                li{
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                    a{
+                        color: $colortitulo;
+                        font-size: 1.5em;
+                        text-align: center;
+                        transition: all 1s ease;
+                        text-decoration: none;
+                        &:hover{
+                            background-color: $colortitulo;
+                            font-weight: bold;
+                            color: $colorfooter;
+                            border-radius: 5px;
+                            padding: 0.5rem;
+                            font-weight: bold;
+                        }
+                        &:active{
+                            color: rgb(14, 11, 14);
+                        }
+                    }
+                }
+            }
+        }           
+    }            
+}
+/* MENU DE NAVEGACION */
+ul{
+    list-style: none;
+}
+/* SECTION PRINCIPAL */
+.principal{
+    .imagenesPrincipales{
+        @include sizes(100%, auto);
+    }
+}
+.botonesPrincipales{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    margin-right:30px;
+    margin-bottom: 30px;
+    z-index: 100;
+    .foto-whatsapp{
+        @include sizes(50px, 50px);
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+ /*SECCIONES*/           
+/*SECTION 1*/
+.section1{
+    border-top: 2px solid $coloraliveri;
+    border-bottom: 2px solid $coloraliveri;
+    padding: 3em;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 10em;
+    margin-bottom: 10em;
+    @include flex(center); 
+    align-items: center;
+    .aliveri{
+        color:  #e08465;
+        padding: 0.2em;
+        font-family: 'Sofia', cursive;
+        text-align: center;
+        font-size: 4.5em;
+    }
+    .presentacion{
+        text-align: center;
+        padding: 1.5em;
+        font-size: 1.3em;
+        line-height: $size/1.6;
+    }    
+}
+.boton{
+    background-color:$colorfooter;
+    font-family:'Thasadith', sans-serif;
+    padding-left: $size/4;
+    padding-right: $size/4;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    &:hover{
+        background-color: $colortitulo;
+        border: 1px solid $colorfooter;
+        
+    }
+    a{
+        color: $colortitulo;
+        text-decoration: none;
+        &:hover{
+            color: $coloraliveri;
+            font-weight:bolder;
+           
+        }
+    }
+}
+/*SECTION 2: DESTACADOS*/
+.section2{
+    @include background($colordestacado);
+    margin-top: 10em;
+    margin-bottom: 10em;
+    .destacado-title{
+        text-align: center;
+        @include background($colorfooter);
+        font-family:'Thasadith', sans-serif;
+        padding: 0.5em;
+        font-size: 2.4em;
+    }
+    .boton-ver{
+        text-align: center;
+    }
+    .divs-destacados{
+        @include flex(space-around);
+        .imagen-destacada1{
+            @include background($clientes);
+            @include sizes(288px, 385px);
+            border: 1px $colorfooter solid;
+            margin: 0.2em;
+            text-align: center;
+            img{
+                padding: 0.3em;
+                @include sizes(286px,270px);
+                transition: all 1s ease;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }                       
+            .boton-hace-tu-pedido{
+                font-family: 'Thasadith', sans-serif; 
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                color: $coloraliveri;
+                border: 1px solid $colorfooter;
+                font-weight: bolder;
+                &:hover{
+                    background-color: $colorfooter;
+                    color: $colortitulo;
+                }         
+            }                       
+            .card-title{
+                border-radius: 0.5em;
+                padding: 0.2em;
+                @include background($colorfooter);
+                margin-top: 1em;
+                margin-left: 0.2em;
+                margin-right: 0.2em;
+                font-size: 1.2em;
+              
+            }                   
+        }
+    }
+}
+/* SECCION PEDIDO/MEDIO DE PAGO*/
+.flex-padre{
+    @include flex(space-around);
+    text-align: center;
+    margin-right: 4em;
+    margin-left: 4em;
+    margin-top: 10em;
+    margin-bottom: 10em;
+    padding: $size/2;
+    div{
+        padding: 1rem;
+        .flex-image{
+            @include sizes(60px,60px);
+        }
+        h4{
+            margin-top: 10px;
+            font-family: 'Thasadith', sans-serif;
+            font-size: 1.4em;
+        }
+    }
+}
+ /*SECCION CONOCE NUESTRAS DELICIAS*/
+.seccion-contenido{
+    @include flex(space-around);
+    padding: 2em;
+    @include background($colorfooter);
+    margin-bottom: 10em;
+    margin-top: 10em;
+    .conoce-delicias{  
+        font-family: 'Thasadith', sans-serif;
+        h5{
+            color:$colortitulo;
+
+        }
+        p{
+            font-size: 1rem;
+            color: black;
+        }
+    }
+    .imagenes-delicias{
+        @include flex(space-around);
+        align-items: center;
+        text-align: center;
+        .div-img-delicias{
+            @include sizes(200.5px,auto);
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            .tort{
+                @include sizes(210.5px, 210.5px);
+                padding: 0.4rem;
+                border-radius: 0.7rem;
+                opacity: 1;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+/*SECTION 3*: CLIENTES*/
+.section3{
+    @include background($clientes);
+    margin-top: 10em;
+    margin-bottom: 10em;
+    font-family: 'Thasadith', sans-serif;
+    font-weight: bold;
+    div{
+        .tituloCliente{
+            @include background($colorfooter);
+            text-align: center;
+            padding: 0.5em;
+            font-size: 2.4em
+        }
+    }
+    .clientes-divs{
+        @include flex(space-around);
+        font-family: 'Thasadith', sans-serif;
+        .card-cliente{
+            @include sizes(200px, auto);
+            margin: $size/2;
+            text-align: center;
+            @include background($colortitulo);
+            .cliente{
+                @include sizes(200px, auto );
+                padding: 0.8rem;
+            }
+            h5{
+                padding: 0.5em;
+                margin: 0.5rem;
+                font-size: 1.4em;
+                border-radius: 0.2rem;
+                @include background($colorfooter);           
+            }
+            p{
+                text-align: center;
+                padding: 0.5em;
+            }
+        }
+    }
+}   
+/*FOOTER*/
+footer{
+    font-family:'Thasadith', sans-serif;;
+    @include flex(space-around);
+    align-items: center;
+    @include background($colorfooter);
+    padding-top: $size/1.6;
+    padding-bottom: $size/1.6;
+    font-size: 1rem;
+    
+    .menuFinal{
+        a{
+            color: $colortitulo;
+            font-family:'Thasadith', sans-serif;
+            text-align: justify;
+            text-decoration: none;
+        }
+    }
+    .logoFinal{
+        @include sizes(100px, 100px);
+    }   
+    .tamaño{
+        @include sizes(20px,20px);
+        margin-right: 1rem;
+        opacity: 0.6;
+        &:hover{
+            margin-right: 1rem;
+            opacity:  1;
+        }
+    }
+}         
+
+.flecha{
+    @include sizes(30px, 30px);
+}
+
+
+/*MEDIA QUERIES*/
+/*Mobile*/
+@media (max-width:480px){
+    header{
+        text-align: center;
+        .header-nav{
+            padding-right: 0.75rem;
+            div{
+                .menuPrincipal{
+                    border-top-right-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                    li{
+                        a{
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section1{
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 6em;
+        margin-bottom: 6em;
+        .aliveri{
+            font-size: 3rem
+        }
+        .presentacion{
+            display: block;
+            font-size: 0.9rem;
+            padding: 0;
+            text-align: center;
+        }
+    }
+    .section2{
+        margin-top: 6em;
+        margin-bottom: 6em;   
+    }
+    .flex-padre{
+        font-size: 0.2rem;
+        margin-top: 6em;
+        margin-bottom: 6em;
+        padding:1em;
+    }
+    .seccion-contenido{
+        margin-top: 6em;
+        margin-bottom: 6em;
+        text-align: center;
+    }
+    .section3{
+        margin-top: 6em;
+        margin-bottom: 6em; 
+    }   
+    footer{
+        display: block;
+        text-align: center;
+        .menuFinal{
+            nav{
+                ul{
+                    li{
+                        a{
+                            text-align: center;
+                            margin-right: $size/2;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+   // SECCION DELICIAS//
+    .galeria-imagenes{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        div{
+            padding: 1em;     
+        }  
+    }
+    
+    //QUIENES SOMOS//
+    .textoLargo{
+        flex-wrap: wrap;
+    }
+    .alexiaImg{
+        img{
+            max-width: 100%;
+        }
+    } 
+    .historia1{
+        p{
+            font-size: 1em;
+            line-height: 1em;
+        }
+    }
+    .historia2{
+        flex-wrap: wrap;
+        div{
+            p{
+                font-family:'Thasadith', sans-serif;
+                color:rgb(14, 9, 10);
+                text-align: justify;
+                padding: 2em;
+                font-size: 1em;
+                line-height: 1em;
+            }
+        }
+        img{
+            max-width: 100%;
+        }  
+    } 
+    .tort{
+        width: 100px;
+        height: 100px;
+    }
+
+    //HACE TU PEDIDO// 
+    .cuerpo{
+        padding: 1em;
+    }
+
+    //INFORMACION// 
+    .conoce2{
+        text-align: center;
+    }
+
+}
+@media (min-width:480px) and (max-width:800px){
+    header{
+        text-align: center;
+        background-color: $colortitulo;
+        .header-nav{
+            padding-right: 0.75rem;
+            div{
+                .menuPrincipal{
+                    border-top-right-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                }
+            }
+        }
+    }
+    .section1{
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 6em;
+        margin-bottom: 6em;
+        .aliveri{
+            font-size: 3rem
+        }
+        .presentacion{
+            display: block;
+            font-size: 0.9rem;
+            padding: 0;
+            text-align: center;
+        }
+    }
+    .section2{
+        margin-top: 6em;
+        margin-bottom: 6em;   
+    }
+    .flex-padre{
+        font-size: 0.2rem;
+    }
+    .seccion-contenido{
+        margin-bottom: 6em;
+        text-align: center;
+    }
+    .section3{
+        margin-top: 6em;
+        margin-bottom: 6em; 
+    }   
+    footer{
+        display: block;
+        text-align: center;
+        .menuFinal{
+            nav{
+                ul{
+                    li{
+                        a{
+                            text-align: center;
+                            margin-right: $size/2;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    .galeria-imagenes{
+        display: flex;
+        flex-wrap: wrap;
+        div{
+            padding: 1em;  
+        }  
+    }
+    //QUIENES SOMOS//
+    .textoLargo{
+        flex-wrap: wrap;
+        .alexiaImg{
+            img{
+                max-width: 100%;
+            }
+        }           
+        .historia1{
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            p{
+                font-size: 1em;
+                line-height: 1em;
+            }
+        }
+    }
+    .historia2{
+        flex-wrap: wrap;
+        div{
+            p{
+                font-size: 1em;
+                line-height: 1em;
+            }
+        } 
+    } 
+
+    //INFORMACION// 
+    .conoce2{
+    text-align: center;
+    }
+}
+@media (min-width:800px) and (max-width:1200px){
+    header{
+        text-align: center;
+        .header-nav{
+            div{
+                .menuPrincipal{
+                    li{
+                        a{
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .galeria{
+        .galeria-imagenes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 1em;
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .imagen-g{
+                    border-radius: 0.2em;
+                    &:hover{
+                        opacity: 0.9;
+                    }
+                }
+            }              
+        }
+    }
+    .principal div img{
+        max-width:100%;
+        display: block;
+        height: auto;
+    }
+    .imagenes-cont div img{
+        height:400px;
+        width: 466px;
+    }  
+    .textoLargo{
+        flex-wrap: wrap;
+        .alexiaImg{
+            img{
+                max-width: 100%;
+            }
+        }           
+        .historia1{
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            p{
+                font-size: 1em;
+                line-height: 1em;
+            }
+        }
+    }
+    .historia2{
+        flex-wrap: wrap;
+        div{
+            p{
+                font-size: 1em;
+                line-height: 1em;
+            }
+        } 
+    } 
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="description" content="Se puede realizar el pedido del producto en nuestra pagina web completando los datos">
+    <meta name="keyword" content="pedido online">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliveri Pasteleria - Pedidos</title>
+    <link rel="icon" type="image/png" href="/imagenes/aliveri2.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&family=Thasadith&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--COMIENZO DEL HEADER-->
+    <header> 
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid header-nav">
+              <a class="navbar-brand" href="/index.html"><img src="/imagenes/aliveri-1.png"  alt="LOGO ALIVERI" class="logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="menuPrincipal navbar-nav">
+                  <li class="nav-item"><a class="active" aria-current="page" href="/index.html">INICIO</a></li>
+                  <li class="nav-item"><a href="/pages/delicias.html">DELICIAS</a></li>
+                  <li class="nav-item"><a  href="/pages/quienes-somos.html">QUIENES SOMOS</a></li>
+                  <li class="nav-item"><a href="/pages/hace-tu-pedido.html">HACE TU PEDIDO</a></li>
+                  <li class="nav-item"><a href="/pages/informacion.html">INFORMACIÓN</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>    
+    </header>
+    <!--FIN DEL HEADER-->
+    <main class="cuerpo" data-aos="zoom-out" data-aos-duration="2000">
+        <!--COMIENZO DEL FORMULARIO-->
+        <h1 class="pedidoOnline">HACE TU PEDIDO ONLINE</h1>
+        <form >
+            <div>
+                <label for="nombre" class="nombreFormu">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" maxlength="20" required> 
+            </div>
+            <div>
+                <label for="apellido"  class="nombreFormu">Apellido</label><br>
+                <input type="text" name="apellido" id="apellido" maxlength="20" required>  
+            </div>
+            <div>
+                <label for="email"  class="nombreFormu">Email</label><br>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="telefono"  class="nombreFormu">Teléfono</label><br>
+                <input type="tel" name="telefono" id="telefono" required>   
+            </div>
+            <div>
+                <h2 class="tituloFavorito">Seleccione su favorito</h2>
+                <div class="opcion-torta">
+                    <div class="opciones">
+                        <label for="tortas"  class="nombreFormu"><strong><em>TORTAS</strong></em></label><br>
+                        <select name="tortas" id="">
+                            <option value="">-</option>
+                            <option value="marquise">MARQUISE FRUTILLA/NUECES</option>
+                            <option value="marquise-de-chocolinas">MARQUISE CHOCOLINAS/FRUTILLA</option>
+                            <option value="marquise-de-oreo-y-bon-o-bon">MARQUISE OREO/BON O BON </option>
+                            <option value="selva-negra">SELVA NEGRA</option>
+                            <option value="letra-torta">TORTA LETRA</option>
+                            <option value="marquise-block">MARQUISE DE BLOCK</option>
+                            <option value="drip-cake">DRIP CAKE</option>
+                        </select>
+                    </div>
+                    <div class="opciones2">
+                        <label for="tamano"  class="nombreFormu">TAMAÑO</label><br>
+                        <select name="tamano" id="">
+                            <option value="">-</option>
+                            <option value="grande">GRANDE (24cm)</option>
+                            <option value="mediano">MEDIANO (19cm)</option>
+                            <option value="chico">MINI (12x16cm)</option>
+                        </select>
+                    </div>
+                    <div class="opciones2">
+                        <label for="cantidad"  class="nombreFormu">CANTIDAD</label><br>
+                        <select name="cantidad" id="">
+                            <option value="cantidad">-</option>
+                            <option value="cantidad">1</option>
+                            <option value="cantidad">2</option>
+                            <option value="cantidad">3</option>
+                            <option value="cantidad">4</option>
+                            <option value="cantidad">5</option>
+                            <option value="cantidad">6</option>
+                            <option value="cantidad">7</option>
+                            <option value="cantidad">8</option>
+                            <option value="cantidad">9</option>
+                            <option value="cantidad">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="opcion-torta">
+                    <div class="opciones">
+                        <label for="tartas"  class="nombreFormu"><strong><em>TARTAS</strong></em></label><br>
+                        <select name="tartas" id="">
+                            <option value="">-</option>
+                            <option value="cabsha">CABSHA</option>
+                            <option value="frutal">TARTA FRUTAL CON FRUTILLAS</option>
+                            <option value="coco">TARTA DE COCO</option>
+                            <option value="mango">TARTA DE MANGO</option>
+                            <option value="frutal-frutos-rojos">TARTA DE FRUTOS ROJOS</option>
+                            <option value="arandanos-y-cereza">TARTA CON ARANDANOS/CEREZAS</option>
+                        </select>
+                    </div>
+                    <div class="opciones2">
+                        <label for="tamano"  class="nombreFormu">TAMAÑO</label><br>
+                        <select name="tamano" id="">
+                            <option value="">-</option>
+                            <option value="grande">GRANDE (24cm)</option>
+                            <option value="mediano">MEDIANO (19cm)</option>
+                            <option value="chico">MINI (12x16cm)</option>
+                        </select>
+                    </div>
+                    <div class="opciones2">
+                        <label for="cantidad"  class="nombreFormu">CANTIDAD</label><br>
+                        <select name="cantidad" id="">
+                            <option value="cantidad">-</option>
+                            <option value="cantidad">1</option>
+                            <option value="cantidad">2</option>
+                            <option value="cantidad">3</option>
+                            <option value="cantidad">4</option>
+                            <option value="cantidad">5</option>
+                            <option value="cantidad">6</option>
+                            <option value="cantidad">7</option>
+                            <option value="cantidad">8</option>
+                            <option value="cantidad">9</option>
+                            <option value="cantidad">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="opcion-torta">
+                    <div class="opciones">
+                        <label for="bocaditos"  class="nombreFormu"><strong><em>BOCADITOS</strong></em></label><br>
+                        <select name="bocaditos" id="">
+                            <option value="">-</option>
+                            <option value="conitos"  class="nombreFormu">CONITOS</option>
+                            <option value="macarons"  class="nombreFormu">MACARONS</option>
+                            <option value="mini-marquise"  class="nombreFormu">MINI MARQUISE</option>
+                            <option value="cuadraditos"  class="nombreFormu">CUADRADITOS MARQUISE</option>
+                            <option value="mini-bocaditos"  class="nombreFormu">MINI BOCADITOSS</option>
+                            <option value="mini-lemon"  class="nombreFormu">MINI LEMON PIE</option>  
+                        </select>
+                    </div>
+                    <div class="opciones2">
+                        <label for="tamano"  class="nombreFormu">TAMAÑO</label><br>
+                        <select name="tamano" id="">
+                            <option value="">-</option>
+                            <option value="grande">DOCENA</option>
+                            <option value="mediano">MEDIA DOCENA</option>
+                            <option value="chico">C/U</option>
+                        </select>
+                    </div>
+                    <div class="opciones2">
+                        <label for="cantidad"  class="nombreFormu">CANTIDAD</label><br>
+                        <select name="cantidad" id="">
+                            <option value="cantidad">-</option>
+                            <option value="cantidad">1</option>
+                            <option value="cantidad">2</option>
+                            <option value="cantidad">3</option>
+                            <option value="cantidad">4</option>
+                            <option value="cantidad">5</option>
+                            <option value="cantidad">6</option>
+                            <option value="cantidad">7</option>
+                            <option value="cantidad">8</option>
+                            <option value="cantidad">9</option>
+                            <option value="cantidad">10</option>
+                        </select> 
+                    </div>
+                </div>    
+                <div class="opcion-torta">
+                    <div class="opciones">
+                        <label for="postres"  class="nombreFormu"><strong><em>POSTRES</strong></em></label><br>
+                        <select name="postres" id="">
+                            <option value="">-</option>
+                            <option value="lemonpie">LEMON PIE</option>
+                            <option value="cheseecake">CHESEECAKE</option>
+                            <option value="oreohelada">OREO HELADA</option>
+                        </select>
+                    </div>
+                    <div class="opciones2">
+                        <label for="tamano"  class="nombreFormu">TAMAÑO</label><br>
+                        <select name="tamano" id="">
+                            <option value="">-</option>
+                            <option value="grande">GRANDE (24cm)</option>
+                            <option value="mediano">MEDIANO (19cm)</option>
+                            <option value="chico">MINI (12x16cm)</option>
+                        </select>
+                    </div>
+                    <div class="opciones2">
+                        <label for="cantidad"  class="nombreFormu">CANTIDAD</label><br>
+                        <select name="cantidad" id="">
+                            <option value="cantidad">-</option>
+                            <option value="cantidad">1</option>
+                            <option value="cantidad">2</option>
+                            <option value="cantidad">3</option>
+                            <option value="cantidad">4</option>
+                            <option value="cantidad">5</option>
+                            <option value="cantidad">6</option>
+                            <option value="cantidad">7</option>
+                            <option value="cantidad">8</option>
+                            <option value="cantidad">9</option>
+                            <option value="cantidad">10</option>
+                        </select> 
+                    </div>
+                </div>  
+            </div> 
+            <div class="fw-bolder">
+                <p><strong>CON ENVÍO?</strong></p>
+                <input type="radio" name="envio" required>
+                <label>SI</label>
+            </div>
+            <div class="fw-bolder">
+                <input type="radio" name="envio">
+                <label>NO</label>
+            </div>     
+            <div class="envio-nov">
+                <p  class="envio-si fw-bolder">En caso de <strong>SI</strong>, responda lo siguiente:</p>
+                <label for="calle" name="calle"  class="nombreFormu">Calle</label>
+                <input type="text" name="calle" id="calle">
+            </div>
+            <div class="envio-nov">
+                <label for="altura" name="altura"  class="nombreFormu">Altura</label>
+                <input type="number" name="altura" id="altura">
+            </div>
+            <div class="envio-nov">
+                <label  class="nombreFormu">Deseo recibir novedades en mi casilla de correo</label>
+                <input type="checkbox" name="notificaciones">
+            </div> 
+            <div class="botones-limp-env">
+                <input class="limpiar fw-bolder" type="reset" value="Limpiar formulario">
+                <input class="limpiar fw-bolder" type="submit" value="Enviar">
+            </div>
+        </form>
+        <!--FIN DEL FORMULARIO-->
+    </main>
+    <!--COMIENZO DEL FOOTER-->
+    <footer>
+        <div class="menuFinal">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="../pages/delicias.html">DELICIAS</a></li>
+                    <li><a href="../pages/quienes-somos.html">QUIENES SOMOS</a></li>
+                    <li><a href="../pages/hace-tu-pedido.html">HACE TU PEDIDO</a></li>
+                    <li><a href="../pages/informacion.html">INFORMACIÓN</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h5>CONTACTO</h5>
+            <p> ✉ alexiasimosis@gmail.com <br>
+                📱 +5493516330344 <br>
+                📍 Friuli 2184 
+            </p>
+        </div>
+        <div>
+            <a href="../index.html"><img src="../imagenes/aliveri-1.png" class="logoFinal" alt="LOGO ALIVERI"> </a>
+        </div>
+        <div>
+            <p>Sitio desarrollado por Leysa Pozo</p>
+        </div>
+        
+        <div  class="redeSociales">
+            <a href="https://instagram.com/aliveri.pasteleria/" target="_blank"><img src="../imagenes/instagram.png" class="tamaño" alt="instagram"></a>  
+            <a href="https://facebook.com/aliveri.pasteleria" target="_blank"><img src="../imagenes/facebook.png" class="tamaño" alt="facebook"></a>
+        </div>
+    </footer>
+    <!--FIN DEL FOOTER-->
+
+    <!--Javascript-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

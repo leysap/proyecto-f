@@ -1,0 +1,93 @@
+@import "colores";
+@mixin background($color) {
+    background-color: $color;
+    //APLICANDO CONDICIONALES//
+    @if $color == $colorheader {
+        color: black;
+        font-weight: bold;
+    }
+        @else if $color == $colorprincipal{
+            color: black;
+        }
+            @else if $color == $colorfooter{
+                color: $colortitulo;
+            }
+            @else if $color == $colordestacado{
+                color: black;
+            }
+                @else if $color == $clientes{
+                    color: black;
+                }
+                @else if $color == $colortitulo{
+                    color: black;
+                }
+                    @else{
+                        color: black;
+                    }
+}
+/*PAGINA HACE TU PEDIDO*/
+/*MAIN*/
+.cuerpo{
+    @include background($colorheader);
+    display: flex;
+    font-family: 'Thasadith', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em;
+    text-align: center;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    .pedidoOnline{
+        @include background($colorfooter);
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        padding: 0.8em;
+        text-align: center;
+        font-size: 2em;
+        font-family: 'Thasadith', sans-serif;
+    }   
+    .nombreFormu{
+        display: inline-block;
+        padding: 5px;
+        font-family:'Thasadith', sans-serif;
+        font-weight: bold;
+    }
+    .tituloFavorito{
+        margin-top: 1em;
+        text-decoration: underline;
+        font-size: 1.7em;
+    }
+    .opcion-torta{
+        margin-bottom: 3em;
+        
+
+        text-align: center;
+        
+        .opciones{
+            display: block;
+        }
+        .opciones2{
+            display: inline-block;
+        }
+    }
+    .envio-nov{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        .envio-si{
+            display: block;
+            margin-top: 2em;
+            font-size: 1em;
+        }
+    }
+    .botones-limp-env{
+        margin: 1em;
+        .limpiar{
+            padding: 0.2em;
+            @include background($colorfooter);
+            transition: all 1s ease;
+            &:hover{
+                @include background($colortitulo);
+            }
+        }
+    }
+}

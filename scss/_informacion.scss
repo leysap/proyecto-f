@@ -1,0 +1,276 @@
+@import "colores";
+@mixin pb ($padding, $radius) {
+    padding: $padding;
+    border-radius: $radius;  
+}
+@mixin background($color) {
+    background-color: $color;
+    //APLICANDO CONDICIONALES//
+    @if $color == $colorheader {
+        color: black;
+    }
+        @else if $color == $colorprincipal{
+            color: black;
+        }
+            @else if $color == $colorfooter{
+                color: $colortitulo;
+            }
+            @else if $color == $colordestacado{
+                color: black;
+            }
+                @else if $color == $clientes{
+                    color: black;
+                }
+                    @else{
+                        color: black;
+                    }
+}
+/*PAGINA INFORMACION*/
+main{
+    .titulo-informacion{
+        text-align: center;
+        font-size: 2em;
+        margin-top: 1em;
+        margin-bottom: 1.3em;
+        margin-left: 1em;
+        margin-right: 1em;
+        border-radius: 0.5em;
+        background-color: $colorfooter;
+        color: $colortitulo;
+        padding: 0.8em;
+        font-family: 'Thasadith', sans-serif;
+    }
+    .seccion-info{
+        font-family: 'Thasadith', sans-serif;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        @include pb(1em, none );
+        border-radius: 0.2em;
+        background-color: $colorheader;
+        .pedidos{
+            @include pb(1em, none );
+            h2{
+                @include background($colortitulo);
+                @include pb(0.3em,0.5em);
+                font-size: 2em;
+                text-align: center;
+                color: $coloraliveri;
+                font-weight: bolder;
+            }
+            ul{
+                li{
+                    text-align: center;
+                }
+            }
+            .pedidos-titulo{
+                @include pb(0.5em, 0.1em);            
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                color: $coloraliveri;
+                text-align: center;
+                font-size: 1.4em;
+                a{
+                    color: black;
+                    &:hover{
+                        color: $coloraliveri;
+                    }
+                }
+                
+            }
+            .enlace-web{
+                a{
+                    color: black;
+                    &:hover{
+                        color: $coloraliveri;
+                    }
+                }
+            }
+            .alerta{
+                background-color: $colortitulo;
+                color: $coloraliveri;
+                font-size: 1.3em;
+                text-align: center;
+                font-weight: bolder;
+                margin-top: 2.5em;
+                border: 1px solid $coloraliveri;
+            }
+        }
+        .columna-2{
+            text-align: center;
+            padding: 1em;
+            .medio-entrega{
+                @include background($colorheader);
+                @include pb(0.3em,0.5em);
+                font-size: 2em;
+                text-align: center;
+                color: $coloraliveri;
+                font-weight: bolder;
+                background-color: $colortitulo; 
+            }
+            h3{
+                font-size: 1.2em;
+            }
+        }
+    }
+    .info-importante{
+        margin-top: 2em;
+        margin-bottom: 2em;
+        text-align: center;
+        font-family: 'Thasadith', sans-serif;
+        font-size: 1em;
+        line-height: 2em;
+        padding: 4em;
+        border-radius: 0.2em;
+        font-weight: bold;
+        background-color: $colorheader;
+        .importante{
+            background-color: $colortitulo;
+            color: $coloraliveri;
+            @include pb(0.3em,0.5em);
+            font-weight: bolder;
+            font-size: 2em;
+        }
+        p{
+            margin-top: 2em;
+           
+        }
+    }
+    .seccion-contenido{
+        margin-top: 4em;
+        margin-bottom: 4em;
+        .conoce2{
+            font-family: 'Thasadith', sans-serif;
+            h4{
+                font-size: 2em;
+            }
+            p{
+                font-size: 1em;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: bold;
+                line-height: 1.8em;
+
+            }
+        }
+        .imagenes-delicias{
+            .div-img-delicias{
+                a{
+                    text-decoration: none;
+                    font-size: 1.6em;                 
+                    padding: 0.2em;
+                    color: $colortitulo;
+                    font-family: 'Caveat', cursive;
+                    &:hover{
+                        color: $coloraliveri;
+                        background-color: $colortitulo;
+                        padding: 0.2em;
+                        border-radius: 0.2em;
+                        margin-left: 0.3em;
+                        margin-right: 0.3em;
+                    }
+                }
+                .tort2{
+                    width: 200.5px;
+                    height: 200.5px;
+                    @include pb(0.4em,0.7em );
+                    &:hover{
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }      
+    }
+    .menu{  
+        @include pb(0.7em,0.5em );
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-top: 4em;
+        margin-bottom: 4em;
+        background-image: url(/imagenes/tic-tac-toe.png);
+        .menuTitulo{
+            @include background($colorfooter);
+            @include pb(0.5em,0.2em );
+            text-align: center;
+            font-size: 2.2em;
+            font-family: 'Caveat', cursive;   
+        }
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            div{
+                width: 300px;
+                margin:1.2em;
+                background-color: $colorheader;
+                border: 3px solid $coloraliveri;
+                @include pb(2em,1em );
+                h3{
+                    background-color: $colortitulo;
+                    color: $coloraliveri;
+                    @include pb(0.5em,0.5em );
+                    font-family: 'Caveat', cursive;  
+                    font-size: 1.3em;
+                    font-weight: bold;  
+                    text-align: center;
+                }
+                ul{
+                    @include pb(1em, none );
+                    font-size: 1em;
+                    list-style:circle;
+                    list-style-position: inside;
+                    font-weight: bold;
+                    li{
+                        text-align: left;
+                        padding: 0.6em;
+                        font-family: 'Thasadith', sans-serif;
+                        
+                        
+                    }
+                }              
+            }
+        }
+        .boton2{
+            text-align: center;
+            a{
+                font-family: 'Thasadith', sans-serif;
+            }
+
+        }
+    }
+    .img-g{
+        margin-top: 4em;
+        margin-bottom: 4em;
+        margin-right: 2em;
+        margin-left: 2em;
+        background-image: url(/imagenes/tic-tac-toe.png);
+        padding: 0.8em;
+        h2{
+            text-align: left;
+            font-family: 'Caveat', cursive;
+            font-size: 2.2em;
+            color: $colortitulo;
+            padding: 0.5em;
+            background-color: $colorfooter;
+            border-radius: 0.2em;
+        }
+        .img-info{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .img-img{
+                width: 300px;
+                height: 300px;
+                border-radius: 1em;
+                margin: 0.5em;
+                opacity: 0.8;
+                transition: 1s all ease;
+                &:hover{
+                    opacity: 1;
+                    transform: scale(1.1,1.1);             
+                }
+            }
+        }
+    }
+}           
+
