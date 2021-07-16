@@ -54,7 +54,8 @@
       text-align: center;
       display: block;
       margin-top: 1.5em;
-      margin-bottom: 1.5em; }
+      margin-bottom: 1.5em;
+      list-style: none; }
       .seccion-delicias main .seccionMenu .menuDelicias li {
         padding: 0.2em; }
         .seccion-delicias main .seccionMenu .menuDelicias li a {
@@ -111,7 +112,8 @@
           color: #ffffff; }
         .seccion-delicias main .section-productos .productos-contenedor .card-div ul {
           text-align: center;
-          background-color: #ffffff; }
+          background-color: #ffffff;
+          list-style: none; }
           .seccion-delicias main .section-productos .productos-contenedor .card-div ul li {
             margin-right: 2em;
             margin-top: 0.5em;
@@ -246,8 +248,10 @@ main .seccion-info {
       text-align: center;
       color: #e08465;
       font-weight: bolder; }
-    main .seccion-info .pedidos ul li {
-      text-align: center; }
+    main .seccion-info .pedidos ul {
+      list-style: none; }
+      main .seccion-info .pedidos ul li {
+        text-align: center; }
     main .seccion-info .pedidos .pedidos-titulo {
       padding: 0.5em;
       border-radius: 0.1em;
@@ -287,6 +291,8 @@ main .seccion-info {
       background-color: #ffffff; }
     main .seccion-info .columna-2 h3 {
       font-size: 1.2em; }
+    main .seccion-info .columna-2 ul {
+      list-style: none; }
 
 main .info-importante {
   margin-top: 2em;
@@ -489,7 +495,6 @@ main .img-g {
   padding: 0%;
   box-sizing: border-box; }
 
-/* BODY*/
 /* PAGINA INDEX */
 /*HEADER*/
 header .header-nav {
@@ -523,11 +528,7 @@ header .header-nav {
         header .header-nav div .menuPrincipal li a:active {
           color: #0e0b0e; }
 
-/* MENU DE NAVEGACION */
-ul {
-  list-style: none; }
-
-/* SECTION PRINCIPAL */
+/* IMAGENES PRINCIPALES */
 .principal .imagenesPrincipales {
   width: 100%;
   height: auto; }
@@ -770,6 +771,8 @@ footer {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
   font-size: 1rem; }
+  footer .menuFinal ul {
+    list-style: none; }
   footer .menuFinal a {
     color: #ffffff;
     font-family: 'Thasadith', sans-serif;

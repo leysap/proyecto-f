@@ -46,8 +46,6 @@ $size: 4em;
     padding: 0%;
     box-sizing: border-box;
 }
-/* BODY*/
-
 /* PAGINA INDEX */
 /*HEADER*/
 header{
@@ -90,11 +88,7 @@ header{
         }           
     }            
 }
-/* MENU DE NAVEGACION */
-ul{
-    list-style: none;
-}
-/* SECTION PRINCIPAL */
+/* IMAGENES PRINCIPALES */
 .principal{
     .imagenesPrincipales{
         @include sizes(100%, auto);
@@ -127,7 +121,7 @@ ul{
     @include flex(center); 
     align-items: center;
     .aliveri{
-        color:  #e08465;
+        color:  $coloraliveri;
         padding: 0.2em;
         font-family: 'Sofia', cursive;
         text-align: center;
@@ -140,6 +134,7 @@ ul{
         line-height: $size/1.6;
     }    
 }
+//BOTON QUIENES SOMOS, VER TODOS Y BOTON EN SECCION INFORMACION//
 .boton{
     background-color:$colorfooter;
     font-family:'Thasadith', sans-serif;
@@ -150,8 +145,7 @@ ul{
     text-align: center;
     &:hover{
         background-color: $colortitulo;
-        border: 1px solid $colorfooter;
-        
+        border: 1px solid $colorfooter;    
     }
     a{
         color: $colortitulo;
@@ -328,8 +322,10 @@ footer{
     padding-top: $size/1.6;
     padding-bottom: $size/1.6;
     font-size: 1rem;
-    
     .menuFinal{
+        ul{
+            list-style: none;
+        }
         a{
             color: $colortitulo;
             font-family:'Thasadith', sans-serif;

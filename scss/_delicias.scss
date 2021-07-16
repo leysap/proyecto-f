@@ -87,6 +87,7 @@
                 display: block;
                 margin-top: 1.5em;
                 margin-bottom: 1.5em;
+                list-style: none;
                 li{
                     padding: 0.2em;
                     a{
@@ -154,7 +155,7 @@
                     ul{
                         text-align: center;
                         background-color: $colortitulo;
-                        
+                        list-style: none;
                         li{
                             margin-right: 2em;
                             margin-top: 0.5em;

@@ -58,6 +58,7 @@ main{
                 font-weight: bolder;
             }
             ul{
+                list-style: none;
                 li{
                     text-align: center;
                 }
@@ -109,6 +110,9 @@ main{
             }
             h3{
                 font-size: 1.2em;
+            }
+            ul{
+                list-style: none;
             }
         }
     }
