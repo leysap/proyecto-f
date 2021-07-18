@@ -9,39 +9,36 @@
         @else if $color == $colorfooter{
             color: $colortitulo;
         }
-            @else if $color == $colordestacado{
+            @else if $color == $colortitulo{
                 color: black;
             }
-                @else if $color == $clientes{
+                @else{
                     color: black;
                 }
-                @else if $color == $colortitulo{
-                    color: black;
-                }
-                    @else{
-                        color: black;
-                    }
+}
+@mixin border {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+@mixin font($align, $padding, $size) {
+    font-family: 'Thasadith', sans-serif;
+    padding: $padding;
+    font-size: $size;  
 }
 /*PAGINA HACE TU PEDIDO*/
 /*MAIN*/
 .cuerpo{
     @include background($colorheader);
+    @include border();
+    @include font(center,none ,none );
     display: flex;
-    font-family: 'Thasadith', sans-serif;
     flex-direction: column;
     justify-content: center;
     margin: 2em;
-    text-align: center;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
     .pedidoOnline{
         @include background($colorfooter);
-        border-top-left-radius: 0.5em;
-        border-top-right-radius: 0.5em;
-        padding: 0.8em;
-        text-align: center;
-        font-size: 2em;
-        font-family: 'Thasadith', sans-serif;
+        @include border();
+        @include font(center, 0.8em ,2em );
     }   
     .nombreFormu{
         display: inline-block;
@@ -56,10 +53,7 @@
     }
     .opcion-torta{
         margin-bottom: 3em;
-        
-
         text-align: center;
-        
         .opciones{
             display: block;
         }
@@ -79,8 +73,8 @@
     .botones-limp-env{
         margin: 1em;
         .limpiar{
-            padding: 0.2em;
             @include background($colorfooter);
+            padding: 0.2em;
             transition: all 1s ease;
             &:hover{
                 @include background($colortitulo);

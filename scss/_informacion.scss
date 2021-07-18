@@ -12,19 +12,23 @@
         @else if $color == $colorfooter{
             color: $colortitulo;
         }
-            @else if $color == $colordestacado{
-                color: black;
+            @else if $color ==$colortitulo{
+                color: $coloraliveri;
             }
-                @else if $color == $clientes{
+                @else{
                     color: black;
                 }
-                    @else{
-                        color: black;
-                    }
+}
+@mixin  flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; 
 }
 /*PAGINA INFORMACION*/
 main{
     .titulo-informacion{
+        @include background($colorfooter);
         text-align: center;
         font-size: 2em;
         margin-top: 1em;
@@ -32,18 +36,16 @@ main{
         margin-left: 1em;
         margin-right: 1em;
         border-radius: 0.5em;
-        background-color: $colorfooter;
-        color: $colortitulo;
         padding: 0.8em;
         font-family: 'Thasadith', sans-serif;
     }
     .seccion-info{
+        @include pb(1em, none );
+        @include background($colorheader);
         font-family: 'Thasadith', sans-serif;
         margin-top: 2em;
         margin-bottom: 2em;
-        @include pb(1em, none );
         border-radius: 0.2em;
-        background-color: $colorheader;
         .pedidos{
             @include pb(1em, none );
             h2{
@@ -51,7 +53,6 @@ main{
                 @include pb(0.3em,0.5em);
                 font-size: 2em;
                 text-align: center;
-                color: $coloraliveri;
                 font-weight: bolder;
             }
             ul{
@@ -73,7 +74,6 @@ main{
                         color: $coloraliveri;
                     }
                 }
-                
             }
             .enlace-web{
                 a{
@@ -84,8 +84,7 @@ main{
                 }
             }
             .alerta{
-                background-color: $colortitulo;
-                color: $coloraliveri;
+                @include background($colortitulo);
                 font-size: 1.3em;
                 text-align: center;
                 font-weight: bolder;
@@ -97,7 +96,6 @@ main{
             text-align: center;
             padding: 1em;
             .medio-entrega{
-                @include background($colorheader);
                 @include pb(0.3em,0.5em);
                 font-size: 2em;
                 text-align: center;
@@ -125,15 +123,13 @@ main{
         font-weight: bold;
         background-color: $colorheader;
         .importante{
-            background-color: $colortitulo;
-            color: $coloraliveri;
+            @include background($colortitulo);
             @include pb(0.3em,0.5em);
             font-weight: bolder;
             font-size: 2em;
         }
         p{
-            margin-top: 2em;
-           
+            margin-top: 2em;          
         }
     }
     .seccion-contenido{
@@ -149,7 +145,6 @@ main{
                 font-family: 'Thasadith', sans-serif;
                 font-weight: bold;
                 line-height: 1.8em;
-
             }
         }
         .imagenes-delicias{
@@ -161,8 +156,7 @@ main{
                     color: $colortitulo;
                     font-family: 'Caveat', cursive;
                     &:hover{
-                        color: $coloraliveri;
-                        background-color: $colortitulo;
+                        @include background($colortitulo);
                         padding: 0.2em;
                         border-radius: 0.2em;
                         margin-left: 0.3em;
@@ -195,19 +189,15 @@ main{
             font-family: 'Caveat', cursive;   
         }
         .flex-container{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            @include flex();
             div{
+                @include pb(2em,1em );
                 width: 300px;
                 margin:1.2em;
                 background-color: $colorheader;
                 border: 3px solid $coloraliveri;
-                @include pb(2em,1em );
                 h3{
-                    background-color: $colortitulo;
-                    color: $coloraliveri;
+                    @include background($colortitulo);
                     @include pb(0.5em,0.5em );
                     font-family: 'Caveat', cursive;  
                     font-size: 1.3em;
@@ -223,9 +213,7 @@ main{
                     li{
                         text-align: left;
                         padding: 0.6em;
-                        font-family: 'Thasadith', sans-serif;
-                        
-                        
+                        font-family: 'Thasadith', sans-serif;  
                     }
                 }              
             }
@@ -245,19 +233,15 @@ main{
         background-image: url(/imagenes/tic-tac-toe.png);
         padding: 0.8em;
         h2{
+            @include background($colorfooter);
             text-align: left;
             font-family: 'Caveat', cursive;
             font-size: 2.2em;
-            color: $colortitulo;
             padding: 0.5em;
-            background-color: $colorfooter;
             border-radius: 0.2em;
         }
         .img-info{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            @include flex();
             .img-img{
                 width: 300px;
                 height: 300px;
@@ -273,4 +257,3 @@ main{
         }
     }
 }           
-

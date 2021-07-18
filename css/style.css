@@ -163,23 +163,23 @@
   background-color: #F2E9D0;
   color: black;
   font-weight: bold;
-  display: flex;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
   font-family: 'Thasadith', sans-serif;
+  padding: none;
+  font-size: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2em;
-  text-align: center;
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em; }
+  margin: 2em; }
   .cuerpo .pedidoOnline {
     background-color: #E79E85;
     color: #ffffff;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
+    font-family: 'Thasadith', sans-serif;
     padding: 0.8em;
-    text-align: center;
-    font-size: 2em;
-    font-family: 'Thasadith', sans-serif; }
+    font-size: 2em; }
   .cuerpo .nombreFormu {
     display: inline-block;
     padding: 5px;
@@ -206,9 +206,9 @@
   .cuerpo .botones-limp-env {
     margin: 1em; }
     .cuerpo .botones-limp-env .limpiar {
-      padding: 0.2em;
       background-color: #E79E85;
       color: #ffffff;
+      padding: 0.2em;
       transition: all 1s ease; }
       .cuerpo .botones-limp-env .limpiar:hover {
         background-color: #ffffff;
@@ -216,6 +216,8 @@
 
 /*PAGINA INFORMACION*/
 main .titulo-informacion {
+  background-color: #E79E85;
+  color: #ffffff;
   text-align: center;
   font-size: 2em;
   margin-top: 1em;
@@ -223,30 +225,28 @@ main .titulo-informacion {
   margin-left: 1em;
   margin-right: 1em;
   border-radius: 0.5em;
-  background-color: #E79E85;
-  color: #ffffff;
   padding: 0.8em;
   font-family: 'Thasadith', sans-serif; }
 
 main .seccion-info {
+  padding: 1em;
+  border-radius: none;
+  background-color: #F2E9D0;
+  color: black;
   font-family: 'Thasadith', sans-serif;
   margin-top: 2em;
   margin-bottom: 2em;
-  padding: 1em;
-  border-radius: none;
-  border-radius: 0.2em;
-  background-color: #F2E9D0; }
+  border-radius: 0.2em; }
   main .seccion-info .pedidos {
     padding: 1em;
     border-radius: none; }
     main .seccion-info .pedidos h2 {
       background-color: #ffffff;
-      color: black;
+      color: #e08465;
       padding: 0.3em;
       border-radius: 0.5em;
       font-size: 2em;
       text-align: center;
-      color: #e08465;
       font-weight: bolder; }
     main .seccion-info .pedidos ul {
       list-style: none; }
@@ -280,8 +280,6 @@ main .seccion-info {
     text-align: center;
     padding: 1em; }
     main .seccion-info .columna-2 .medio-entrega {
-      background-color: #F2E9D0;
-      color: black;
       padding: 0.3em;
       border-radius: 0.5em;
       font-size: 2em;
@@ -334,8 +332,8 @@ main .seccion-contenido {
     color: #ffffff;
     font-family: 'Caveat', cursive; }
     main .seccion-contenido .imagenes-delicias .div-img-delicias a:hover {
-      color: #e08465;
       background-color: #ffffff;
+      color: #e08465;
       padding: 0.2em;
       border-radius: 0.2em;
       margin-left: 0.3em;
@@ -370,12 +368,12 @@ main .menu {
     flex-wrap: wrap;
     justify-content: space-around; }
     main .menu .flex-container div {
+      padding: 2em;
+      border-radius: 1em;
       width: 300px;
       margin: 1.2em;
       background-color: #F2E9D0;
-      border: 3px solid #e08465;
-      padding: 2em;
-      border-radius: 1em; }
+      border: 3px solid #e08465; }
       main .menu .flex-container div h3 {
         background-color: #ffffff;
         color: #e08465;
@@ -409,12 +407,12 @@ main .img-g {
   background-image: url(/imagenes/tic-tac-toe.png);
   padding: 0.8em; }
   main .img-g h2 {
+    background-color: #E79E85;
+    color: #ffffff;
     text-align: left;
     font-family: 'Caveat', cursive;
     font-size: 2.2em;
-    color: #ffffff;
     padding: 0.5em;
-    background-color: #E79E85;
     border-radius: 0.2em; }
   main .img-g .img-info {
     display: flex;
@@ -440,14 +438,15 @@ main .img-g {
   border-top-left-radius: 0.8em;
   border-top-right-radius: 0.8em; }
   .main .titulo-quien {
+    background-color: #E79E85;
+    color: #ffffff;
     font-family: 'Thasadith', sans-serif;
     text-align: center;
-    padding: 0.8em;
     font-size: 2em;
+    padding: 0.8em;
+    line-height: none;
     border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    background-color: #E79E85;
-    color: #ffffff; }
+    border-top-right-radius: 0.5em; }
   .main .contenedor {
     margin: 0.5em; }
     .main .contenedor .textoLargo {
@@ -465,13 +464,14 @@ main .img-g {
         margin-left: 0.5em;
         margin-right: 0.5em; }
         .main .contenedor .textoLargo .historia1 p {
+          font-family: 'Thasadith', sans-serif;
+          text-align: justify;
+          font-size: 1.2em;
+          padding: none;
+          line-height: 2em;
           margin-top: 2.5em;
           margin-left: 0.5em;
-          margin-right: 0.5em;
-          text-align: justify;
-          font-family: 'Thasadith', sans-serif;
-          font-size: 1.2em;
-          line-height: 2em; }
+          margin-right: 0.5em; }
     .main .contenedor .historia2 {
       display: flex;
       flex-direction: row;
@@ -480,11 +480,11 @@ main .img-g {
       padding: 1em; }
       .main .contenedor .historia2 div p {
         font-family: 'Thasadith', sans-serif;
-        color: #0e090a;
         text-align: justify;
-        padding: 2em;
         font-size: 1.2em;
-        line-height: 2em; }
+        padding: 2em;
+        line-height: 2em;
+        color: #0e090a; }
       .main .contenedor .historia2 img {
         width: 300px;
         height: 300px;

@@ -8,15 +8,21 @@
         @else if $color == $colorfooter{
             color: $colortitulo;
         }
-            @else if $color == $colordestacado{
+            @else{
                 color: black;
             }
-                @else if $color == $clientes{
-                    color: black;
-                }
-                    @else{
-                        color: black;
-                    }
+}
+@mixin flex{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+@mixin font-align-size-padding-line($align,$size,$padding,$line){
+    font-family:'Thasadith', sans-serif;
+    text-align: $align;
+    font-size: $size;
+    padding: $padding;
+    line-height: $line;
 }
 /*PAGINA QUIENES SOMOS*/
 .main{
@@ -25,20 +31,15 @@
     border-top-left-radius: 0.8em ;
     border-top-right-radius: 0.8em;
     .titulo-quien{
-        font-family:'Thasadith', sans-serif;
-        text-align: center;
-        padding: 0.8em;
-        font-size:2em;
+        @include background($colorfooter);
+        @include font-align-size-padding-line(center,2em , 0.8em, none);
         border-top-left-radius: 0.5em ;
         border-top-right-radius: 0.5em;
-        @include background($colorfooter);
     }
     .contenedor{
         margin: 0.5em;
         .textoLargo{
-            display: flex;
-            flex-direction: row;
-            justify-content:space-around;
+            @include flex();
             margin-bottom:1em;
             margin: 0.5em;
             .alexiaImg{
@@ -53,30 +54,21 @@
                 margin-left: 0.5em;
                 margin-right: 0.5em;
                 p{
+                    @include font-align-size-padding-line(justify,1.2em ,none,2em );
                     margin-top: 2.5em;
                     margin-left: 0.5em;
                     margin-right: 0.5em;
-                    text-align: justify;
-                    font-family: 'Thasadith', sans-serif;
-                    font-size: 1.2em;
-                    line-height: 2em;
                 }
             }
         }
         .historia2{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            @include flex();
             align-items: center;
             padding: 1em;
             div{
                 p{
-                    font-family:'Thasadith', sans-serif;
+                    @include font-align-size-padding-line(justify,1.2em ,2em ,2em );
                     color:rgb(14, 9, 10);
-                    text-align: justify;
-                    padding: 2em;
-                    font-size: 1.2em;
-                    line-height: 2em;
                 }
             }
             img{
