@@ -10,9 +10,22 @@ $size: 4em;
     flex-wrap: wrap;
     justify-content: $justify;
 }
-@mixin sizes($width, $height) {
+@mixin sizes($width, $height){
     width: $width;
     height: $height;
+}
+@mixin margin ($mtop, $mbot){
+    margin-top: $mtop;
+    margin-bottom: $mbot;
+}
+@mixin mrightleft ($right, $left){
+    margin-right: $right;
+    margin-left: $left;  
+}
+@mixin text-size-padding ($align, $fsize, $padding){
+    text-align: $align;
+    font-size: $fsize;
+    padding: $padding;
 }
 @mixin background($color) {
     background-color: $color;
@@ -21,14 +34,10 @@ $size: 4em;
         font-family:'Thasadith', sans-serif;
         color: black;
     }
-        @else if $color == $colorprincipal{
+        @else if $color == $colorfooter{
             font-family:'Thasadith', sans-serif;
-            color: black;
+            color: $colortitulo;
         }
-            @else if $color == $colorfooter{
-                font-family:'Thasadith', sans-serif;
-                color: $colortitulo;
-            }
             @else if $color == $colordestacado{
                 font-family:'Thasadith', sans-serif;
                 color: black;
@@ -58,17 +67,15 @@ header{
         }
         div{
             .menuPrincipal{
+                @include background($colorfooter);
                 border-bottom-left-radius: 1em;
                 border-top-left-radius: 1em;
                 padding: 1em;
-                @include background($colorfooter);
                 li{
-                    margin-left: 1rem;
-                    margin-right: 1rem;
+                    @include mrightleft(1em, 1em);
                     a{
+                        @include text-size-padding(center, 1.5em ,none);
                         color: $colortitulo;
-                        font-size: 1.5em;
-                        text-align: center;
                         transition: all 1s ease;
                         text-decoration: none;
                         &:hover{
@@ -111,37 +118,30 @@ header{
  /*SECCIONES*/           
 /*SECTION 1*/
 .section1{
+    @include mrightleft(4em, 4em);
+    @include margin(10em, 10em);
+    @include flex(center); 
     border-top: 2px solid $coloraliveri;
     border-bottom: 2px solid $coloraliveri;
     padding: 3em;
-    margin-left: 4em;
-    margin-right: 4em;
-    margin-top: 10em;
-    margin-bottom: 10em;
-    @include flex(center); 
     align-items: center;
     .aliveri{
+        @include text-size-padding(center, 4.5em ,0.2em );
         color:  $coloraliveri;
-        padding: 0.2em;
         font-family: 'Sofia', cursive;
-        text-align: center;
-        font-size: 4.5em;
     }
     .presentacion{
-        text-align: center;
-        padding: 1.5em;
-        font-size: 1.3em;
+        @include text-size-padding(center,1.3em ,1.5em);
         line-height: $size/1.6;
     }    
 }
-//BOTON QUIENES SOMOS, VER TODOS Y BOTON EN SECCION INFORMACION//
+//BOTON QUIENES SOMOS, VER TODOS Y BOTON EN SECCION INFORMACIÓN//
 .boton{
+    @include margin(1em, 1em);
     background-color:$colorfooter;
     font-family:'Thasadith', sans-serif;
     padding-left: $size/4;
     padding-right: $size/4;
-    margin-top: 1em;
-    margin-bottom: 1em;
     text-align: center;
     &:hover{
         background-color: $colortitulo;
@@ -152,22 +152,18 @@ header{
         text-decoration: none;
         &:hover{
             color: $coloraliveri;
-            font-weight:bolder;
-           
+            font-weight:bolder;  
         }
     }
 }
 /*SECTION 2: DESTACADOS*/
 .section2{
     @include background($colordestacado);
-    margin-top: 10em;
-    margin-bottom: 10em;
+    @include margin(10em, 10em);
     .destacado-title{
-        text-align: center;
         @include background($colorfooter);
+        @include text-size-padding(center, 2.4em , 0.5em );
         font-family:'Thasadith', sans-serif;
-        padding: 0.5em;
-        font-size: 2.4em;
     }
     .boton-ver{
         text-align: center;
@@ -181,17 +177,23 @@ header{
             margin: 0.2em;
             text-align: center;
             img{
-                padding: 0.3em;
                 @include sizes(286px,270px);
+                padding: 0.3em;
                 transition: all 1s ease;
                 &:hover{
                     opacity: 0.8;
                 }
+            } 
+            .card-title{
+                @include mrightleft(0.2em, 0.2em);
+                @include background($colorfooter);
+                @include text-size-padding(none,1.2em , 0.2em);
+                border-radius: 0.5em;
+                margin-top: 1em;
             }                       
             .boton-hace-tu-pedido{
+                @include margin(0.5em, 0.5em);
                 font-family: 'Thasadith', sans-serif; 
-                margin-top: 0.5em;
-                margin-bottom: 0.5em;
                 color: $coloraliveri;
                 border: 1px solid $colorfooter;
                 font-weight: bolder;
@@ -199,29 +201,17 @@ header{
                     background-color: $colorfooter;
                     color: $colortitulo;
                 }         
-            }                       
-            .card-title{
-                border-radius: 0.5em;
-                padding: 0.2em;
-                @include background($colorfooter);
-                margin-top: 1em;
-                margin-left: 0.2em;
-                margin-right: 0.2em;
-                font-size: 1.2em;
-              
-            }                   
+            }                                    
         }
     }
 }
 /* SECCION PEDIDO/MEDIO DE PAGO*/
 .flex-padre{
     @include flex(space-around);
-    text-align: center;
-    margin-right: 4em;
-    margin-left: 4em;
-    margin-top: 10em;
-    margin-bottom: 10em;
+    @include mrightleft(4em, 4em);
+    @include margin(10em, 10em);
     padding: $size/2;
+    text-align: center;
     div{
         padding: 1rem;
         .flex-image{
@@ -237,15 +227,13 @@ header{
  /*SECCION CONOCE NUESTRAS DELICIAS*/
 .seccion-contenido{
     @include flex(space-around);
-    padding: 2em;
     @include background($colorfooter);
-    margin-bottom: 10em;
-    margin-top: 10em;
+    @include margin(10em, 10em);
+    padding: 2em;
     .conoce-delicias{  
         font-family: 'Thasadith', sans-serif;
         h5{
             color:$colortitulo;
-
         }
         p{
             font-size: 1rem;
@@ -258,8 +246,7 @@ header{
         text-align: center;
         .div-img-delicias{
             @include sizes(200.5px,auto);
-            margin-left: 0.5em;
-            margin-right: 0.5em;
+            @include mrightleft(0.5em, 0.5em);
             .tort{
                 @include sizes(210.5px, 210.5px);
                 padding: 0.4rem;
@@ -275,36 +262,30 @@ header{
 /*SECTION 3*: CLIENTES*/
 .section3{
     @include background($clientes);
-    margin-top: 10em;
-    margin-bottom: 10em;
+    @include margin(10em, 10em);
     font-family: 'Thasadith', sans-serif;
     font-weight: bold;
-    div{
-        .tituloCliente{
-            @include background($colorfooter);
-            text-align: center;
-            padding: 0.5em;
-            font-size: 2.4em
-        }
-    }
+    .tituloCliente{
+        @include background($colorfooter);
+        @include text-size-padding(center, 2.4em ,0.5em );
+    } 
     .clientes-divs{
         @include flex(space-around);
         font-family: 'Thasadith', sans-serif;
         .card-cliente{
             @include sizes(200px, auto);
+            @include background($colortitulo);
             margin: $size/2;
             text-align: center;
-            @include background($colortitulo);
             .cliente{
                 @include sizes(200px, auto );
                 padding: 0.8rem;
             }
             h5{
-                padding: 0.5em;
+                @include background($colorfooter);
+                @include text-size-padding(none, 1.4em , 0.5em);
                 margin: 0.5rem;
-                font-size: 1.4em;
-                border-radius: 0.2rem;
-                @include background($colorfooter);           
+                border-radius: 0.2rem;           
             }
             p{
                 text-align: center;
@@ -315,13 +296,14 @@ header{
 }   
 /*FOOTER*/
 footer{
-    font-family:'Thasadith', sans-serif;;
-    @include flex(space-around);
-    align-items: center;
     @include background($colorfooter);
+    @include flex(space-around);
+    font-family:'Thasadith', sans-serif;;
+    align-items: center;
     padding-top: $size/1.6;
     padding-bottom: $size/1.6;
     font-size: 1rem;
+    font-weight: 400;
     .menuFinal{
         ul{
             list-style: none;
@@ -331,6 +313,14 @@ footer{
             font-family:'Thasadith', sans-serif;
             text-align: justify;
             text-decoration: none;
+            &:active{
+                color: black;
+            }
+        }
+    }
+    div{
+        h5{
+            font-weight: 400;
         }
     }
     .logoFinal{
@@ -346,12 +336,6 @@ footer{
         }
     }
 }         
-
-.flecha{
-    @include sizes(30px, 30px);
-}
-
-
 /*MEDIA QUERIES*/
 /*Mobile*/
 @media (max-width:480px){
@@ -373,38 +357,38 @@ footer{
         }
     }
     .section1{
-        margin-left: 1em;
-        margin-right: 1em;
-        margin-top: 6em;
-        margin-bottom: 6em;
+        @include mrightleft(1em, 1em);
+        @include margin(6em, 6em);
         .aliveri{
             font-size: 3rem
         }
         .presentacion{
+            @include text-size-padding(center, 0.9em , 0);
             display: block;
-            font-size: 0.9rem;
-            padding: 0;
-            text-align: center;
         }
     }
     .section2{
-        margin-top: 6em;
-        margin-bottom: 6em;   
+        @include margin(6em, 6em);  
     }
     .flex-padre{
-        font-size: 0.2rem;
-        margin-top: 6em;
-        margin-bottom: 6em;
+        @include margin(6em, 6em);
+        font-size: 0.9em;
         padding:1em;
     }
     .seccion-contenido{
-        margin-top: 6em;
-        margin-bottom: 6em;
+        @include margin(6em,6em);
         text-align: center;
+        .conoce-delicias{
+            h5{
+                font-size: 1.8em;
+            }
+            p{
+                margin-top:2em;
+            }
+        }
     }
     .section3{
-        margin-top: 6em;
-        margin-bottom: 6em; 
+        @include margin(6em,6em);
     }   
     footer{
         display: block;
@@ -430,8 +414,7 @@ footer{
         div{
             padding: 1em;     
         }  
-    }
-    
+    } 
     //QUIENES SOMOS//
     .textoLargo{
         flex-wrap: wrap;
@@ -451,11 +434,9 @@ footer{
         flex-wrap: wrap;
         div{
             p{
+                @include text-size-padding(justify, 1em ,2em);
                 font-family:'Thasadith', sans-serif;
                 color:rgb(14, 9, 10);
-                text-align: justify;
-                padding: 2em;
-                font-size: 1em;
                 line-height: 1em;
             }
         }
@@ -467,17 +448,14 @@ footer{
         width: 100px;
         height: 100px;
     }
-
     //HACE TU PEDIDO// 
     .cuerpo{
         padding: 1em;
     }
-
     //INFORMACION// 
     .conoce2{
         text-align: center;
     }
-
 }
 @media (min-width:480px) and (max-width:800px){
     header{
@@ -494,23 +472,18 @@ footer{
         }
     }
     .section1{
-        margin-left: 1em;
-        margin-right: 1em;
-        margin-top: 6em;
-        margin-bottom: 6em;
+        @include mrightleft(1em,1em);
+       @include margin(6em, 6em);
         .aliveri{
             font-size: 3rem
         }
         .presentacion{
+            @include text-size-padding(center, 0.9em ,0);
             display: block;
-            font-size: 0.9rem;
-            padding: 0;
-            text-align: center;
         }
     }
     .section2{
-        margin-top: 6em;
-        margin-bottom: 6em;   
+        @include margin(6em,6em);  
     }
     .flex-padre{
         font-size: 0.2rem;
@@ -520,8 +493,7 @@ footer{
         text-align: center;
     }
     .section3{
-        margin-top: 6em;
-        margin-bottom: 6em; 
+        @include margin(6em ,6em);
     }   
     footer{
         display: block;
@@ -555,8 +527,7 @@ footer{
             }
         }           
         .historia1{
-            margin-left: 0.5em;
-            margin-right: 0.5em;
+            @include mrightleft(0.5em ,0.5em);
             p{
                 font-size: 1em;
                 line-height: 1em;
@@ -572,7 +543,6 @@ footer{
             }
         } 
     } 
-
     //INFORMACION// 
     .conoce2{
     text-align: center;
@@ -629,8 +599,7 @@ footer{
             }
         }           
         .historia1{
-            margin-left: 0.5em;
-            margin-right: 0.5em;
+            @include mrightleft(0.5em ,0.5em);
             p{
                 font-size: 1em;
                 line-height: 1em;

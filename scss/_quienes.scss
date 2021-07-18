@@ -5,12 +5,9 @@
     @if $color == $colorheader {
         color: black;
     }
-        @else if $color == $colorprincipal{
-            color: black;
+        @else if $color == $colorfooter{
+            color: $colortitulo;
         }
-            @else if $color == $colorfooter{
-                color: $colortitulo;
-            }
             @else if $color == $colordestacado{
                 color: black;
             }

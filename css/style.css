@@ -503,19 +503,20 @@ header .header-nav {
     width: 150px;
     height: auto; }
   header .header-nav div .menuPrincipal {
-    border-bottom-left-radius: 1em;
-    border-top-left-radius: 1em;
-    padding: 1em;
     background-color: #E79E85;
     font-family: 'Thasadith', sans-serif;
-    color: #ffffff; }
+    color: #ffffff;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+    padding: 1em; }
     header .header-nav div .menuPrincipal li {
-      margin-left: 1rem;
-      margin-right: 1rem; }
+      margin-right: 1em;
+      margin-left: 1em; }
       header .header-nav div .menuPrincipal li a {
-        color: #ffffff;
-        font-size: 1.5em;
         text-align: center;
+        font-size: 1.5em;
+        padding: none;
+        color: #ffffff;
         transition: all 1s ease;
         text-decoration: none; }
         header .header-nav div .menuPrincipal li a:hover {
@@ -549,37 +550,37 @@ header .header-nav {
 /*SECCIONES*/
 /*SECTION 1*/
 .section1 {
-  border-top: 2px solid #e08465;
-  border-bottom: 2px solid #e08465;
-  padding: 3em;
-  margin-left: 4em;
   margin-right: 4em;
+  margin-left: 4em;
   margin-top: 10em;
   margin-bottom: 10em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  border-top: 2px solid #e08465;
+  border-bottom: 2px solid #e08465;
+  padding: 3em;
   align-items: center; }
   .section1 .aliveri {
-    color: #e08465;
-    padding: 0.2em;
-    font-family: 'Sofia', cursive;
     text-align: center;
-    font-size: 4.5em; }
+    font-size: 4.5em;
+    padding: 0.2em;
+    color: #e08465;
+    font-family: 'Sofia', cursive; }
   .section1 .presentacion {
     text-align: center;
-    padding: 1.5em;
     font-size: 1.3em;
+    padding: 1.5em;
     line-height: 2.5em; }
 
 .boton {
+  margin-top: 1em;
+  margin-bottom: 1em;
   background-color: #E79E85;
   font-family: 'Thasadith', sans-serif;
   padding-left: 1em;
   padding-right: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
   text-align: center; }
   .boton:hover {
     background-color: #ffffff;
@@ -599,13 +600,13 @@ header .header-nav {
   margin-top: 10em;
   margin-bottom: 10em; }
   .section2 .destacado-title {
-    text-align: center;
     background-color: #E79E85;
     font-family: 'Thasadith', sans-serif;
     color: #ffffff;
-    font-family: 'Thasadith', sans-serif;
+    text-align: center;
+    font-size: 2.4em;
     padding: 0.5em;
-    font-size: 2.4em; }
+    font-family: 'Thasadith', sans-serif; }
   .section2 .boton-ver {
     text-align: center; }
   .section2 .divs-destacados {
@@ -623,32 +624,33 @@ header .header-nav {
       margin: 0.2em;
       text-align: center; }
       .section2 .divs-destacados .imagen-destacada1 img {
-        padding: 0.3em;
         width: 286px;
         height: 270px;
+        padding: 0.3em;
         transition: all 1s ease; }
         .section2 .divs-destacados .imagen-destacada1 img:hover {
           opacity: 0.8; }
-      .section2 .divs-destacados .imagen-destacada1 .boton-hace-tu-pedido {
+      .section2 .divs-destacados .imagen-destacada1 .card-title {
+        margin-right: 0.2em;
+        margin-left: 0.2em;
+        background-color: #E79E85;
         font-family: 'Thasadith', sans-serif;
+        color: #ffffff;
+        text-align: none;
+        font-size: 1.2em;
+        padding: 0.2em;
+        border-radius: 0.5em;
+        margin-top: 1em; }
+      .section2 .divs-destacados .imagen-destacada1 .boton-hace-tu-pedido {
         margin-top: 0.5em;
         margin-bottom: 0.5em;
+        font-family: 'Thasadith', sans-serif;
         color: #e08465;
         border: 1px solid #E79E85;
         font-weight: bolder; }
         .section2 .divs-destacados .imagen-destacada1 .boton-hace-tu-pedido:hover {
           background-color: #E79E85;
           color: #ffffff; }
-      .section2 .divs-destacados .imagen-destacada1 .card-title {
-        border-radius: 0.5em;
-        padding: 0.2em;
-        background-color: #E79E85;
-        font-family: 'Thasadith', sans-serif;
-        color: #ffffff;
-        margin-top: 1em;
-        margin-left: 0.2em;
-        margin-right: 0.2em;
-        font-size: 1.2em; }
 
 /* SECCION PEDIDO/MEDIO DE PAGO*/
 .flex-padre {
@@ -656,12 +658,12 @@ header .header-nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  text-align: center;
   margin-right: 4em;
   margin-left: 4em;
   margin-top: 10em;
   margin-bottom: 10em;
-  padding: 2em; }
+  padding: 2em;
+  text-align: center; }
   .flex-padre div {
     padding: 1rem; }
     .flex-padre div .flex-image {
@@ -678,12 +680,12 @@ header .header-nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 2em;
   background-color: #E79E85;
   font-family: 'Thasadith', sans-serif;
   color: #ffffff;
+  margin-top: 10em;
   margin-bottom: 10em;
-  margin-top: 10em; }
+  padding: 2em; }
   .seccion-contenido .conoce-delicias {
     font-family: 'Thasadith', sans-serif; }
     .seccion-contenido .conoce-delicias h5 {
@@ -701,8 +703,8 @@ header .header-nav {
     .seccion-contenido .imagenes-delicias .div-img-delicias {
       width: 200.5px;
       height: auto;
-      margin-left: 0.5em;
-      margin-right: 0.5em; }
+      margin-right: 0.5em;
+      margin-left: 0.5em; }
       .seccion-contenido .imagenes-delicias .div-img-delicias .tort {
         width: 210.5px;
         height: 210.5px;
@@ -721,13 +723,13 @@ header .header-nav {
   margin-bottom: 10em;
   font-family: 'Thasadith', sans-serif;
   font-weight: bold; }
-  .section3 div .tituloCliente {
+  .section3 .tituloCliente {
     background-color: #E79E85;
     font-family: 'Thasadith', sans-serif;
     color: #ffffff;
     text-align: center;
-    padding: 0.5em;
-    font-size: 2.4em; }
+    font-size: 2.4em;
+    padding: 0.5em; }
   .section3 .clientes-divs {
     display: flex;
     flex-direction: row;
@@ -737,40 +739,42 @@ header .header-nav {
     .section3 .clientes-divs .card-cliente {
       width: 200px;
       height: auto;
-      margin: 2em;
-      text-align: center;
       background-color: #ffffff;
-      color: black; }
+      color: black;
+      margin: 2em;
+      text-align: center; }
       .section3 .clientes-divs .card-cliente .cliente {
         width: 200px;
         height: auto;
         padding: 0.8rem; }
       .section3 .clientes-divs .card-cliente h5 {
-        padding: 0.5em;
-        margin: 0.5rem;
-        font-size: 1.4em;
-        border-radius: 0.2rem;
         background-color: #E79E85;
         font-family: 'Thasadith', sans-serif;
-        color: #ffffff; }
+        color: #ffffff;
+        text-align: none;
+        font-size: 1.4em;
+        padding: 0.5em;
+        margin: 0.5rem;
+        border-radius: 0.2rem; }
       .section3 .clientes-divs .card-cliente p {
         text-align: center;
         padding: 0.5em; }
 
 /*FOOTER*/
 footer {
+  background-color: #E79E85;
   font-family: 'Thasadith', sans-serif;
+  color: #ffffff;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
-  background-color: #E79E85;
   font-family: 'Thasadith', sans-serif;
-  color: #ffffff;
+  align-items: center;
   padding-top: 2.5em;
   padding-bottom: 2.5em;
-  font-size: 1rem; }
+  font-size: 1rem;
+  font-weight: 400; }
   footer .menuFinal ul {
     list-style: none; }
   footer .menuFinal a {
@@ -778,6 +782,10 @@ footer {
     font-family: 'Thasadith', sans-serif;
     text-align: justify;
     text-decoration: none; }
+    footer .menuFinal a:active {
+      color: black; }
+  footer div h5 {
+    font-weight: 400; }
   footer .logoFinal {
     width: 100px;
     height: 100px; }
@@ -789,10 +797,6 @@ footer {
     footer .tamaño:hover {
       margin-right: 1rem;
       opacity: 1; }
-
-.flecha {
-  width: 30px;
-  height: 30px; }
 
 /*MEDIA QUERIES*/
 /*Mobile*/
@@ -807,29 +811,33 @@ footer {
         header .header-nav div .menuPrincipal li a {
           font-size: 1.2em; }
   .section1 {
-    margin-left: 1em;
     margin-right: 1em;
+    margin-left: 1em;
     margin-top: 6em;
     margin-bottom: 6em; }
     .section1 .aliveri {
       font-size: 3rem; }
     .section1 .presentacion {
-      display: block;
-      font-size: 0.9rem;
+      text-align: center;
+      font-size: 0.9em;
       padding: 0;
-      text-align: center; }
+      display: block; }
   .section2 {
     margin-top: 6em;
     margin-bottom: 6em; }
   .flex-padre {
-    font-size: 0.2rem;
     margin-top: 6em;
     margin-bottom: 6em;
+    font-size: 0.9em;
     padding: 1em; }
   .seccion-contenido {
     margin-top: 6em;
     margin-bottom: 6em;
     text-align: center; }
+    .seccion-contenido .conoce-delicias h5 {
+      font-size: 1.8em; }
+    .seccion-contenido .conoce-delicias p {
+      margin-top: 2em; }
   .section3 {
     margin-top: 6em;
     margin-bottom: 6em; }
@@ -855,11 +863,11 @@ footer {
   .historia2 {
     flex-wrap: wrap; }
     .historia2 div p {
+      text-align: justify;
+      font-size: 1em;
+      padding: 2em;
       font-family: 'Thasadith', sans-serif;
       color: #0e090a;
-      text-align: justify;
-      padding: 2em;
-      font-size: 1em;
       line-height: 1em; }
     .historia2 img {
       max-width: 100%; }
@@ -881,17 +889,17 @@ footer {
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem; }
   .section1 {
-    margin-left: 1em;
     margin-right: 1em;
+    margin-left: 1em;
     margin-top: 6em;
     margin-bottom: 6em; }
     .section1 .aliveri {
       font-size: 3rem; }
     .section1 .presentacion {
-      display: block;
-      font-size: 0.9rem;
+      text-align: center;
+      font-size: 0.9em;
       padding: 0;
-      text-align: center; }
+      display: block; }
   .section2 {
     margin-top: 6em;
     margin-bottom: 6em; }
@@ -919,8 +927,8 @@ footer {
     .textoLargo .alexiaImg img {
       max-width: 100%; }
     .textoLargo .historia1 {
-      margin-left: 0.5em;
-      margin-right: 0.5em; }
+      margin-right: 0.5em;
+      margin-left: 0.5em; }
       .textoLargo .historia1 p {
         font-size: 1em;
         line-height: 1em; }
@@ -962,8 +970,8 @@ footer {
     .textoLargo .alexiaImg img {
       max-width: 100%; }
     .textoLargo .historia1 {
-      margin-left: 0.5em;
-      margin-right: 0.5em; }
+      margin-right: 0.5em;
+      margin-left: 0.5em; }
       .textoLargo .historia1 p {
         font-size: 1em;
         line-height: 1em; }
