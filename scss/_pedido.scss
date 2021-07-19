@@ -23,14 +23,15 @@
 @mixin font($align, $padding, $size) {
     font-family: 'Thasadith', sans-serif;
     padding: $padding;
-    font-size: $size;  
+    font-size: $size; 
+    text-align: $align; 
 }
 /*PAGINA HACE TU PEDIDO*/
 /*MAIN*/
 .cuerpo{
     @include background($colorheader);
     @include border();
-    @include font(center,none ,none );
+    @include font(center,none ,none);
     display: flex;
     flex-direction: column;
     justify-content: center;
