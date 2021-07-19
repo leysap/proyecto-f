@@ -165,10 +165,8 @@
   font-weight: bold;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
-  font-family: 'Thasadith', sans-serif;
   text-align: center;
-  padding: none;
-  font-size: none;
+  font-family: 'Thasadith', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;

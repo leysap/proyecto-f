@@ -20,18 +20,13 @@
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
 }
-@mixin font($textalign, $pad, $fontsize){
-    font-family: 'Thasadith', sans-serif;
-    text-align: $textalign;
-    padding: $pad;
-    font-size: $fontsize;  
-}
 /*PAGINA HACE TU PEDIDO*/
 /*MAIN*/
 .cuerpo{
     @include background($colorheader);
     @include border();
-    @include font( center, none ,none);
+    text-align: center;
+    font-family: 'Thasadith', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +34,10 @@
     .pedidoOnline{
         @include background($colorfooter);
         @include border();
-        @include font( center, 0.8em ,2em );
+        font-family: 'Thasadith', sans-serif;
+        text-align: center;
+        padding: 0.8em;
+        font-size: 2em;
     }   
     .nombreFormu{
         display: inline-block;
