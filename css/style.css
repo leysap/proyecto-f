@@ -218,12 +218,12 @@
 main .titulo-informacion {
   background-color: #E79E85;
   color: #ffffff;
-  text-align: center;
-  font-size: 2em;
   margin-top: 1em;
   margin-bottom: 1.3em;
-  margin-left: 1em;
   margin-right: 1em;
+  margin-left: 1em;
+  text-align: center;
+  font-size: 2em;
   border-radius: 0.5em;
   padding: 0.8em;
   font-family: 'Thasadith', sans-serif; }
@@ -233,9 +233,11 @@ main .seccion-info {
   border-radius: none;
   background-color: #F2E9D0;
   color: black;
-  font-family: 'Thasadith', sans-serif;
   margin-top: 2em;
   margin-bottom: 2em;
+  margin-right: none;
+  margin-left: none;
+  font-family: 'Thasadith', sans-serif;
   border-radius: 0.2em; }
   main .seccion-info .pedidos {
     padding: 1em;
@@ -248,11 +250,7 @@ main .seccion-info {
       font-size: 2em;
       text-align: center;
       font-weight: bolder; }
-    main .seccion-info .pedidos ul {
-      list-style: none; }
-      main .seccion-info .pedidos ul li {
-        text-align: center; }
-    main .seccion-info .pedidos .pedidos-titulo {
+    main .seccion-info .pedidos div .pedidos-titulo {
       padding: 0.5em;
       border-radius: 0.1em;
       border-top: 1px solid black;
@@ -260,10 +258,14 @@ main .seccion-info {
       color: #e08465;
       text-align: center;
       font-size: 1.4em; }
-      main .seccion-info .pedidos .pedidos-titulo a {
+      main .seccion-info .pedidos div .pedidos-titulo a {
         color: black; }
-        main .seccion-info .pedidos .pedidos-titulo a:hover {
+        main .seccion-info .pedidos div .pedidos-titulo a:hover {
           color: #e08465; }
+    main .seccion-info .pedidos div ul {
+      list-style: none; }
+      main .seccion-info .pedidos div ul li {
+        text-align: center; }
     main .seccion-info .pedidos .enlace-web a {
       color: black; }
       main .seccion-info .pedidos .enlace-web a:hover {
@@ -282,19 +284,21 @@ main .seccion-info {
     main .seccion-info .columna-2 .medio-entrega {
       padding: 0.3em;
       border-radius: 0.5em;
+      background-color: #ffffff;
+      color: #e08465;
       font-size: 2em;
       text-align: center;
-      color: #e08465;
-      font-weight: bolder;
-      background-color: #ffffff; }
-    main .seccion-info .columna-2 h3 {
+      font-weight: bolder; }
+    main .seccion-info .columna-2 div h3 {
       font-size: 1.2em; }
-    main .seccion-info .columna-2 ul {
+    main .seccion-info .columna-2 div ul {
       list-style: none; }
 
 main .info-importante {
   margin-top: 2em;
   margin-bottom: 2em;
+  margin-right: none;
+  margin-left: none;
   text-align: center;
   font-family: 'Thasadith', sans-serif;
   font-size: 1em;
@@ -315,7 +319,9 @@ main .info-importante {
 
 main .seccion-contenido {
   margin-top: 4em;
-  margin-bottom: 4em; }
+  margin-bottom: 4em;
+  margin-right: none;
+  margin-left: none; }
   main .seccion-contenido .conoce2 {
     font-family: 'Thasadith', sans-serif; }
     main .seccion-contenido .conoce2 h4 {
@@ -334,10 +340,12 @@ main .seccion-contenido {
     main .seccion-contenido .imagenes-delicias .div-img-delicias a:hover {
       background-color: #ffffff;
       color: #e08465;
-      padding: 0.2em;
-      border-radius: 0.2em;
+      margin-top: none;
+      margin-bottom: none;
+      margin-right: 0.3em;
       margin-left: 0.3em;
-      margin-right: 0.3em; }
+      padding: 0.2em;
+      border-radius: 0.2em; }
   main .seccion-contenido .imagenes-delicias .div-img-delicias .tort2 {
     width: 200.5px;
     height: 200.5px;
@@ -349,10 +357,10 @@ main .seccion-contenido {
 main .menu {
   padding: 0.7em;
   border-radius: 0.5em;
-  margin-left: 2em;
-  margin-right: 2em;
   margin-top: 4em;
   margin-bottom: 4em;
+  margin-right: 2em;
+  margin-left: 2em;
   background-image: url(/imagenes/tic-tac-toe.png); }
   main .menu .menuTitulo {
     background-color: #E79E85;

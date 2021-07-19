@@ -19,61 +19,67 @@
                     color: black;
                 }
 }
+@mixin margin ($top, $bottom, $right, $left){
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-right: $right;
+    margin-left: $left;
+}
 @mixin  flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around; 
 }
+@mixin fonts ($sizes, $align, $weight, $family) {
+    font-size: $sizes;
+    text-align: $align;
+    font-weight: $weight;
+    font-family: $family;
+}
 /*PAGINA INFORMACION*/
 main{
     .titulo-informacion{
         @include background($colorfooter);
-        text-align: center;
-        font-size: 2em;
-        margin-top: 1em;
-        margin-bottom: 1.3em;
-        margin-left: 1em;
-        margin-right: 1em;
+        @include margin(1em, 1.3em , 1em , 1em);
+        @include fonts(2em , center , none ,'Thasadith', sans-serif );
         border-radius: 0.5em;
         padding: 0.8em;
-        font-family: 'Thasadith', sans-serif;
     }
     .seccion-info{
         @include pb(1em, none );
         @include background($colorheader);
+        @include margin(2em, 2em  ,none ,none );
         font-family: 'Thasadith', sans-serif;
-        margin-top: 2em;
-        margin-bottom: 2em;
         border-radius: 0.2em;
         .pedidos{
             @include pb(1em, none );
             h2{
                 @include background($colortitulo);
                 @include pb(0.3em,0.5em);
-                font-size: 2em;
-                text-align: center;
-                font-weight: bolder;
+                @include fonts(2em,center ,bolder ,'Thasadith', sans-serif );
             }
-            ul{
-                list-style: none;
-                li{
+            div{
+                .pedidos-titulo{
+                    @include pb(0.5em, 0.1em);            
+                    border-top: 1px solid black;
+                    border-bottom: 1px solid black;
+                    color: $coloraliveri;
                     text-align: center;
-                }
-            }
-            .pedidos-titulo{
-                @include pb(0.5em, 0.1em);            
-                border-top: 1px solid black;
-                border-bottom: 1px solid black;
-                color: $coloraliveri;
-                text-align: center;
-                font-size: 1.4em;
-                a{
-                    color: black;
-                    &:hover{
-                        color: $coloraliveri;
+                    font-size: 1.4em;
+                    a{
+                        color: black;
+                        &:hover{
+                            color: $coloraliveri;
+                        }
                     }
                 }
+                ul{
+                    list-style: none;
+                    li{
+                        text-align: center;
+                    }
+                } 
             }
             .enlace-web{
                 a{
@@ -85,9 +91,7 @@ main{
             }
             .alerta{
                 @include background($colortitulo);
-                font-size: 1.3em;
-                text-align: center;
-                font-weight: bolder;
+                @include fonts(1.3em, center ,bolder ,'Thasadith', sans-serif );
                 margin-top: 2.5em;
                 border: 1px solid $coloraliveri;
             }
@@ -97,30 +101,25 @@ main{
             padding: 1em;
             .medio-entrega{
                 @include pb(0.3em,0.5em);
-                font-size: 2em;
-                text-align: center;
-                color: $coloraliveri;
-                font-weight: bolder;
-                background-color: $colortitulo; 
+                @include background($colortitulo);
+                @include fonts(2em,center ,bolder ,'Thasadith', sans-serif );
             }
-            h3{
-                font-size: 1.2em;
-            }
-            ul{
-                list-style: none;
+            div{
+                h3{
+                    font-size: 1.2em;
+                }
+                ul{
+                    list-style: none;
+                }
             }
         }
     }
     .info-importante{
-        margin-top: 2em;
-        margin-bottom: 2em;
-        text-align: center;
-        font-family: 'Thasadith', sans-serif;
-        font-size: 1em;
+        @include margin(2em , 2em ,none ,none );
+        @include fonts(1em, center , bold ,'Thasadith', sans-serif );
         line-height: 2em;
         padding: 4em;
         border-radius: 0.2em;
-        font-weight: bold;
         background-color: $colorheader;
         .importante{
             @include background($colortitulo);
@@ -133,17 +132,14 @@ main{
         }
     }
     .seccion-contenido{
-        margin-top: 4em;
-        margin-bottom: 4em;
+        @include margin(4em,4em ,none ,none);
         .conoce2{
             font-family: 'Thasadith', sans-serif;
             h4{
                 font-size: 2em;
             }
             p{
-                font-size: 1em;
-                font-family: 'Thasadith', sans-serif;
-                font-weight: bold;
+                @include fonts(1em,none ,bold ,'Thasadith', sans-serif );
                 line-height: 1.8em;
             }
         }
@@ -157,16 +153,15 @@ main{
                     font-family: 'Caveat', cursive;
                     &:hover{
                         @include background($colortitulo);
+                        @include margin(none,none ,0.3em ,0.3em );
                         padding: 0.2em;
                         border-radius: 0.2em;
-                        margin-left: 0.3em;
-                        margin-right: 0.3em;
                     }
                 }
                 .tort2{
+                    @include pb(0.4em,0.7em );
                     width: 200.5px;
                     height: 200.5px;
-                    @include pb(0.4em,0.7em );
                     &:hover{
                         opacity: 0.9;
                     }
@@ -176,17 +171,12 @@ main{
     }
     .menu{  
         @include pb(0.7em,0.5em );
-        margin-left: 2em;
-        margin-right: 2em;
-        margin-top: 4em;
-        margin-bottom: 4em;
+        @include margin(4em, 4em , 2em, 2em);
         background-image: url(/imagenes/tic-tac-toe.png);
         .menuTitulo{
             @include background($colorfooter);
             @include pb(0.5em,0.2em );
-            text-align: center;
-            font-size: 2.2em;
-            font-family: 'Caveat', cursive;   
+            @include fonts(2.2em, center ,none ,'Caveat', cursive);  
         }
         .flex-container{
             @include flex();
@@ -199,10 +189,7 @@ main{
                 h3{
                     @include background($colortitulo);
                     @include pb(0.5em,0.5em );
-                    font-family: 'Caveat', cursive;  
-                    font-size: 1.3em;
-                    font-weight: bold;  
-                    text-align: center;
+                    @include fonts(1.3em, center , bold ,'Caveat', cursive);
                 }
                 ul{
                     @include pb(1em, none );
@@ -226,17 +213,12 @@ main{
         }
     }
     .img-g{
-        margin-top: 4em;
-        margin-bottom: 4em;
-        margin-right: 2em;
-        margin-left: 2em;
+        @include margin(4em,4em ,2em ,2em);
         background-image: url(/imagenes/tic-tac-toe.png);
         padding: 0.8em;
         h2{
             @include background($colorfooter);
-            text-align: left;
-            font-family: 'Caveat', cursive;
-            font-size: 2.2em;
+            @include fonts(2.2em, left , none ,'Caveat', cursive);
             padding: 0.5em;
             border-radius: 0.2em;
         }
