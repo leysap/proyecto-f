@@ -8,48 +8,49 @@
         @else if $color == $colorfooter{
             color: $colortitulo;
         }
-            @else if $color == $colordestacado{
-                color: black;
+            @else if $color == $colortitulo{
+                color: $coloraliveri;
             }
-                @else if $color == $clientes{
+                @else{
                     color: black;
                 }
-                    @else{
-                        color: black;
-                    }
+}
+@mixin flex ($justify){
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify    
+}
+@mixin margin($topp, $bott, $rightt, $leftt) {
+    margin-top: $topp;
+    margin-bottom: $bott;
+    margin-right: $rightt;
+    margin-left: $leftt;
+}
+@mixin pad-br ($paddings, $radius){
+    padding: $paddingg;
+    border-radius: $radius;
 }
 /*PAGINA DOS: DELICIAS*/
 .seccion-delicias{
     font-family:'Thasadith', sans-serif;
     main{
         .titulo-delicias{
+            @include background($colorfooter);
+            @include margin(1em,1em ,1em ,1em );
+            @include pad-br(0.8em,0.5em );
             text-align: center;
             font-size: 2em;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            margin-left: 1em;
-            margin-right: 1em;
-            border-radius: 0.5em;
-            background-color: $colorfooter;
-            color: $colortitulo;
-            padding: 0.8em;
         }
         .galeria{
             .galeria-imagenes{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                margin-top: 1em;
-                margin-bottom: 1em;
+                @include flex(space-around);
+                @include margin(1em,1em ,none ,none );
                 div{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
+                    @include flex(space-around);
                     .imagen-g{
+                        @include pad-br(1em,0.2em );
                         max-width: 100%;
                         max-height: auto;
-                        padding: 1em;
-                        border-radius: 0.2em;
                         &:hover{
                             opacity: 0.9;
                         }
@@ -58,32 +59,25 @@
             }
         }
         .seccionMenu{
+            @include margin(5em,5em ,none ,none );
+            @include pad-br(2em,1em );
             background-image: url(/imagenes/tic-tac-toe.png);
-            margin-top: 5em;
-            margin-bottom: 5em;
-            border-radius: 1em;
-            padding: 2em;
             border: 2px solid $colorfooter;
             .delicias{
-                border-radius: 0.2em;
+                @include background($colorfooter);
+                @include pad-br(0.5em,0.2em );
                 text-align: center;
                 font-family: 'Caveat', cursive;
-                background-color: $colorfooter;
-                color: $colortitulo;
                 font-size: 2em;
-                padding: 0.5em;
             }
             .contenedor-menu{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
+                @include flex(center);
                 flex-wrap: wrap;
             }
             .menuDelicias{
+                @include margin(1.5em,1.5em ,none ,none);
                 text-align:center;
                 display: block;
-                margin-top: 1.5em;
-                margin-bottom: 1.5em;
                 list-style: none;
                 li{
                     padding: 0.2em;
@@ -96,70 +90,39 @@
                         text-decoration: none;
                         font-weight:500;
                         &:hover{
-                            background-color: $colorfooter;
-                            color: $colortitulo;
+                            @include background($colorfooter);
+                            @include pad-br(0.2em,0.2em );
                             font-weight: 500;
-                            padding: 0.2em;
-                            border-radius: 0.2em;
                             transition: all 1s ease;
                         }
                     }
-                }
-                
+                }  
             }       
         }
         .section-productos{
+            @include margin(5em,5em ,1em ,1em );
             font-weight: bold;
             background-image: url(/imagenes/tic-tac-toe.png);
-            margin-top: 5em;
-            margin-bottom:5em;
-            margin-right: 1em;
-            margin-left: 1em;
             padding: 1em;
             div{
                 .titulo-producto{
+                    @include background($colorfooter);
+                    @include pad-br(0.5em, 0.2em );
                     text-align:center;
-                    padding: 0.5em;
-                    background-color: $colorfooter;
-                    border-radius: 0.2em;
-                    color: $colortitulo;
                     font-family: 'Caveat', cursive;
                     font-size: 2.5em;
                 }
             }
             .productos-contenedor{
-                display: flex;
-                flex-direction: row;
+                @include flex(space-around);
                 flex-wrap: wrap;
-                justify-content: space-around;
                 .card-div{
                     text-align: center;
                     background-color: $colorheader;
                     margin: 1em;
-                    width: 300px;
-                    height: 500px;
+                    width: 300px;          
                     height: auto;
                     border: 2px solid $colorfooter;
-                    h3{
-                        margin-top: 1em;
-                        margin-bottom: 1em;
-                        font-family: 'Caveat', cursive;
-                        font-size: 2em;
-                        padding: 0.2em;
-                        background-color: $colorfooter;
-                        color: $colortitulo;
-                    }
-                    ul{
-                        text-align: center;
-                        background-color: $colortitulo;
-                        list-style: none;
-                        li{
-                            margin-right: 2em;
-                            margin-top: 0.5em;
-                            margin-bottom: 0.5em;
-                            padding: 0.2em;
-                        }
-                    }
                     img{
                         padding: 0.2em;
                         margin-top: 0.2em;
@@ -170,15 +133,29 @@
                             transform: scale(1.1,1.1);
                         }
                     }
+                    h3{
+                        @include background($colorfooter);
+                        @include margin(1em,1em ,none , none);
+                        font-family: 'Caveat', cursive;
+                        font-size: 2em;
+                        padding: 0.2em;
+                    }
+                    ul{
+                        text-align: center;
+                        background-color: $colortitulo;
+                        list-style: none;
+                        li{
+                            @include margin(0.5em,0.5em ,2em ,none );
+                            padding: 0.2em;
+                        }
+                    }
                     .card-pedidos{
-                        margin-top: 1em;
-                        margin-bottom: 1em;
+                        @include margin(1em,1em ,none ,none );
                         .link-pedido{
                             color: $colorfooter;
                             text-decoration: none;
                             padding: 1.2em;
                             &:hover{
-                            
                                 color: black;
                             }
                         }
@@ -190,17 +167,15 @@
 }                          
                 /*Boton arriba*/
 .boton-arriba{
+    @include margin(none,none ,30px ,30px );
     position: fixed;
     bottom:0;
     right: 0;
-    margin-right: 30px;
-    margin-bottom: 30px;
     z-index: 100;
     opacity: 1;
     button{
+        @include pad-br(0.5em,1em );
         background-color: $colorfooter;
-        border-radius: 1em;
-        padding: 0.5em;
         &:hover{
             opacity: 0.7;
             transition: all 1s ease;
