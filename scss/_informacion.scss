@@ -42,7 +42,7 @@ main{
     .titulo-informacion{
         @include background($colorfooter);
         @include margin(1em, 1.3em , 1em , 1em);
-        @include fonts(2em , center , none ,'Thasadith', sans-serif );
+        @include fonts(2em, center ,none ,'Thasadith' sans-serif );
         border-radius: 0.5em;
         padding: 0.8em;
     }
@@ -57,7 +57,7 @@ main{
             h2{
                 @include background($colortitulo);
                 @include pb(0.3em,0.5em);
-                @include fonts(2em,center ,bolder ,'Thasadith', sans-serif );
+                @include fonts( 2em, center , bolder ,'Thasadith' sans-serif );
             }
             div{
                 .pedidos-titulo{
@@ -91,7 +91,7 @@ main{
             }
             .alerta{
                 @include background($colortitulo);
-                @include fonts(1.3em, center ,bolder ,'Thasadith', sans-serif );
+                @include fonts( 1.3em , center , bolder ,'Thasadith' sans-serif );
                 margin-top: 2.5em;
                 border: 1px solid $coloraliveri;
             }
@@ -102,7 +102,7 @@ main{
             .medio-entrega{
                 @include pb(0.3em,0.5em);
                 @include background($colortitulo);
-                @include fonts(2em,center ,bolder ,'Thasadith', sans-serif );
+                @include fonts(2em,center ,bolder ,'Thasadith' sans-serif );
             }
             div{
                 h3{
@@ -116,7 +116,7 @@ main{
     }
     .info-importante{
         @include margin(2em , 2em ,none ,none );
-        @include fonts(1em, center , bold ,'Thasadith', sans-serif );
+        @include fonts(1em, center , bold ,'Thasadith' sans-serif );
         line-height: 2em;
         padding: 4em;
         border-radius: 0.2em;
@@ -139,7 +139,7 @@ main{
                 font-size: 2em;
             }
             p{
-                @include fonts(1em,none ,bold ,'Thasadith', sans-serif );
+                @include fonts(1em,none ,bold ,'Thasadith' sans-serif );
                 line-height: 1.8em;
             }
         }
@@ -176,7 +176,7 @@ main{
         .menuTitulo{
             @include background($colorfooter);
             @include pb(0.5em,0.2em );
-            @include fonts(2.2em, center ,none ,'Caveat', cursive);  
+            @include fonts(2.2em, center ,none ,'Caveat' cursive);  
         }
         .flex-container{
             @include flex();
@@ -189,7 +189,7 @@ main{
                 h3{
                     @include background($colortitulo);
                     @include pb(0.5em,0.5em );
-                    @include fonts(1.3em, center , bold ,'Caveat', cursive);
+                    @include fonts(1.3em, center , bold ,'Caveat' cursive);
                 }
                 ul{
                     @include pb(1em, none );
@@ -218,7 +218,7 @@ main{
         padding: 0.8em;
         h2{
             @include background($colorfooter);
-            @include fonts(2.2em, left , none ,'Caveat', cursive);
+            @include fonts(2.2em, left , none ,'Caveat' cursive);
             padding: 0.5em;
             border-radius: 0.2em;
         }

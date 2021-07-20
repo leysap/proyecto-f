@@ -3,58 +3,64 @@
 .seccion-delicias {
   font-family: 'Thasadith', sans-serif; }
   .seccion-delicias main .titulo-delicias {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    border-radius: 0.5em;
     background-color: #E79E85;
     color: #ffffff;
-    padding: 0.8em; }
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    text-align: center;
+    font-size: 2em; }
   .seccion-delicias main .galeria .galeria-imagenes {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 1em;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    margin-right: none;
+    margin-left: none; }
     .seccion-delicias main .galeria .galeria-imagenes div {
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
       .seccion-delicias main .galeria .galeria-imagenes div .imagen-g {
-        max-width: 100%;
-        max-height: auto;
         padding: 1em;
-        border-radius: 0.2em; }
+        border-radius: 0.2em;
+        max-width: 100%;
+        max-height: auto; }
         .seccion-delicias main .galeria .galeria-imagenes div .imagen-g:hover {
           opacity: 0.9; }
   .seccion-delicias main .seccionMenu {
-    background-image: url(/imagenes/tic-tac-toe.png);
     margin-top: 5em;
     margin-bottom: 5em;
-    border-radius: 1em;
+    margin-right: none;
+    margin-left: none;
     padding: 2em;
+    border-radius: 1em;
+    background-image: url(/imagenes/tic-tac-toe.png);
     border: 2px solid #E79E85; }
     .seccion-delicias main .seccionMenu .delicias {
+      background-color: #E79E85;
+      color: #ffffff;
+      padding: 0.5em;
       border-radius: 0.2em;
       text-align: center;
       font-family: 'Caveat', cursive;
-      background-color: #E79E85;
-      color: #ffffff;
-      font-size: 2em;
-      padding: 0.5em; }
+      font-size: 2em; }
     .seccion-delicias main .seccionMenu .contenedor-menu {
       display: flex;
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap; }
     .seccion-delicias main .seccionMenu .menuDelicias {
-      text-align: center;
-      display: block;
       margin-top: 1.5em;
       margin-bottom: 1.5em;
+      margin-right: none;
+      margin-left: none;
+      text-align: center;
+      display: block;
       list-style: none; }
       .seccion-delicias main .seccionMenu .menuDelicias li {
         padding: 0.2em; }
@@ -69,56 +75,38 @@
           .seccion-delicias main .seccionMenu .menuDelicias li a:hover {
             background-color: #E79E85;
             color: #ffffff;
-            font-weight: 500;
             padding: 0.2em;
             border-radius: 0.2em;
+            font-weight: 500;
             transition: all 1s ease; }
   .seccion-delicias main .section-productos {
-    font-weight: bold;
-    background-image: url(/imagenes/tic-tac-toe.png);
     margin-top: 5em;
     margin-bottom: 5em;
     margin-right: 1em;
     margin-left: 1em;
+    font-weight: bold;
+    background-image: url(/imagenes/tic-tac-toe.png);
     padding: 1em; }
     .seccion-delicias main .section-productos div .titulo-producto {
-      text-align: center;
-      padding: 0.5em;
       background-color: #E79E85;
-      border-radius: 0.2em;
       color: #ffffff;
+      padding: 0.5em;
+      border-radius: 0.2em;
+      text-align: center;
       font-family: 'Caveat', cursive;
       font-size: 2.5em; }
     .seccion-delicias main .section-productos .productos-contenedor {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around; }
+      justify-content: space-around;
+      flex-wrap: wrap; }
       .seccion-delicias main .section-productos .productos-contenedor .card-div {
         text-align: center;
         background-color: #F2E9D0;
         margin: 1em;
         width: 300px;
-        height: 500px;
         height: auto;
         border: 2px solid #E79E85; }
-        .seccion-delicias main .section-productos .productos-contenedor .card-div h3 {
-          margin-top: 1em;
-          margin-bottom: 1em;
-          font-family: 'Caveat', cursive;
-          font-size: 2em;
-          padding: 0.2em;
-          background-color: #E79E85;
-          color: #ffffff; }
-        .seccion-delicias main .section-productos .productos-contenedor .card-div ul {
-          text-align: center;
-          background-color: #ffffff;
-          list-style: none; }
-          .seccion-delicias main .section-productos .productos-contenedor .card-div ul li {
-            margin-right: 2em;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            padding: 0.2em; }
         .seccion-delicias main .section-productos .productos-contenedor .card-div img {
           padding: 0.2em;
           margin-top: 0.2em;
@@ -127,9 +115,31 @@
           transition: 2s all ease; }
           .seccion-delicias main .section-productos .productos-contenedor .card-div img:hover {
             transform: scale(1.1, 1.1); }
+        .seccion-delicias main .section-productos .productos-contenedor .card-div h3 {
+          background-color: #E79E85;
+          color: #ffffff;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          margin-right: none;
+          margin-left: none;
+          font-family: 'Caveat', cursive;
+          font-size: 2em;
+          padding: 0.2em; }
+        .seccion-delicias main .section-productos .productos-contenedor .card-div ul {
+          text-align: center;
+          background-color: #ffffff;
+          list-style: none; }
+          .seccion-delicias main .section-productos .productos-contenedor .card-div ul li {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-right: 2em;
+            margin-left: none;
+            padding: 0.2em; }
         .seccion-delicias main .section-productos .productos-contenedor .card-div .card-pedidos {
           margin-top: 1em;
-          margin-bottom: 1em; }
+          margin-bottom: 1em;
+          margin-right: none;
+          margin-left: none; }
           .seccion-delicias main .section-productos .productos-contenedor .card-div .card-pedidos .link-pedido {
             color: #E79E85;
             text-decoration: none;
@@ -139,17 +149,19 @@
 
 /*Boton arriba*/
 .boton-arriba {
+  margin-top: none;
+  margin-bottom: none;
+  margin-right: 30px;
+  margin-left: 30px;
   position: fixed;
   bottom: 0;
   right: 0;
-  margin-right: 30px;
-  margin-bottom: 30px;
   z-index: 100;
   opacity: 1; }
   .boton-arriba button {
-    background-color: #E79E85;
+    padding: 0.5em;
     border-radius: 1em;
-    padding: 0.5em; }
+    background-color: #E79E85; }
     .boton-arriba button:hover {
       opacity: 0.7;
       transition: all 1s ease; }
@@ -222,11 +234,12 @@ main .titulo-informacion {
   margin-bottom: 1.3em;
   margin-right: 1em;
   margin-left: 1em;
-  text-align: center;
   font-size: 2em;
+  text-align: center;
+  font-weight: none;
+  font-family: "Thasadith" sans-serif;
   border-radius: 0.5em;
-  padding: 0.8em;
-  font-family: 'Thasadith', sans-serif; }
+  padding: 0.8em; }
 
 main .seccion-info {
   padding: 1em;
@@ -249,7 +262,8 @@ main .seccion-info {
       border-radius: 0.5em;
       font-size: 2em;
       text-align: center;
-      font-weight: bolder; }
+      font-weight: bolder;
+      font-family: "Thasadith" sans-serif; }
     main .seccion-info .pedidos div .pedidos-titulo {
       padding: 0.5em;
       border-radius: 0.1em;
@@ -276,6 +290,7 @@ main .seccion-info {
       font-size: 1.3em;
       text-align: center;
       font-weight: bolder;
+      font-family: "Thasadith" sans-serif;
       margin-top: 2.5em;
       border: 1px solid #e08465; }
   main .seccion-info .columna-2 {
@@ -288,7 +303,8 @@ main .seccion-info {
       color: #e08465;
       font-size: 2em;
       text-align: center;
-      font-weight: bolder; }
+      font-weight: bolder;
+      font-family: "Thasadith" sans-serif; }
     main .seccion-info .columna-2 div h3 {
       font-size: 1.2em; }
     main .seccion-info .columna-2 div ul {
@@ -299,13 +315,13 @@ main .info-importante {
   margin-bottom: 2em;
   margin-right: none;
   margin-left: none;
-  text-align: center;
-  font-family: 'Thasadith', sans-serif;
   font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Thasadith" sans-serif;
   line-height: 2em;
   padding: 4em;
   border-radius: 0.2em;
-  font-weight: bold;
   background-color: #F2E9D0; }
   main .info-importante .importante {
     background-color: #ffffff;
@@ -328,8 +344,9 @@ main .seccion-contenido {
       font-size: 2em; }
     main .seccion-contenido .conoce2 p {
       font-size: 1em;
-      font-family: 'Thasadith', sans-serif;
+      text-align: none;
       font-weight: bold;
+      font-family: "Thasadith" sans-serif;
       line-height: 1.8em; }
   main .seccion-contenido .imagenes-delicias .div-img-delicias a {
     text-decoration: none;
@@ -347,10 +364,10 @@ main .seccion-contenido {
       padding: 0.2em;
       border-radius: 0.2em; }
   main .seccion-contenido .imagenes-delicias .div-img-delicias .tort2 {
-    width: 200.5px;
-    height: 200.5px;
     padding: 0.4em;
-    border-radius: 0.7em; }
+    border-radius: 0.7em;
+    width: 200.5px;
+    height: 200.5px; }
     main .seccion-contenido .imagenes-delicias .div-img-delicias .tort2:hover {
       opacity: 0.9; }
 
@@ -367,9 +384,10 @@ main .menu {
     color: #ffffff;
     padding: 0.5em;
     border-radius: 0.2em;
-    text-align: center;
     font-size: 2.2em;
-    font-family: 'Caveat', cursive; }
+    text-align: center;
+    font-weight: none;
+    font-family: "Caveat" cursive; }
   main .menu .flex-container {
     display: flex;
     flex-direction: row;
@@ -387,10 +405,10 @@ main .menu {
         color: #e08465;
         padding: 0.5em;
         border-radius: 0.5em;
-        font-family: 'Caveat', cursive;
         font-size: 1.3em;
+        text-align: center;
         font-weight: bold;
-        text-align: center; }
+        font-family: "Caveat" cursive; }
       main .menu .flex-container div ul {
         padding: 1em;
         border-radius: none;
@@ -417,9 +435,10 @@ main .img-g {
   main .img-g h2 {
     background-color: #E79E85;
     color: #ffffff;
-    text-align: left;
-    font-family: 'Caveat', cursive;
     font-size: 2.2em;
+    text-align: left;
+    font-weight: none;
+    font-family: "Caveat" cursive;
     padding: 0.5em;
     border-radius: 0.2em; }
   main .img-g .img-info {
