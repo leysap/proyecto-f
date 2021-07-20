@@ -237,7 +237,7 @@ main .titulo-informacion {
   font-size: 2em;
   text-align: center;
   font-weight: none;
-  font-family: "Thasadith" sans-serif;
+  font-family: "Thasadith";
   border-radius: 0.5em;
   padding: 0.8em; }
 
@@ -318,7 +318,7 @@ main .info-importante {
   font-size: 1em;
   text-align: center;
   font-weight: bold;
-  font-family: "Thasadith" sans-serif;
+  font-family: "Thasadith";
   line-height: 2em;
   padding: 4em;
   border-radius: 0.2em;
@@ -387,7 +387,7 @@ main .menu {
     font-size: 2.2em;
     text-align: center;
     font-weight: none;
-    font-family: "Caveat" cursive; }
+    font-family: "Caveat"; }
   main .menu .flex-container {
     display: flex;
     flex-direction: row;
@@ -408,7 +408,7 @@ main .menu {
         font-size: 1.3em;
         text-align: center;
         font-weight: bold;
-        font-family: "Caveat" cursive; }
+        font-family: "Caveat"; }
       main .menu .flex-container div ul {
         padding: 1em;
         border-radius: none;
@@ -438,7 +438,7 @@ main .img-g {
     font-size: 2.2em;
     text-align: left;
     font-weight: none;
-    font-family: "Caveat" cursive;
+    font-family: "Caveat";
     padding: 0.5em;
     border-radius: 0.2em; }
   main .img-g .img-info {

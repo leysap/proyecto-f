@@ -42,7 +42,7 @@ main{
     .titulo-informacion{
         @include background($colorfooter);
         @include margin(1em, 1.3em , 1em , 1em);
-        @include fonts(2em, center ,none ,'Thasadith' sans-serif );
+        @include fonts(2em, center ,none ,'Thasadith');
         border-radius: 0.5em;
         padding: 0.8em;
     }
@@ -116,7 +116,7 @@ main{
     }
     .info-importante{
         @include margin(2em , 2em ,none ,none );
-        @include fonts(1em, center , bold ,'Thasadith' sans-serif );
+        @include fonts(1em, center , bold ,'Thasadith' );
         line-height: 2em;
         padding: 4em;
         border-radius: 0.2em;
@@ -176,7 +176,7 @@ main{
         .menuTitulo{
             @include background($colorfooter);
             @include pb(0.5em,0.2em );
-            @include fonts(2.2em, center ,none ,'Caveat' cursive);  
+            @include fonts(2.2em, center ,none ,'Caveat' );  
         }
         .flex-container{
             @include flex();
@@ -189,7 +189,7 @@ main{
                 h3{
                     @include background($colortitulo);
                     @include pb(0.5em,0.5em );
-                    @include fonts(1.3em, center , bold ,'Caveat' cursive);
+                    @include fonts(1.3em, center , bold ,'Caveat');
                 }
                 ul{
                     @include pb(1em, none );
@@ -218,7 +218,7 @@ main{
         padding: 0.8em;
         h2{
             @include background($colorfooter);
-            @include fonts(2.2em, left , none ,'Caveat' cursive);
+            @include fonts(2.2em, left , none ,'Caveat');
             padding: 0.5em;
             border-radius: 0.2em;
         }
