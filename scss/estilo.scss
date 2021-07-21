@@ -313,6 +313,9 @@ footer{
             font-family:'Thasadith', sans-serif;
             text-align: justify;
             text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
             &:active{
                 color: black;
             }
@@ -349,7 +352,7 @@ footer{
                     border-bottom-right-radius: 1rem;
                     li{
                         a{
-                            font-size: 1.2em;
+                            font-size: 1.9em;
                         }
                     }
                 }
@@ -400,6 +403,7 @@ footer{
                         a{
                             text-align: center;
                             margin-right: $size/2;
+                            font-size: 1.5em;
                         }
                     }
                 }
@@ -467,13 +471,18 @@ footer{
                 .menuPrincipal{
                     border-top-right-radius: 1rem;
                     border-bottom-right-radius: 1rem;
+                    li{
+                        a{
+                            font-size: 1.9em;
+                        }
+                    }
                 }
             }
         }
     }
     .section1{
         @include mrightleft(1em,1em);
-       @include margin(6em, 6em);
+        @include margin(6em, 6em);
         .aliveri{
             font-size: 3rem
         }
@@ -556,7 +565,7 @@ footer{
                 .menuPrincipal{
                     li{
                         a{
-                            font-size: 1.5em;
+                            font-size: 1.9em;
                         }
                     }
                 }

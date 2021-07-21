@@ -809,6 +809,8 @@ footer {
     font-family: 'Thasadith', sans-serif;
     text-align: justify;
     text-decoration: none; }
+    footer .menuFinal a:hover {
+      text-decoration: underline; }
     footer .menuFinal a:active {
       color: black; }
   footer div h5 {
@@ -836,7 +838,7 @@ footer {
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem; }
         header .header-nav div .menuPrincipal li a {
-          font-size: 1.2em; }
+          font-size: 1.9em; }
   .section1 {
     margin-right: 1em;
     margin-left: 1em;
@@ -873,7 +875,8 @@ footer {
     text-align: center; }
     footer .menuFinal nav ul li a {
       text-align: center;
-      margin-right: 2em; }
+      margin-right: 2em;
+      font-size: 1.5em; }
   .galeria-imagenes {
     display: flex;
     flex-direction: column;
@@ -915,6 +918,8 @@ footer {
       header .header-nav div .menuPrincipal {
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem; }
+        header .header-nav div .menuPrincipal li a {
+          font-size: 1.9em; }
   .section1 {
     margin-right: 1em;
     margin-left: 1em;
@@ -971,7 +976,7 @@ footer {
   header {
     text-align: center; }
     header .header-nav div .menuPrincipal li a {
-      font-size: 1.5em; }
+      font-size: 1.9em; }
   .galeria .galeria-imagenes {
     display: flex;
     flex-direction: row;
