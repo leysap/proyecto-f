@@ -503,7 +503,9 @@ footer{
         @include margin(6em,6em);  
     }
     .flex-padre{
-        font-size: 0.2rem;
+        @include margin(6em, 6em);
+        font-size: 0.9em;
+        padding:1em;
     }
     .seccion-contenido{
         margin-bottom: 6em;
