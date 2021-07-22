@@ -182,7 +182,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2em; }
+  margin: 2em;
+  font-weight: bolder; }
   .cuerpo .pedidoOnline {
     background-color: #E79E85;
     color: #ffffff;
@@ -192,37 +193,41 @@
     text-align: center;
     padding: 0.8em;
     font-size: 2em; }
-  .cuerpo .nombreFormu {
-    display: inline-block;
+  .cuerpo form .texto {
+    font-weight: bold; }
+  .cuerpo form .nombreFormu {
     padding: 5px;
     font-family: 'Thasadith', sans-serif;
     font-weight: bold; }
-  .cuerpo .tituloFavorito {
+  .cuerpo form .tituloFavorito {
     margin-top: 1em;
     text-decoration: underline;
     font-size: 1.7em; }
-  .cuerpo .opcion-torta {
-    margin-bottom: 3em;
+  .cuerpo form .opcion-torta {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     text-align: center; }
-    .cuerpo .opcion-torta .opciones {
+    .cuerpo form .opcion-torta .opciones {
       display: block; }
-    .cuerpo .opcion-torta .opciones2 {
+    .cuerpo form .opcion-torta .opciones2 {
       display: inline-block; }
-  .cuerpo .envio-nov {
+  .cuerpo form .envio {
+    margin-top: 2em; }
+  .cuerpo form .envio-nov {
     margin-top: 1em;
     margin-bottom: 1em; }
-    .cuerpo .envio-nov .envio-si {
+    .cuerpo form .envio-nov .envio-si {
       display: block;
       margin-top: 2em;
       font-size: 1em; }
-  .cuerpo .botones-limp-env {
+  .cuerpo form .botones-limp-env {
     margin: 1em; }
-    .cuerpo .botones-limp-env .limpiar {
+    .cuerpo form .botones-limp-env .limpiar {
       background-color: #E79E85;
       color: #ffffff;
       padding: 0.2em;
       transition: all 1s ease; }
-      .cuerpo .botones-limp-env .limpiar:hover {
+      .cuerpo form .botones-limp-env .limpiar:hover {
         background-color: #ffffff;
         color: black; }
 
@@ -461,9 +466,9 @@ main .img-g {
 .main {
   background-color: #F2E9D0;
   color: black;
-  margin: 2em;
   border-top-left-radius: 0.8em;
-  border-top-right-radius: 0.8em; }
+  border-top-right-radius: 0.8em;
+  margin: 2em; }
   .main .titulo-quien {
     background-color: #E79E85;
     color: #ffffff;

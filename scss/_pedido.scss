@@ -31,6 +31,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 2em;
+    font-weight: bolder;
     .pedidoOnline{
         @include background($colorfooter);
         @include border();
@@ -38,46 +39,56 @@
         text-align: center;
         padding: 0.8em;
         font-size: 2em;
-    }   
-    .nombreFormu{
-        display: inline-block;
-        padding: 5px;
-        font-family:'Thasadith', sans-serif;
-        font-weight: bold;
-    }
-    .tituloFavorito{
-        margin-top: 1em;
-        text-decoration: underline;
-        font-size: 1.7em;
-    }
-    .opcion-torta{
-        margin-bottom: 3em;
-        text-align: center;
-        .opciones{
-            display: block;
+    } 
+    form{
+        .texto{
+            font-weight: bold;
         }
-        .opciones2{
-            display: inline-block;
+        .nombreFormu{
+            padding: 5px;
+            font-family:'Thasadith', sans-serif;
+            font-weight: bold;
         }
-    }
-    .envio-nov{
-        margin-top: 1em;
-        margin-bottom: 1em;
-        .envio-si{
-            display: block;
+        .tituloFavorito{
+            margin-top: 1em;
+            text-decoration: underline;
+            font-size: 1.7em;
+        }
+        .opcion-torta{
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+            text-align: center;
+            .opciones{
+                display: block;
+            }
+            .opciones2{
+                display: inline-block;
+            }
+        }
+        .envio{
             margin-top: 2em;
-            font-size: 1em;
+
         }
-    }
-    .botones-limp-env{
-        margin: 1em;
-        .limpiar{
-            @include background($colorfooter);
-            padding: 0.2em;
-            transition: all 1s ease;
-            &:hover{
-                @include background($colortitulo);
+        .envio-nov{
+            margin-top: 1em;
+            margin-bottom: 1em;
+            .envio-si{
+                display: block;
+                margin-top: 2em;
+                font-size: 1em;
+            }
+        }
+        .botones-limp-env{
+            margin: 1em;
+            .limpiar{
+                @include background($colorfooter);
+                padding: 0.2em;
+                transition: all 1s ease;
+                &:hover{
+                    @include background($colortitulo);
+                }
             }
         }
     }
-}
+}  
+    

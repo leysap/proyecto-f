@@ -24,17 +24,19 @@
     padding: $padding;
     line-height: $line;
 }
+@mixin border ($left, $right) {
+    border-top-left-radius: $left;
+    border-top-right-radius: $right; 
+}
 /*PAGINA QUIENES SOMOS*/
 .main{
     @include background($colorheader);
+    @include border(0.8em, 0.8em );
     margin: 2em;
-    border-top-left-radius: 0.8em ;
-    border-top-right-radius: 0.8em;
     .titulo-quien{
         @include background($colorfooter);
         @include font-align-size-padding-line(center,2em , 0.8em, none);
-        border-top-left-radius: 0.5em ;
-        border-top-right-radius: 0.5em;
+        @include border(0.5em, 0.5em );
     }
     .contenedor{
         margin: 0.5em;

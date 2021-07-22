@@ -39,22 +39,22 @@
     <main class="cuerpo" data-aos="zoom-out" data-aos-duration="500">
         <!--COMIENZO DEL FORMULARIO-->
         <h1 class="pedidoOnline">HACE TU PEDIDO ONLINE</h1>
-        <form >
+        <form>
             <div>
                 <label for="nombre" class="nombreFormu">Nombre</label><br>
-                <input type="text" name="nombre" id="nombre" maxlength="20" required> 
+                <input type="text" name="nombre" placeholder="Ingrese su nombre" id="nombre" class="texto" maxlength="20" required> 
             </div>
             <div>
                 <label for="apellido"  class="nombreFormu">Apellido</label><br>
-                <input type="text" name="apellido" id="apellido" maxlength="20" required>  
+                <input type="text" name="apellido" id="apellido" class="texto" maxlength="20" required>  
             </div>
             <div>
                 <label for="email"  class="nombreFormu">Email</label><br>
-                <input type="email" name="email" id="email">
+                <input type="email" class="texto" name="email" id="email">
             </div>
             <div>
                 <label for="telefono"  class="nombreFormu">Teléfono</label><br>
-                <input type="tel" name="telefono" id="telefono" required>   
+                <input type="tel" class="texto" name="telefono" id="telefono" required>   
             </div>
             <div>
                 <h2 class="tituloFavorito">Seleccione su favorito</h2>
@@ -63,38 +63,38 @@
                         <label for="tortas"  class="nombreFormu"><strong><em>TORTAS</strong></em></label><br>
                         <select name="tortas" id="">
                             <option value="">-</option>
-                            <option value="marquise">MARQUISE FRUTILLA/NUECES</option>
-                            <option value="marquise-de-chocolinas">MARQUISE CHOCOLINAS/FRUTILLA</option>
-                            <option value="marquise-de-oreo-y-bon-o-bon">MARQUISE OREO/BON O BON </option>
-                            <option value="selva-negra">SELVA NEGRA</option>
-                            <option value="letra-torta">TORTA LETRA</option>
-                            <option value="marquise-block">MARQUISE DE BLOCK</option>
-                            <option value="drip-cake">DRIP CAKE</option>
+                            <option value="marquise" class="nombreFormu">Marquise frutilla y nueces</option>
+                            <option value="marquise-de-chocolinas" class="nombreFormu">Marquise chocolinas</option>
+                            <option value="marquise-de-oreo-y-bon-o-bon" class="nombreFormu">Marquise de oreo </option>
+                            <option value="selva-negra" class="nombreFormu">Selva negra</option>
+                            <option value="letra-torta" class="nombreFormu">Torta letra</option>
+                            <option value="marquise-block" class="nombreFormu">Marquise de block</option>
+                            <option value="drip-cake" class="nombreFormu">Drip cake</option>
                         </select>
                     </div>
                     <div class="opciones2">
-                        <label for="tamano"  class="nombreFormu">TAMAÑO</label><br>
+                        <label for="tamano"  class="nombreFormu">Tamaño</label><br>
                         <select name="tamano" id="">
                             <option value="">-</option>
-                            <option value="grande">GRANDE (24cm)</option>
-                            <option value="mediano">MEDIANO (19cm)</option>
-                            <option value="chico">MINI (12x16cm)</option>
+                            <option value="grande" class="nombreFormu">Grande(24cm)</option>
+                            <option value="mediano" class="nombreFormu">Mediano(19cm)</option>
+                            <option value="chico" class="nombreFormu">Mini(12x16cm)</option>
                         </select>
                     </div>
                     <div class="opciones2">
-                        <label for="cantidad"  class="nombreFormu">CANTIDAD</label><br>
+                        <label for="cantidad"  class="nombreFormu">Cantidad</label><br>
                         <select name="cantidad" id="">
                             <option value="cantidad">-</option>
-                            <option value="cantidad">1</option>
-                            <option value="cantidad">2</option>
-                            <option value="cantidad">3</option>
-                            <option value="cantidad">4</option>
-                            <option value="cantidad">5</option>
-                            <option value="cantidad">6</option>
-                            <option value="cantidad">7</option>
-                            <option value="cantidad">8</option>
-                            <option value="cantidad">9</option>
-                            <option value="cantidad">10</option>
+                            <option value="cantidad" class="nombreFormu">1</option>
+                            <option value="cantidad" class="nombreFormu">2</option>
+                            <option value="cantidad" class="nombreFormu">3</option>
+                            <option value="cantidad" class="nombreFormu">4</option>
+                            <option value="cantidad" class="nombreFormu">5</option>
+                            <option value="cantidad" class="nombreFormu">6</option>
+                            <option value="cantidad" class="nombreFormu">7</option>
+                            <option value="cantidad" class="nombreFormu">8</option>
+                            <option value="cantidad" class="nombreFormu">9</option>
+                            <option value="cantidad" class="nombreFormu">10</option>
                         </select>
                     </div>
                 </div>
@@ -103,37 +103,37 @@
                         <label for="tartas"  class="nombreFormu"><strong><em>TARTAS</strong></em></label><br>
                         <select name="tartas" id="">
                             <option value="">-</option>
-                            <option value="cabsha">CABSHA</option>
-                            <option value="frutal">TARTA FRUTAL CON FRUTILLAS</option>
-                            <option value="coco">TARTA DE COCO</option>
-                            <option value="mango">TARTA DE MANGO</option>
-                            <option value="frutal-frutos-rojos">TARTA DE FRUTOS ROJOS</option>
-                            <option value="arandanos-y-cereza">TARTA CON ARANDANOS/CEREZAS</option>
+                            <option value="cabsha" class="nombreFormu">Cabsha</option>
+                            <option value="frutal" class="nombreFormu">Tarta frutal con frutillas</option>
+                            <option value="coco" class="nombreFormu">Tarta de coco</option>
+                            <option value="mango" class="nombreFormu">Tarta de mango</option>
+                            <option value="frutal-frutos-rojos" class="nombreFormu">Tarta de frutos rojos</option>
+                            <option value="arandanos-y-cereza" class="nombreFormu">Tarta c/arandanos/cerez.</option>
                         </select>
                     </div>
                     <div class="opciones2">
-                        <label for="tamano"  class="nombreFormu">TAMAÑO</label><br>
+                        <label for="tamano"  class="nombreFormu">Tamaño</label><br>
                         <select name="tamano" id="">
                             <option value="">-</option>
-                            <option value="grande">GRANDE (24cm)</option>
-                            <option value="mediano">MEDIANO (19cm)</option>
-                            <option value="chico">MINI (12x16cm)</option>
+                            <option value="grande" class="nombreFormu">Grande(24cm)</option>
+                            <option value="mediano" class="nombreFormu">Mediano(19cm)</option>
+                            <option value="chico" class="nombreFormu">Mini(12x16cm)</option>
                         </select>
                     </div>
                     <div class="opciones2">
-                        <label for="cantidad"  class="nombreFormu">CANTIDAD</label><br>
+                        <label for="cantidad"  class="nombreFormu">Cantidad</label><br>
                         <select name="cantidad" id="">
                             <option value="cantidad">-</option>
-                            <option value="cantidad">1</option>
-                            <option value="cantidad">2</option>
-                            <option value="cantidad">3</option>
-                            <option value="cantidad">4</option>
-                            <option value="cantidad">5</option>
-                            <option value="cantidad">6</option>
-                            <option value="cantidad">7</option>
-                            <option value="cantidad">8</option>
-                            <option value="cantidad">9</option>
-                            <option value="cantidad">10</option>
+                            <option value="cantidad" class="nombreFormu">1</option>
+                            <option value="cantidad" class="nombreFormu">2</option>
+                            <option value="cantidad" class="nombreFormu">3</option>
+                            <option value="cantidad" class="nombreFormu">4</option>
+                            <option value="cantidad" class="nombreFormu">5</option>
+                            <option value="cantidad" class="nombreFormu">6</option>
+                            <option value="cantidad" class="nombreFormu">7</option>
+                            <option value="cantidad" class="nombreFormu">8</option>
+                            <option value="cantidad" class="nombreFormu">9</option>
+                            <option value="cantidad" class="nombreFormu">10</option>
                         </select>
                     </div>
                 </div>
@@ -142,37 +142,37 @@
                         <label for="bocaditos"  class="nombreFormu"><strong><em>BOCADITOS</strong></em></label><br>
                         <select name="bocaditos" id="">
                             <option value="">-</option>
-                            <option value="conitos"  class="nombreFormu">CONITOS</option>
-                            <option value="macarons"  class="nombreFormu">MACARONS</option>
-                            <option value="mini-marquise"  class="nombreFormu">MINI MARQUISE</option>
-                            <option value="cuadraditos"  class="nombreFormu">CUADRADITOS MARQUISE</option>
-                            <option value="mini-bocaditos"  class="nombreFormu">MINI BOCADITOSS</option>
-                            <option value="mini-lemon"  class="nombreFormu">MINI LEMON PIE</option>  
+                            <option value="conitos"  class="nombreFormu">Conitos</option>
+                            <option value="macarons"  class="nombreFormu">Macarons</option>
+                            <option value="mini-marquise"  class="nombreFormu">Mini marquise</option>
+                            <option value="cuadraditos"  class="nombreFormu">Cuadraditos marquise</option>
+                            <option value="mini-bocaditos"  class="nombreFormu">Mini bocaditos</option>
+                            <option value="mini-lemon"  class="nombreFormu">Mini lemon pie</option>  
                         </select>
                     </div>
                     <div class="opciones2">
-                        <label for="tamano"  class="nombreFormu">TAMAÑO</label><br>
+                        <label for="tamano"  class="nombreFormu">Tamaño</label><br>
                         <select name="tamano" id="">
                             <option value="">-</option>
-                            <option value="grande">DOCENA</option>
-                            <option value="mediano">MEDIA DOCENA</option>
-                            <option value="chico">C/U</option>
+                            <option value="grande" class="nombreFormu">Docena</option>
+                            <option value="mediano" class="nombreFormu">Media docena</option>
+                            <option value="chico" class="nombreFormu">C/u</option>
                         </select>
                     </div>
                     <div class="opciones2">
-                        <label for="cantidad"  class="nombreFormu">CANTIDAD</label><br>
+                        <label for="cantidad"  class="nombreFormu">Cantidad</label><br>
                         <select name="cantidad" id="">
                             <option value="cantidad">-</option>
-                            <option value="cantidad">1</option>
-                            <option value="cantidad">2</option>
-                            <option value="cantidad">3</option>
-                            <option value="cantidad">4</option>
-                            <option value="cantidad">5</option>
-                            <option value="cantidad">6</option>
-                            <option value="cantidad">7</option>
-                            <option value="cantidad">8</option>
-                            <option value="cantidad">9</option>
-                            <option value="cantidad">10</option>
+                            <option value="cantidad" class="nombreFormu">1</option>
+                            <option value="cantidad" class="nombreFormu">2</option>
+                            <option value="cantidad" class="nombreFormu">3</option>
+                            <option value="cantidad" class="nombreFormu">4</option>
+                            <option value="cantidad" class="nombreFormu">5</option>
+                            <option value="cantidad" class="nombreFormu">6</option>
+                            <option value="cantidad" class="nombreFormu">7</option>
+                            <option value="cantidad" class="nombreFormu">8</option>
+                            <option value="cantidad" class="nombreFormu">9</option>
+                            <option value="cantidad" class="nombreFormu">10</option>
                         </select> 
                     </div>
                 </div>    
@@ -181,55 +181,57 @@
                         <label for="postres"  class="nombreFormu"><strong><em>POSTRES</strong></em></label><br>
                         <select name="postres" id="">
                             <option value="">-</option>
-                            <option value="lemonpie">LEMON PIE</option>
-                            <option value="cheseecake">CHESEECAKE</option>
-                            <option value="oreohelada">OREO HELADA</option>
+                            <option value="lemonpie" class="nombreFormu">Lemon pie</option>
+                            <option value="cheseecake" class="nombreFormu">Cheesecake</option>
+                            <option value="oreohelada" class="nombreFormu">Oreo helada/option>
                         </select>
                     </div>
                     <div class="opciones2">
-                        <label for="tamano"  class="nombreFormu">TAMAÑO</label><br>
+                        <label for="tamano"  class="nombreFormu">Tamaño</label><br>
                         <select name="tamano" id="">
                             <option value="">-</option>
-                            <option value="grande">GRANDE (24cm)</option>
-                            <option value="mediano">MEDIANO (19cm)</option>
-                            <option value="chico">MINI (12x16cm)</option>
+                            <option value="grande" class="nombreFormu">Grande(24cm)</option>
+                            <option value="mediano" class="nombreFormu">Mediano(19cm)</option>
+                            <option value="chico" class="nombreFormu">Mini(12x16cm)</option>
                         </select>
                     </div>
                     <div class="opciones2">
-                        <label for="cantidad"  class="nombreFormu">CANTIDAD</label><br>
+                        <label for="cantidad"  class="nombreFormu">Cantidad</label><br>
                         <select name="cantidad" id="">
-                            <option value="cantidad">-</option>
-                            <option value="cantidad">1</option>
-                            <option value="cantidad">2</option>
-                            <option value="cantidad">3</option>
-                            <option value="cantidad">4</option>
-                            <option value="cantidad">5</option>
-                            <option value="cantidad">6</option>
-                            <option value="cantidad">7</option>
-                            <option value="cantidad">8</option>
-                            <option value="cantidad">9</option>
-                            <option value="cantidad">10</option>
+                            <option value="cantidad" >-</option>
+                            <option value="cantidad" class="nombreFormu">1</option>
+                            <option value="cantidad" class="nombreFormu">2</option>
+                            <option value="cantidad" class="nombreFormu">3</option>
+                            <option value="cantidad" class="nombreFormu">4</option>
+                            <option value="cantidad" class="nombreFormu">5</option>
+                            <option value="cantidad" class="nombreFormu">6</option>
+                            <option value="cantidad" class="nombreFormu">7</option>
+                            <option value="cantidad" class="nombreFormu">8</option>
+                            <option value="cantidad" class="nombreFormu">9</option>
+                            <option value="cantidad" class="nombreFormu">10</option>
                         </select> 
                     </div>
                 </div>  
-            </div> 
-            <div class="fw-bolder">
-                <p><strong>CON ENVÍO?</strong></p>
-                <input type="radio" name="envio" required>
-                <label>SI</label>
             </div>
-            <div class="fw-bolder">
-                <input type="radio" name="envio">
-                <label>NO</label>
-            </div>     
+            <div class="envio">
+                <div class="fw-bolder">
+                    <p><strong>CON ENVÍO?</strong></p>
+                    <input type="radio" name="envio" required>
+                    <label>SI</label>
+                </div>
+                <div class="fw-bolder">
+                    <input type="radio" name="envio">
+                    <label>NO</label>
+                </div>     
+            </div> 
             <div class="envio-nov">
                 <p  class="envio-si fw-bolder">En caso de <strong>SI</strong>, responda lo siguiente:</p>
                 <label for="calle" name="calle"  class="nombreFormu">Calle</label>
-                <input type="text" name="calle" id="calle">
+                <input type="text" class="texto" name="calle" id="calle">
             </div>
             <div class="envio-nov">
                 <label for="altura" name="altura"  class="nombreFormu">Altura</label>
-                <input type="number" name="altura" id="altura">
+                <input type="number" class="texto" name="altura" id="altura">
             </div>
             <div class="envio-nov">
                 <label  class="nombreFormu">Deseo recibir novedades en mi casilla de correo</label>
