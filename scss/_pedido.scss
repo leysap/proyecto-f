@@ -4,7 +4,6 @@
     //APLICANDO CONDICIONALES//
     @if $color == $colorheader {
         color: black;
-        font-weight: bold;
     }
         @else if $color == $colorfooter{
             color: $colortitulo;
@@ -26,12 +25,10 @@
     @include background($colorheader);
     @include border();
     text-align: center;
-    font-family: 'Thasadith', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 2em;
-    font-weight: bolder;
     .pedidoOnline{
         @include background($colorfooter);
         @include border();
@@ -41,33 +38,42 @@
         font-size: 2em;
     } 
     form{
-        .texto{
-            font-weight: bold;
-        }
-        .nombreFormu{
-            padding: 5px;
-            font-family:'Thasadith', sans-serif;
-            font-weight: bold;
-        }
-        .tituloFavorito{
-            margin-top: 1em;
-            text-decoration: underline;
-            font-size: 1.7em;
-        }
-        .opcion-torta{
-            margin-top: 1.5em;
-            margin-bottom: 1.5em;
-            text-align: center;
-            .opciones{
-                display: block;
+        .div-input{
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            .nombreFormu{
+                padding: 5px;
+                font-family:'Thasadith', sans-serif;
+                font-weight: bold;
             }
-            .opciones2{
-                display: inline-block;
+        }
+        div{
+            .tituloFavorito{
+                margin-top: 1em;
+                text-decoration: underline;
+                font-size: 1.7em;
+                font-family:'Thasadith', sans-serif;
+                font-weight: bold;
+            }
+            .opcion-torta{
+                margin-top: 1.5em;
+                margin-bottom: 1.5em;
+                text-align: center;
+                .opciones{
+                    display: block;
+                    padding: 1em;
+                    .nobreFormu2{
+                        font-family: 'Caveat', cursive;
+                    }
+                }
+                .opciones2{
+                    display: inline-block;
+                  
+                }
             }
         }
         .envio{
             margin-top: 2em;
-
         }
         .envio-nov{
             margin-top: 1em;
@@ -90,5 +96,4 @@
             }
         }
     }
-}  
-    
+}     

@@ -455,6 +455,14 @@ footer{
     //HACE TU PEDIDO// 
     .cuerpo{
         padding: 1em;
+        form{
+            .div-input{
+                display: block;
+                .nombreFormu{
+                    display: block;
+                }
+            }
+        }
     }
     //INFORMACION// 
     .conoce2{
@@ -526,6 +534,14 @@ footer{
         div{
             padding: 1em;  
         }  
+    }
+    //HACE TU PEDIDO//
+    .cuerpo{
+        form{
+            .div-input{
+                display: block;
+            }
+        }
     }
     //QUIENES SOMOS//
     .textoLargo{

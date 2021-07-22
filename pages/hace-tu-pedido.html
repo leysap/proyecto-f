@@ -40,67 +40,67 @@
         <!--COMIENZO DEL FORMULARIO-->
         <h1 class="pedidoOnline">HACE TU PEDIDO ONLINE</h1>
         <form>
-            <div>
-                <label for="nombre" class="nombreFormu">Nombre</label><br>
-                <input type="text" name="nombre" placeholder="Ingrese su nombre" id="nombre" class="texto" maxlength="20" required> 
+            <div class="div-input">
+                <label for="nombre" class="nombreFormu">Nombre</label>
+                <input type="text" size="21" name="nombre" id="nombre" maxlength="20" required> 
             </div>
-            <div>
-                <label for="apellido"  class="nombreFormu">Apellido</label><br>
-                <input type="text" name="apellido" id="apellido" class="texto" maxlength="20" required>  
+            <div class="div-input">
+                <label for="apellido"  class="nombreFormu">Apellido</label>
+                <input type="text" size="21" name="apellido" id="apellido" maxlength="20" required>  
             </div>
-            <div>
-                <label for="email"  class="nombreFormu">Email</label><br>
-                <input type="email" class="texto" name="email" id="email">
+            <div class="div-input">
+                <label for="email"  class="nombreFormu">Email</label>
+                <input type="email" size="23" name="email" id="email">
             </div>
-            <div>
-                <label for="telefono"  class="nombreFormu">Teléfono</label><br>
-                <input type="tel" class="texto" name="telefono" id="telefono" required>   
+            <div class="div-input">
+                <label for="telefono"  class="nombreFormu">Teléfono</label>
+                <input type="tel" size="20" name="telefono" id="telefono" required>   
             </div>
             <div>
                 <h2 class="tituloFavorito">Seleccione su favorito</h2>
                 <div class="opcion-torta">
                     <div class="opciones">
-                        <label for="tortas"  class="nombreFormu"><strong><em>TORTAS</strong></em></label><br>
+                        <label for="tortas"  class="nombreFormu2"><em><strong>TORTAS</em></strong> </label><br>
                         <select name="tortas" id="">
                             <option value="">-</option>
-                            <option value="marquise" class="nombreFormu">Marquise frutilla y nueces</option>
-                            <option value="marquise-de-chocolinas" class="nombreFormu">Marquise chocolinas</option>
-                            <option value="marquise-de-oreo-y-bon-o-bon" class="nombreFormu">Marquise de oreo </option>
-                            <option value="selva-negra" class="nombreFormu">Selva negra</option>
-                            <option value="letra-torta" class="nombreFormu">Torta letra</option>
-                            <option value="marquise-block" class="nombreFormu">Marquise de block</option>
-                            <option value="drip-cake" class="nombreFormu">Drip cake</option>
+                            <option value="marquise">Marquise frutilla y nueces</option>
+                            <option value="marquise-de-chocolinas" >Marquise chocolinas</option>
+                            <option value="marquise-de-oreo-y-bon-o-bon" >Marquise de oreo </option>
+                            <option value="selva-negra" >Selva negra</option>
+                            <option value="letra-torta">Torta letra</option>
+                            <option value="marquise-block" >Marquise de block</option>
+                            <option value="drip-cake">Drip cake</option>
                         </select>
                     </div>
                     <div class="opciones2">
-                        <label for="tamano"  class="nombreFormu">Tamaño</label><br>
+                        <label for="tamano">Tamaño</label><br>
                         <select name="tamano" id="">
                             <option value="">-</option>
-                            <option value="grande" class="nombreFormu">Grande(24cm)</option>
-                            <option value="mediano" class="nombreFormu">Mediano(19cm)</option>
-                            <option value="chico" class="nombreFormu">Mini(12x16cm)</option>
+                            <option value="grande">Grande(24cm)</option>
+                            <option value="mediano">Mediano(19cm)</option>
+                            <option value="chico">Mini(12x16cm)</option>
                         </select>
                     </div>
                     <div class="opciones2">
                         <label for="cantidad"  class="nombreFormu">Cantidad</label><br>
                         <select name="cantidad" id="">
                             <option value="cantidad">-</option>
-                            <option value="cantidad" class="nombreFormu">1</option>
-                            <option value="cantidad" class="nombreFormu">2</option>
-                            <option value="cantidad" class="nombreFormu">3</option>
-                            <option value="cantidad" class="nombreFormu">4</option>
-                            <option value="cantidad" class="nombreFormu">5</option>
-                            <option value="cantidad" class="nombreFormu">6</option>
-                            <option value="cantidad" class="nombreFormu">7</option>
-                            <option value="cantidad" class="nombreFormu">8</option>
-                            <option value="cantidad" class="nombreFormu">9</option>
-                            <option value="cantidad" class="nombreFormu">10</option>
+                            <option value="cantidad">1</option>
+                            <option value="cantidad">2</option>
+                            <option value="cantidad">3</option>
+                            <option value="cantidad">4</option>
+                            <option value="cantidad">5</option>
+                            <option value="cantidad">6</option>
+                            <option value="cantidad">7</option>
+                            <option value="cantidad">8</option>
+                            <option value="cantidad">9</option>
+                            <option value="cantidad">10</option>
                         </select>
                     </div>
                 </div>
                 <div class="opcion-torta">
                     <div class="opciones">
-                        <label for="tartas"  class="nombreFormu"><strong><em>TARTAS</strong></em></label><br>
+                        <label for="tartas"  class="nombreFormu2"><em><strong>TARTAS</em></strong></label><br>
                         <select name="tartas" id="">
                             <option value="">-</option>
                             <option value="cabsha" class="nombreFormu">Cabsha</option>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="opcion-torta">
                     <div class="opciones">
-                        <label for="bocaditos"  class="nombreFormu"><strong><em>BOCADITOS</strong></em></label><br>
+                        <label for="bocaditos"  class="nombreFormu2"><strong><em>BOCADITOS</strong></em></label><br>
                         <select name="bocaditos" id="">
                             <option value="">-</option>
                             <option value="conitos"  class="nombreFormu">Conitos</option>
@@ -214,18 +214,18 @@
                 </div>  
             </div>
             <div class="envio">
-                <div class="fw-bolder">
+                <div>
                     <p><strong>CON ENVÍO?</strong></p>
                     <input type="radio" name="envio" required>
                     <label>SI</label>
                 </div>
-                <div class="fw-bolder">
+                <div>
                     <input type="radio" name="envio">
                     <label>NO</label>
                 </div>     
             </div> 
             <div class="envio-nov">
-                <p  class="envio-si fw-bolder">En caso de <strong>SI</strong>, responda lo siguiente:</p>
+                <p  class="envio-si">En caso de <strong>SI</strong>, responda lo siguiente:</p>
                 <label for="calle" name="calle"  class="nombreFormu">Calle</label>
                 <input type="text" class="texto" name="calle" id="calle">
             </div>
@@ -238,8 +238,8 @@
                 <input type="checkbox" name="notificaciones">
             </div> 
             <div class="botones-limp-env">
-                <input class="limpiar fw-bolder" type="reset" value="Limpiar formulario">
-                <input class="limpiar fw-bolder" type="submit" value="Enviar">
+                <input class="limpiar" type="reset" value="Limpiar formulario">
+                <input class="limpiar" type="submit" value="Enviar">
             </div>
         </form>
         <!--FIN DEL FORMULARIO-->

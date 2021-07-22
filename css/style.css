@@ -174,16 +174,13 @@
 .cuerpo {
   background-color: #F2E9D0;
   color: black;
-  font-weight: bold;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
   text-align: center;
-  font-family: 'Thasadith', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2em;
-  font-weight: bolder; }
+  margin: 2em; }
   .cuerpo .pedidoOnline {
     background-color: #E79E85;
     color: #ffffff;
@@ -193,23 +190,29 @@
     text-align: center;
     padding: 0.8em;
     font-size: 2em; }
-  .cuerpo form .texto {
-    font-weight: bold; }
-  .cuerpo form .nombreFormu {
-    padding: 5px;
-    font-family: 'Thasadith', sans-serif;
-    font-weight: bold; }
-  .cuerpo form .tituloFavorito {
+  .cuerpo form .div-input {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }
+    .cuerpo form .div-input .nombreFormu {
+      padding: 5px;
+      font-family: 'Thasadith', sans-serif;
+      font-weight: bold; }
+  .cuerpo form div .tituloFavorito {
     margin-top: 1em;
     text-decoration: underline;
-    font-size: 1.7em; }
-  .cuerpo form .opcion-torta {
+    font-size: 1.7em;
+    font-family: 'Thasadith', sans-serif;
+    font-weight: bold; }
+  .cuerpo form div .opcion-torta {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     text-align: center; }
-    .cuerpo form .opcion-torta .opciones {
-      display: block; }
-    .cuerpo form .opcion-torta .opciones2 {
+    .cuerpo form div .opcion-torta .opciones {
+      display: block;
+      padding: 1em; }
+      .cuerpo form div .opcion-torta .opciones .nobreFormu2 {
+        font-family: 'Caveat', cursive; }
+    .cuerpo form div .opcion-torta .opciones2 {
       display: inline-block; }
   .cuerpo form .envio {
     margin-top: 2em; }
@@ -911,6 +914,10 @@ footer {
     height: 100px; }
   .cuerpo {
     padding: 1em; }
+    .cuerpo form .div-input {
+      display: block; }
+      .cuerpo form .div-input .nombreFormu {
+        display: block; }
   .conoce2 {
     text-align: center; } }
 
@@ -959,6 +966,8 @@ footer {
     flex-wrap: wrap; }
     .galeria-imagenes div {
       padding: 1em; }
+  .cuerpo form .div-input {
+    display: block; }
   .textoLargo {
     flex-wrap: wrap; }
     .textoLargo .alexiaImg img {
