@@ -846,7 +846,7 @@ footer {
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem; }
         header .header-nav div .menuPrincipal li a {
-          font-size: 1.9em; }
+          font-size: 1.7em; }
   .section1 {
     margin-right: 1em;
     margin-left: 1em;
@@ -885,6 +885,11 @@ footer {
       text-align: center;
       margin-right: 2em;
       font-size: 1.5em; }
+    footer div a .logoFinal {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em; }
+    footer div a .tamaño {
+      margin-top: 1em; }
   .galeria-imagenes {
     display: flex;
     flex-direction: column;
@@ -938,7 +943,7 @@ footer {
     margin-top: 6em;
     margin-bottom: 6em; }
     .section1 .aliveri {
-      font-size: 3rem; }
+      font-size: 3em; }
     .section1 .presentacion {
       text-align: center;
       font-size: 0.9em;
@@ -955,15 +960,26 @@ footer {
   .seccion-contenido {
     margin-bottom: 6em;
     text-align: center; }
+    .seccion-contenido .conoce-delicias h5 {
+      margin-bottom: 1em;
+      margin-top: 1em; }
   .section3 {
     margin-top: 6em;
     margin-bottom: 6em; }
+    .section3 .clientes-divs .card-cliente {
+      width: 250px; }
   footer {
     display: block;
     text-align: center; }
     footer .menuFinal nav ul li a {
       text-align: center;
-      margin-right: 2em; }
+      margin-right: 2em;
+      font-size: 1.5em; }
+    footer div a .logoFinal {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em; }
+    footer div a .tamaño {
+      margin-top: 1em; }
   .galeria-imagenes {
     display: flex;
     flex-wrap: wrap; }
@@ -989,31 +1005,48 @@ footer {
   .conoce2 {
     text-align: center; } }
 
-@media (min-width: 800px) and (max-width: 1200px) {
+@media (min-width: 801px) and (max-width: 991px) {
   header {
+    text-align: center;
+    background-color: #ffffff; }
+    header .header-nav {
+      padding-right: 0.75rem; }
+      header .header-nav div .menuPrincipal {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem; }
+        header .header-nav div .menuPrincipal li a {
+          font-size: 1.9em; }
+  .section1 {
+    margin-top: 6em;
+    margin-bottom: 6em;
+    margin-right: 1em;
+    margin-left: 1em; }
+    .section1 .aliveri {
+      font-size: 3em; }
+    .section1 .presentacion {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 0;
+      display: block; }
+  .section2 {
+    margin-top: 6em;
+    margin-bottom: 6em; }
+  .flex-padre {
+    margin-top: 6em;
+    margin-bottom: 6em;
+    font-size: 0.8em;
+    padding: 1em; }
+  .seccion-contenido {
+    margin-bottom: 6em;
     text-align: center; }
-    header .header-nav div .menuPrincipal li a {
-      font-size: 1.9em; }
-  .galeria .galeria-imagenes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 1em; }
-    .galeria .galeria-imagenes div {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around; }
-      .galeria .galeria-imagenes div .imagen-g {
-        border-radius: 0.2em; }
-        .galeria .galeria-imagenes div .imagen-g:hover {
-          opacity: 0.9; }
-  .principal div img {
-    max-width: 100%;
-    display: block;
-    height: auto; }
-  .imagenes-cont div img {
-    height: 400px;
-    width: 466px; }
+    .seccion-contenido .conoce-delicias h5 {
+      margin-top: 1em;
+      margin-bottom: 1em; }
+  .section3 {
+    margin-top: 6em;
+    margin-bottom: 6em; }
+    .section3 .clientes-divs .card-cliente {
+      width: 300px; }
   .textoLargo {
     flex-wrap: wrap; }
     .textoLargo .alexiaImg img {
@@ -1023,9 +1056,49 @@ footer {
       margin-left: 0.5em; }
       .textoLargo .historia1 p {
         font-size: 1em;
-        line-height: 1em; }
-  .historia2 {
+        line-height: 1em; } }
+
+@media (min-width: 991px) and (max-width: 1200px) {
+  header {
+    text-align: center; }
+    header .header-nav div .menuPrincipal li a {
+      font-size: 1.9em; }
+  .section1 {
+    margin-top: 6em;
+    margin-bottom: 6em;
+    margin-right: 1em;
+    margin-left: 1em; }
+    .section1 .aliveri {
+      font-size: 3em; }
+    .section1 .presentacion {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 0;
+      display: block; }
+  .section2 {
+    margin-top: 6em;
+    margin-bottom: 6em; }
+  .flex-padre {
+    margin-top: 6em;
+    margin-bottom: 6em;
+    font-size: 0.8em;
+    padding: 1em; }
+  .seccion-contenido {
+    margin-bottom: 6em;
+    text-align: center; }
+    .seccion-contenido .conoce-delicias h5 {
+      margin-top: 1em;
+      margin-bottom: 1em; }
+  .section3 {
+    margin-top: 6em;
+    margin-bottom: 6em; }
+  .textoLargo {
     flex-wrap: wrap; }
-    .historia2 div p {
-      font-size: 1em;
-      line-height: 1em; } }
+    .textoLargo .alexiaImg img {
+      max-width: 100%; }
+    .textoLargo .historia1 {
+      margin-right: 0.5em;
+      margin-left: 0.5em; }
+      .textoLargo .historia1 p {
+        font-size: 1em;
+        line-height: 1em; } }
