@@ -1,1 +1,1 @@
-Hola! Mi nombre es Leysa Pozo. Esta es la página oficial de Aliveri Pastelería, para todos aquellos amantes de lo dulce. Conocerás en detalle a cada una de nuestras delicias, sus precios, sus tamaños y mucho más!
+Hola! Mi nombre es Leysa Pozo. Esta es la página oficial de Aliveri Pastelería, creada para mi mejor amiga repostera Alexia S. Dentro de la página web conocerás en detalle a cada una de nuestras delicias, sus precios, sus tamaños y mucho más!
