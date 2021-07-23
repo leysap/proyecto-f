@@ -19,6 +19,10 @@
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
 }
+@mixin margin($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
 /*PAGINA HACE TU PEDIDO*/
 /*MAIN*/
 .cuerpo{
@@ -39,8 +43,7 @@
     } 
     form{
         .div-input{
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
+            @include margin(0.5em,0.5em );
             .nombreFormu{
                 padding: 5px;
                 font-family:'Thasadith', sans-serif;
@@ -56,8 +59,7 @@
                 font-weight: bold;
             }
             .opcion-torta{
-                margin-top: 1.5em;
-                margin-bottom: 1.5em;
+                @include margin(1.5em, 1.5em );
                 text-align: center;
                 .opciones{
                     display: block;
@@ -68,7 +70,6 @@
                 }
                 .opciones2{
                     display: inline-block;
-                  
                 }
             }
         }
@@ -76,8 +77,7 @@
             margin-top: 2em;
         }
         .envio-nov{
-            margin-top: 1em;
-            margin-bottom: 1em;
+            @include margin(1em,1em );
             .envio-si{
                 display: block;
                 margin-top: 2em;
