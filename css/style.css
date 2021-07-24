@@ -201,8 +201,7 @@
     margin-top: 1em;
     text-decoration: underline;
     font-size: 1.7em;
-    font-family: 'Thasadith', sans-serif;
-    font-weight: bold; }
+    font-family: 'Thasadith', sans-serif; }
   .cuerpo form div .opcion-torta {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -564,10 +563,35 @@ header .header-nav {
         header .header-nav div .menuPrincipal li a:active {
           color: #0e0b0e; }
 
-/* IMAGENES PRINCIPALES */
-.principal .imagenesPrincipales {
-  width: 100%;
-  height: auto; }
+.contenedor-principal div h3 {
+  font-family: 'Thasadith', sans-serif;
+  color: #ffffff;
+  background-color: #e08465;
+  font-size: 2em;
+  padding: 0.1em;
+  border-radius: 0.2em;
+  margin-left: 9em;
+  margin-right: 9em;
+  text-align: center; }
+
+.contenedor-principal div .titulo-cheese {
+  margin-left: 5.5em;
+  margin-right: 5.5em; }
+
+.contenedor-principal div p {
+  font-size: 1.3em; }
+
+.contenedor-principal div .boton2 {
+  background-color: #ffffff;
+  border: 1px solid #e08465; }
+  .contenedor-principal div .boton2:hover {
+    background-color: #e08465; }
+  .contenedor-principal div .boton2 a {
+    text-decoration: none;
+    color: #e08465;
+    font-weight: 500; }
+    .contenedor-principal div .boton2 a:hover {
+      color: #ffffff; }
 
 .botonesPrincipales {
   position: fixed;
@@ -884,7 +908,7 @@ footer {
     footer .menuFinal nav ul li a {
       text-align: center;
       margin-right: 2em;
-      font-size: 1.5em; }
+      font-size: 1.2em; }
     footer div a .logoFinal {
       margin-top: 1.5em;
       margin-bottom: 1.5em; }

@@ -95,10 +95,43 @@ header{
         }           
     }            
 }
-/* IMAGENES PRINCIPALES */
-.principal{
-    .imagenesPrincipales{
-        @include sizes(100%, auto);
+//CARROUSEL//
+.contenedor-principal{
+    div{
+        h3{
+            font-family:  'Thasadith', sans-serif;
+            color: $colortitulo;
+            background-color: $coloraliveri;
+
+            font-size: 2em;
+            padding: 0.1em;
+            border-radius: 0.2em;
+            margin-left: 9em;
+            margin-right: 9em;
+            text-align: center;
+        }
+        .titulo-cheese{
+            margin-left: 5.5em;
+            margin-right: 5.5em;
+        }
+        p{
+            font-size: 1.3em;
+        }
+        .boton2{
+            background-color: $colortitulo;
+            border: 1px solid $coloraliveri;
+            &:hover{
+                background-color: $coloraliveri;
+            }
+            a{
+                text-decoration: none;
+                color: $coloraliveri;
+                font-weight: 500;
+                &:hover{
+                    color: $colortitulo;
+                }
+            }
+        }
     }
 }
 .botonesPrincipales{
@@ -403,7 +436,7 @@ footer{
                         a{
                             text-align: center;
                             margin-right: $size/2;
-                            font-size: 1.5em;
+                            font-size: 1.2em;
                         }
                     }
                 }
