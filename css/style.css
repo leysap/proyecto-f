@@ -564,19 +564,23 @@ header .header-nav {
           color: #0e0b0e; }
 
 .contenedor-principal div h3 {
-  font-family: 'Thasadith', sans-serif;
-  color: #ffffff;
-  background-color: #e08465;
+  margin-right: 9em;
+  margin-left: 9em;
+  text-align: center;
   font-size: 2em;
   padding: 0.1em;
-  border-radius: 0.2em;
-  margin-left: 9em;
-  margin-right: 9em;
-  text-align: center; }
+  font-family: 'Thasadith', sans-serif;
+  color: #ffffff;
+  background-color: rgba(224, 133, 103, 0.596);
+  border-radius: 0.2em; }
 
 .contenedor-principal div .titulo-cheese {
-  margin-left: 5.5em;
-  margin-right: 5.5em; }
+  margin-right: 5.5em;
+  margin-left: 5.5em; }
+
+.contenedor-principal div .titulo-choco {
+  margin-right: 4.5em;
+  margin-left: 4.5em; }
 
 .contenedor-principal div p {
   font-size: 1.3em; }

@@ -99,20 +99,18 @@ header{
 .contenedor-principal{
     div{
         h3{
+            @include mrightleft(9em,9em );
+            @include text-size-padding(center,2em ,0.1em );
             font-family:  'Thasadith', sans-serif;
             color: $colortitulo;
-            background-color: $coloraliveri;
-
-            font-size: 2em;
-            padding: 0.1em;
+            background-color: hsla(15, 66%, 64%, 0.596);
             border-radius: 0.2em;
-            margin-left: 9em;
-            margin-right: 9em;
-            text-align: center;
         }
         .titulo-cheese{
-            margin-left: 5.5em;
-            margin-right: 5.5em;
+            @include mrightleft(5.5em, 5.5em );
+        }
+        .titulo-choco{
+            @include mrightleft(4.5em,4.5em );
         }
         p{
             font-size: 1.3em;
