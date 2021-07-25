@@ -27,6 +27,10 @@ $size: 4em;
     font-size: $fsize;
     padding: $padding;
 }
+@mixin bordertop {
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
 @mixin background($color) {
     background-color: $color;
     //APLICANDO CONDICIONALES//
@@ -82,8 +86,8 @@ header{
                             background-color: $colortitulo;
                             font-weight: bold;
                             color: $colorfooter;
-                            border-radius: 5px;
-                            padding: 0.5rem;
+                            border-radius: 0.313em;
+                            padding: 0.5em;
                         }
                         &:active{
                             color: rgb(14, 11, 14);
@@ -116,7 +120,7 @@ header{
         }
         .boton2{
             background-color: $colortitulo;
-            border: 1px solid $coloraliveri;
+            border: 0.063em solid $coloraliveri;
             &:hover{
                 background-color: $coloraliveri;
             }
@@ -225,11 +229,10 @@ header{
                 @include margin(0.5em, 0.5em);
                 font-family: 'Thasadith', sans-serif; 
                 color: $coloraliveri;
-                border: 1px solid $colorfooter;
+                border: 0.063em solid $colorfooter;
                 font-weight: bolder;
                 &:hover{
-                    background-color: $colorfooter;
-                    color: $colortitulo;
+                    @include background($colorfooter);
                 }         
             }                                    
         }
@@ -378,8 +381,7 @@ footer{
             padding-right: 0.75em;
             div{
                 .menuPrincipal{
-                    border-top-right-radius: 1em;
-                    border-bottom-right-radius: 1em;
+                    @include bordertop();
                     li{
                         a{
                             font-size: 1.5em;
@@ -520,8 +522,7 @@ footer{
             padding-right: 0.75rem;
             div{
                 .menuPrincipal{
-                    border-top-right-radius: 1rem;
-                    border-bottom-right-radius: 1rem;
+                    @include bordertop();
                     li{
                         a{
                             font-size: 1.9em;
@@ -666,8 +667,7 @@ footer{
             padding-right: 0.75em;
             div{
                 .menuPrincipal{
-                    border-top-right-radius: 1em;
-                    border-bottom-right-radius: 1em;
+                    @include bordertop();
                     li{
                         a{
                             font-size: 1.9em;
@@ -716,7 +716,6 @@ footer{
                 }                                                  
             }
         }
-
     }
     .flex-padre{
         @include margin(6em, 6em);
@@ -757,7 +756,6 @@ footer{
         }
     }
 }
-
 @media (min-width:992px) and (max-width:1200px){
     header{
         text-align: center;
