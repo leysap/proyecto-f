@@ -62,8 +62,8 @@ main{
             div{
                 .pedidos-titulo{
                     @include pb(0.5em, 0.1em);            
-                    border-top: 1px solid black;
-                    border-bottom: 1px solid black;
+                    border-top: 0.063em solid black;
+                    border-bottom: 0.063emsolid black;
                     color: $coloraliveri;
                     text-align: center;
                     font-size: 1.4em;
@@ -160,8 +160,8 @@ main{
                 }
                 .tort2{
                     @include pb(0.4em,0.7em );
-                    width: 200.5px;
-                    height: 200.5px;
+                    width: 12.531em;
+                    height: 12.531em;
                     &:hover{
                         opacity: 0.9;
                     }
@@ -182,7 +182,7 @@ main{
             @include flex();
             div{
                 @include pb(2em,1em );
-                width: 300px;
+                width: 18.75em;
                 margin:1.2em;
                 background-color: $colorheader;
                 border: 3px solid $coloraliveri;
@@ -225,8 +225,8 @@ main{
         .img-info{
             @include flex();
             .img-img{
-                width: 300px;
-                height: 300px;
+                width: 18.75em;
+                height: 18.75em;
                 border-radius: 1em;
                 margin: 0.5em;
                 opacity: 0.8;

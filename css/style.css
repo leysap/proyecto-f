@@ -195,7 +195,7 @@
     margin-top: 0.5em;
     margin-bottom: 0.5em; }
     .cuerpo form .div-input .nombreFormu {
-      padding: 5px;
+      padding: 0.313em;
       font-family: 'Thasadith', sans-serif;
       font-weight: bold; }
   .cuerpo form div .tituloFavorito {
@@ -275,8 +275,8 @@ main .seccion-info {
     main .seccion-info .pedidos div .pedidos-titulo {
       padding: 0.5em;
       border-radius: 0.1em;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
+      border-top: 0.063em solid black;
+      border-bottom: 0.063emsolid black;
       color: #e08465;
       text-align: center;
       font-size: 1.4em; }
@@ -374,8 +374,8 @@ main .seccion-contenido {
   main .seccion-contenido .imagenes-delicias .div-img-delicias .tort2 {
     padding: 0.4em;
     border-radius: 0.7em;
-    width: 200.5px;
-    height: 200.5px; }
+    width: 12.531em;
+    height: 12.531em; }
     main .seccion-contenido .imagenes-delicias .div-img-delicias .tort2:hover {
       opacity: 0.9; }
 
@@ -404,7 +404,7 @@ main .menu {
     main .menu .flex-container div {
       padding: 2em;
       border-radius: 1em;
-      width: 300px;
+      width: 18.75em;
       margin: 1.2em;
       background-color: #F2E9D0;
       border: 3px solid #e08465; }
@@ -455,8 +455,8 @@ main .img-g {
     flex-wrap: wrap;
     justify-content: space-around; }
     main .img-g .img-info .img-img {
-      width: 300px;
-      height: 300px;
+      width: 18.75em;
+      height: 18.75em;
       border-radius: 1em;
       margin: 0.5em;
       opacity: 0.8;
@@ -955,7 +955,7 @@ footer {
       display: block; }
       .cuerpo form .div-input .nombreFormu {
         display: block; }
-  .conoce2 {
+  main .seccion-contenido .conoce2 {
     text-align: center; } }
 
 @media (min-width: 480px) and (max-width: 800px) {
@@ -1053,7 +1053,7 @@ footer {
       font-size: 1.3em;
       line-height: 1.8em;
       padding: 1em; }
-  .conoce2 {
+  main .seccion-contenido .conoce2 {
     text-align: center; } }
 
 @media (min-width: 801px) and (max-width: 992px) {

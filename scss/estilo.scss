@@ -515,8 +515,12 @@ footer{
         }
     }
     //INFORMACION// 
-    .conoce2{
-        text-align: center;
+    main{
+        .seccion-contenido{
+            .conoce2{
+                text-align: center;
+            }
+        }
     }
 }
 @media (min-width:480px) and (max-width:800px){
@@ -669,8 +673,12 @@ footer{
         }
     }
     //INFORMACION// 
-    .conoce2{
-    text-align: center;
+    main{
+        .seccion-contenido{
+            .conoce2{
+                text-align: center;
+            }
+        }
     }
 }
 @media (min-width:801px) and (max-width:992px){
@@ -781,7 +789,6 @@ footer{
             }
         }
     }
-   
 }
 @media (min-width:992px) and (max-width:1200px){
     header{
