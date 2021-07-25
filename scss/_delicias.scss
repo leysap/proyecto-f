@@ -30,6 +30,15 @@
     padding: $paddings;
     border-radius: $radius;
 }
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin fonts($family, $size, $align) {
+    font-family: $family;
+    font-size: $size;
+    text-align: $align;
+}
 /*PAGINA DOS: DELICIAS*/
 .seccion-delicias{
     font-family:'Thasadith', sans-serif;
@@ -66,9 +75,7 @@
             .delicias{
                 @include background($colorfooter);
                 @include pad-br(0.5em,0.2em );
-                text-align: center;
-                font-family: 'Caveat', cursive;
-                font-size: 2em;
+                @include fonts('Caveat' cursive,2em ,center );
             }
             .contenedor-menu{
                 @include flex(center);
@@ -82,11 +89,9 @@
                 li{
                     padding: 0.2em;
                     a{
+                        @include fonts('Thasadith' sans-serif,1.7em ,center );
                         padding: 0.2em;
-                        text-align: center;
                         color: rgb(65, 56, 65);
-                        font-family: 'Thasadith', sans-serif;
-                        font-size: 1.7em;
                         text-decoration: none;
                         font-weight:500;
                         &:hover{
@@ -108,26 +113,23 @@
                 .titulo-producto{
                     @include background($colorfooter);
                     @include pad-br(0.5em, 0.2em );
-                    text-align:center;
+                    @include fonts(none,2.5em ,center );
                     font-family: 'Caveat', cursive;
-                    font-size: 2.5em;
                 }
             }
             .productos-contenedor{
                 @include flex(space-around);
                 flex-wrap: wrap;
                 .card-div{
+                    @include sizes(18.75em, auto );
                     text-align: center;
                     background-color: $colorheader;
                     margin: 1em;
-                    width: 300px;          
-                    height: auto;
                     border: 2px solid $colorfooter;
                     img{
+                        @include sizes(18.188em, 18.188em );
                         padding: 0.2em;
                         margin-top: 0.2em;
-                        width: 291px;
-                        height: 291px;
                         transition: 2s all ease;
                         &:hover{
                             transform: scale(1.1,1.1);
@@ -140,6 +142,7 @@
                         font-size: 2em;
                         padding: 0.2em;
                     }
+                   
                     ul{
                         text-align: center;
                         background-color: $colortitulo;
@@ -167,7 +170,7 @@
 }                          
                 /*Boton arriba*/
 .boton-arriba{
-    @include margin(none,none ,30px ,30px );
+    @include margin(none,1.8em ,1.8em,none );
     position: fixed;
     bottom:0;
     right: 0;
@@ -181,8 +184,7 @@
             transition: all 1s ease;
         }
         .img-flecha{
-            width: 20px;
-            height: 20px;
+            @include sizes(1.563em,1.563em );
         }
     }
 }               

@@ -464,8 +464,10 @@ footer{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        div{
-            padding: 1em;     
+        div{ 
+            img{
+                @include sizes(19em,19em );
+            }    
         }  
     } 
     //QUIENES SOMOS//
@@ -614,11 +616,15 @@ footer{
             }
         }  
     }
+    //seccion delicias//
     .galeria-imagenes{
         display: flex;
         flex-wrap: wrap;
         div{
-            padding: 1em;  
+            padding: 1em; 
+            img{
+                @include sizes(26em,26em );
+            }     
         }  
     }
     //HACE TU PEDIDO//
