@@ -534,7 +534,7 @@ main .img-g {
 header .header-nav {
   padding-right: 0; }
   header .header-nav a .logo {
-    width: 150px;
+    width: 7.5em;
     height: auto; }
   header .header-nav div .menuPrincipal {
     background-color: #E79E85;
@@ -600,12 +600,12 @@ header .header-nav {
   position: fixed;
   bottom: 0;
   right: 0;
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin-right: 1.8em;
+  margin-bottom: 1.8em;
   z-index: 100; }
   .botonesPrincipales .foto-whatsapp {
-    width: 50px;
-    height: 50px; }
+    width: 3em;
+    height: 3em; }
     .botonesPrincipales .foto-whatsapp:hover {
       opacity: 0.8; }
 
@@ -620,8 +620,8 @@ header .header-nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  border-top: 2px solid #e08465;
-  border-bottom: 2px solid #e08465;
+  border-top: 0.125em solid #e08465;
+  border-bottom: 0.125em solid #e08465;
   padding: 3em;
   align-items: center; }
   .section1 .aliveri {
@@ -680,14 +680,14 @@ header .header-nav {
       background-color: #FFE8CF;
       font-family: 'Thasadith', sans-serif;
       color: black;
-      width: 288px;
-      height: 385px;
+      width: 18em;
+      height: 24.063em;
       border: 1px #E79E85 solid;
       margin: 0.2em;
       text-align: center; }
       .section2 .divs-destacados .imagen-destacada1 img {
-        width: 286px;
-        height: 270px;
+        width: 17.875em;
+        height: 16.875em;
         padding: 0.3em;
         transition: all 1s ease; }
         .section2 .divs-destacados .imagen-destacada1 img:hover {
@@ -727,12 +727,12 @@ header .header-nav {
   padding: 2em;
   text-align: center; }
   .flex-padre div {
-    padding: 1rem; }
+    padding: 1em; }
     .flex-padre div .flex-image {
-      width: 60px;
-      height: 60px; }
+      width: 3.75em;
+      height: 3.75em; }
     .flex-padre div h4 {
-      margin-top: 10px;
+      margin-top: 0.625em;
       font-family: 'Thasadith', sans-serif;
       font-size: 1.4em; }
 
@@ -753,7 +753,7 @@ header .header-nav {
     .seccion-contenido .conoce-delicias h5 {
       color: #ffffff; }
     .seccion-contenido .conoce-delicias p {
-      font-size: 1rem;
+      font-size: 1em;
       color: black; }
   .seccion-contenido .imagenes-delicias {
     display: flex;
@@ -763,15 +763,15 @@ header .header-nav {
     align-items: center;
     text-align: center; }
     .seccion-contenido .imagenes-delicias .div-img-delicias {
-      width: 200.5px;
+      width: 12.531em;
       height: auto;
       margin-right: 0.5em;
       margin-left: 0.5em; }
       .seccion-contenido .imagenes-delicias .div-img-delicias .tort {
-        width: 210.5px;
-        height: 210.5px;
-        padding: 0.4rem;
-        border-radius: 0.7rem;
+        width: 13.156em;
+        height: 13.156em;
+        padding: 0.4em;
+        border-radius: 0.7em;
         opacity: 1; }
         .seccion-contenido .imagenes-delicias .div-img-delicias .tort:hover {
           opacity: 0.8; }
@@ -808,7 +808,7 @@ header .header-nav {
       .section3 .clientes-divs .card-cliente .cliente {
         width: 12em;
         height: auto;
-        padding: 0.8rem; }
+        padding: 0.8em; }
       .section3 .clientes-divs .card-cliente h5 {
         background-color: #E79E85;
         font-family: 'Thasadith', sans-serif;
@@ -816,8 +816,8 @@ header .header-nav {
         text-align: none;
         font-size: 1.4em;
         padding: 0.5em;
-        margin: 0.5rem;
-        border-radius: 0.2rem; }
+        margin: 0.5em;
+        border-radius: 0.2em; }
       .section3 .clientes-divs .card-cliente p {
         text-align: center;
         padding: 0.5em; }
@@ -835,7 +835,7 @@ footer {
   align-items: center;
   padding-top: 2.5em;
   padding-bottom: 2.5em;
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 400; }
   footer .menuFinal ul {
     list-style: none; }
@@ -868,10 +868,10 @@ footer {
   header {
     text-align: center; }
     header .header-nav {
-      padding-right: 0.75rem; }
+      padding-right: 0.75em; }
       header .header-nav div .menuPrincipal {
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem; }
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em; }
         header .header-nav div .menuPrincipal li a {
           font-size: 1.5em; }
   .section1 {
@@ -947,9 +947,6 @@ footer {
       line-height: 1em; }
     .historia2 img {
       max-width: 100%; }
-  .tort {
-    width: 100px;
-    height: 100px; }
   .cuerpo {
     padding: 1em; }
     .cuerpo form .div-input {
@@ -1058,10 +1055,10 @@ footer {
     text-align: center;
     background-color: #ffffff; }
     header .header-nav {
-      padding-right: 0.75rem; }
+      padding-right: 0.75em; }
       header .header-nav div .menuPrincipal {
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem; }
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em; }
         header .header-nav div .menuPrincipal li a {
           font-size: 1.9em; }
   .contenedor-principal div h3 {
@@ -1115,7 +1112,7 @@ footer {
     margin-top: 6em;
     margin-bottom: 6em; }
     .section3 .clientes-divs .card-cliente {
-      width: 300px; }
+      width: 18.75em; }
   .textoLargo {
     flex-wrap: wrap; }
     .textoLargo .alexiaImg img {
@@ -1176,9 +1173,12 @@ footer {
   .seccion-contenido {
     margin-bottom: 6em;
     text-align: center; }
-    .seccion-contenido .conoce-delicias h5 {
-      margin-top: 1em;
-      margin-bottom: 1em; }
+    .seccion-contenido .conoce-delicias {
+      margin-top: 2em;
+      padding: 1em; }
+      .seccion-contenido .conoce-delicias h5 {
+        margin-top: 1em;
+        margin-bottom: 1em; }
   .section3 {
     margin-top: 6em;
     margin-bottom: 6em; }
