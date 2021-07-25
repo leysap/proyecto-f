@@ -303,12 +303,12 @@ header{
         @include flex(space-around);
         font-family: 'Thasadith', sans-serif;
         .card-cliente{
-            @include sizes(200px, auto);
+            @include sizes(12em, auto);
             @include background($colortitulo);
             margin: $size/2;
             text-align: center;
             .cliente{
-                @include sizes(200px, auto );
+                @include sizes(12em, auto );
                 padding: 0.8rem;
             }
             h5{
@@ -357,10 +357,10 @@ footer{
         }
     }
     .logoFinal{
-        @include sizes(100px, 100px);
+        @include sizes(7.5em, 7.5em);
     }   
     .tamaño{
-        @include sizes(20px,20px);
+        @include sizes(1.5em,1.5em);
         margin-right: 1rem;
         opacity: 0.6;
         &:hover{
@@ -382,7 +382,7 @@ footer{
                     border-bottom-right-radius: 1rem;
                     li{
                         a{
-                            font-size: 1.7em;
+                            font-size: 1.5em;
                         }
                     }
                 }
@@ -422,6 +422,11 @@ footer{
     }
     .section3{
         @include margin(6em,6em);
+        .clientes-divs{
+            .card-cliente{
+                width: 19em;
+            }
+        }
     }   
     footer{
         display: block;
@@ -433,7 +438,7 @@ footer{
                         a{
                             text-align: center;
                             margin-right: $size/2;
-                            font-size: 1.2em;
+                            font-size: 1.3em;
                         }
                     }
                 }
@@ -443,9 +448,11 @@ footer{
             a{
                 .logoFinal{
                     @include margin(1.5em,1.5em );
+                    @include sizes(8em,8em );
                 }
                 .tamaño{
                     margin-top: 1em;
+                    @include sizes(2em,2em );
                 }
             }
         } 
@@ -528,11 +535,28 @@ footer{
             }
         }
     }
+    //carrousell//
+    .contenedor-principal{
+        div{
+            h3{
+                @include mrightleft(4.5em,4.5em );
+            }
+            .titulo-cheese{
+                @include mrightleft(1em, 1em );
+            }
+            .titulo-choco{
+                @include mrightleft(0.5em,0.5em );
+            }
+            p{
+                font-size: 1.2em;
+            }
+        }
+    }
     .section1{
         @include mrightleft(1em,1em);
         @include margin(6em, 6em);
         .aliveri{
-            font-size: 3em
+            font-size: 3em;
         }
         .presentacion{
             @include text-size-padding(center, 0.9em ,0);
@@ -552,8 +576,7 @@ footer{
         text-align: center;
         .conoce-delicias{
             h5{
-                margin-bottom: 1em;
-                margin-top: 1em;
+                @include margin(1em,1em );
             }
         }
     }
@@ -561,8 +584,7 @@ footer{
         @include margin(6em ,6em);
         .clientes-divs{
             .card-cliente{
-                width: 250px;
-
+                width: 20em;
             }
         }
     }   
@@ -586,9 +608,11 @@ footer{
             a{
                 .logoFinal{
                     @include margin(1.5em,1.5em );
+                    @include sizes(8em,8em );
                 }
                 .tamaño{
                     margin-top: 1em;
+                    @include sizes(2em,2em );
                 }
             }
         }  
@@ -638,7 +662,7 @@ footer{
     text-align: center;
     }
 }
-@media (min-width:801px) and (max-width:991px){
+@media (min-width:801px) and (max-width:992px){
     header{
         text-align: center;
         background-color: $colortitulo;
@@ -657,6 +681,19 @@ footer{
             }
         }
     }
+    .contenedor-principal{
+        div{
+            h3{
+                @include mrightleft(4.5em,4.5em );
+            }
+            .titulo-cheese{
+                @include mrightleft(1em, 1em );
+            }
+            .titulo-choco{
+                @include mrightleft(0.5em,0.5em );
+            }
+        }
+    }
     .section1{
         @include margin(6em,6em );
         @include mrightleft(1em, 1em );
@@ -670,6 +707,20 @@ footer{
     }
     .section2{
         @include margin(6em,6em);  
+        .divs-destacados{
+            .imagen-destacada1{
+                @include sizes(14em, 18em);
+                img{
+                    @include sizes(12em,12em);
+                    margin-top: 0.5em;
+                } 
+                .card-title{
+                    @include text-size-padding(none,1em , 0.2em);
+                    margin-top: 0.5em;
+                }                                                  
+            }
+        }
+
     }
     .flex-padre{
         @include margin(6em, 6em);
@@ -710,7 +761,8 @@ footer{
         }
     }
 }
-@media (min-width:991px) and (max-width:1200px){
+
+@media (min-width:992px) and (max-width:1200px){
     header{
         text-align: center;
         .header-nav{
@@ -718,10 +770,23 @@ footer{
                 .menuPrincipal{
                     li{
                         a{
-                            font-size: 1.9em;
+                            font-size: 1.4em;
                         }
                     }
                 }
+            }
+        }
+    }
+    .contenedor-principal{
+        div{
+            h3{
+                @include mrightleft(7em,7em );
+            }
+            .titulo-cheese{
+                @include mrightleft(3.5em, 3.5em );
+            }
+            .titulo-choco{
+                @include mrightleft(3em,3em );
             }
         }
     }
@@ -738,6 +803,19 @@ footer{
     }
     .section2{
         @include margin(6em,6em);  
+        .divs-destacados{
+            .imagen-destacada1{
+                @include sizes(14em, 18em);
+                img{
+                    @include sizes(12em,12em);
+                    margin-top: 0.5em;
+                } 
+                .card-title{
+                    @include text-size-padding(none,1em , 0.2em);
+                    margin-top: 0.5em;
+                }                                                  
+            }
+        }
     }
     .flex-padre{
         @include margin(6em, 6em);
@@ -755,6 +833,14 @@ footer{
     }
     .section3{
         @include margin(6em ,6em);
+        .clientes-divs{
+            .card-cliente{
+                width: 10em;
+                .cliente{
+                    @include sizes(9em,9em )
+                }
+            }
+        }  
     }   
     .textoLargo{
         flex-wrap: wrap;

@@ -799,14 +799,14 @@ header .header-nav {
     justify-content: space-around;
     font-family: 'Thasadith', sans-serif; }
     .section3 .clientes-divs .card-cliente {
-      width: 200px;
+      width: 12em;
       height: auto;
       background-color: #ffffff;
       color: black;
       margin: 2em;
       text-align: center; }
       .section3 .clientes-divs .card-cliente .cliente {
-        width: 200px;
+        width: 12em;
         height: auto;
         padding: 0.8rem; }
       .section3 .clientes-divs .card-cliente h5 {
@@ -851,11 +851,11 @@ footer {
   footer div h5 {
     font-weight: 400; }
   footer .logoFinal {
-    width: 100px;
-    height: 100px; }
+    width: 7.5em;
+    height: 7.5em; }
   footer .tamaño {
-    width: 20px;
-    height: 20px;
+    width: 1.5em;
+    height: 1.5em;
     margin-right: 1rem;
     opacity: 0.6; }
     footer .tamaño:hover {
@@ -873,7 +873,7 @@ footer {
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem; }
         header .header-nav div .menuPrincipal li a {
-          font-size: 1.7em; }
+          font-size: 1.5em; }
   .section1 {
     margin-right: 1em;
     margin-left: 1em;
@@ -905,18 +905,24 @@ footer {
   .section3 {
     margin-top: 6em;
     margin-bottom: 6em; }
+    .section3 .clientes-divs .card-cliente {
+      width: 19em; }
   footer {
     display: block;
     text-align: center; }
     footer .menuFinal nav ul li a {
       text-align: center;
       margin-right: 2em;
-      font-size: 1.2em; }
+      font-size: 1.3em; }
     footer div a .logoFinal {
       margin-top: 1.5em;
-      margin-bottom: 1.5em; }
+      margin-bottom: 1.5em;
+      width: 8em;
+      height: 8em; }
     footer div a .tamaño {
-      margin-top: 1em; }
+      margin-top: 1em;
+      width: 2em;
+      height: 2em; }
   .galeria-imagenes {
     display: flex;
     flex-direction: column;
@@ -964,6 +970,17 @@ footer {
         border-bottom-right-radius: 1rem; }
         header .header-nav div .menuPrincipal li a {
           font-size: 1.9em; }
+  .contenedor-principal div h3 {
+    margin-right: 4.5em;
+    margin-left: 4.5em; }
+  .contenedor-principal div .titulo-cheese {
+    margin-right: 1em;
+    margin-left: 1em; }
+  .contenedor-principal div .titulo-choco {
+    margin-right: 0.5em;
+    margin-left: 0.5em; }
+  .contenedor-principal div p {
+    font-size: 1.2em; }
   .section1 {
     margin-right: 1em;
     margin-left: 1em;
@@ -988,13 +1005,13 @@ footer {
     margin-bottom: 6em;
     text-align: center; }
     .seccion-contenido .conoce-delicias h5 {
-      margin-bottom: 1em;
-      margin-top: 1em; }
+      margin-top: 1em;
+      margin-bottom: 1em; }
   .section3 {
     margin-top: 6em;
     margin-bottom: 6em; }
     .section3 .clientes-divs .card-cliente {
-      width: 250px; }
+      width: 20em; }
   footer {
     display: block;
     text-align: center; }
@@ -1004,9 +1021,13 @@ footer {
       font-size: 1.5em; }
     footer div a .logoFinal {
       margin-top: 1.5em;
-      margin-bottom: 1.5em; }
+      margin-bottom: 1.5em;
+      width: 8em;
+      height: 8em; }
     footer div a .tamaño {
-      margin-top: 1em; }
+      margin-top: 1em;
+      width: 2em;
+      height: 2em; }
   .galeria-imagenes {
     display: flex;
     flex-wrap: wrap; }
@@ -1032,7 +1053,7 @@ footer {
   .conoce2 {
     text-align: center; } }
 
-@media (min-width: 801px) and (max-width: 991px) {
+@media (min-width: 801px) and (max-width: 992px) {
   header {
     text-align: center;
     background-color: #ffffff; }
@@ -1043,6 +1064,15 @@ footer {
         border-bottom-right-radius: 1rem; }
         header .header-nav div .menuPrincipal li a {
           font-size: 1.9em; }
+  .contenedor-principal div h3 {
+    margin-right: 4.5em;
+    margin-left: 4.5em; }
+  .contenedor-principal div .titulo-cheese {
+    margin-right: 1em;
+    margin-left: 1em; }
+  .contenedor-principal div .titulo-choco {
+    margin-right: 0.5em;
+    margin-left: 0.5em; }
   .section1 {
     margin-top: 6em;
     margin-bottom: 6em;
@@ -1058,6 +1088,18 @@ footer {
   .section2 {
     margin-top: 6em;
     margin-bottom: 6em; }
+    .section2 .divs-destacados .imagen-destacada1 {
+      width: 14em;
+      height: 18em; }
+      .section2 .divs-destacados .imagen-destacada1 img {
+        width: 12em;
+        height: 12em;
+        margin-top: 0.5em; }
+      .section2 .divs-destacados .imagen-destacada1 .card-title {
+        text-align: none;
+        font-size: 1em;
+        padding: 0.2em;
+        margin-top: 0.5em; }
   .flex-padre {
     margin-top: 6em;
     margin-bottom: 6em;
@@ -1085,11 +1127,20 @@ footer {
         font-size: 1em;
         line-height: 1em; } }
 
-@media (min-width: 991px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   header {
     text-align: center; }
     header .header-nav div .menuPrincipal li a {
-      font-size: 1.9em; }
+      font-size: 1.4em; }
+  .contenedor-principal div h3 {
+    margin-right: 7em;
+    margin-left: 7em; }
+  .contenedor-principal div .titulo-cheese {
+    margin-right: 3.5em;
+    margin-left: 3.5em; }
+  .contenedor-principal div .titulo-choco {
+    margin-right: 3em;
+    margin-left: 3em; }
   .section1 {
     margin-top: 6em;
     margin-bottom: 6em;
@@ -1105,6 +1156,18 @@ footer {
   .section2 {
     margin-top: 6em;
     margin-bottom: 6em; }
+    .section2 .divs-destacados .imagen-destacada1 {
+      width: 14em;
+      height: 18em; }
+      .section2 .divs-destacados .imagen-destacada1 img {
+        width: 12em;
+        height: 12em;
+        margin-top: 0.5em; }
+      .section2 .divs-destacados .imagen-destacada1 .card-title {
+        text-align: none;
+        font-size: 1em;
+        padding: 0.2em;
+        margin-top: 0.5em; }
   .flex-padre {
     margin-top: 6em;
     margin-bottom: 6em;
@@ -1119,6 +1182,11 @@ footer {
   .section3 {
     margin-top: 6em;
     margin-bottom: 6em; }
+    .section3 .clientes-divs .card-cliente {
+      width: 10em; }
+      .section3 .clientes-divs .card-cliente .cliente {
+        width: 9em;
+        height: 9em; }
   .textoLargo {
     flex-wrap: wrap; }
     .textoLargo .alexiaImg img {
