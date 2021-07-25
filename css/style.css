@@ -491,9 +491,9 @@ main .img-g {
       margin-bottom: 1em;
       margin: 0.5em; }
       .main .contenedor .textoLargo .alexiaImg img {
-        margin-top: 0.5em;
-        width: 600px;
+        width: 37.5em;
         height: auto;
+        margin-top: 0.5em;
         border-radius: 0.3em; }
       .main .contenedor .textoLargo .historia1 {
         margin-left: 0.5em;
@@ -504,9 +504,9 @@ main .img-g {
           font-size: 1.2em;
           padding: none;
           line-height: 2em;
-          margin-top: 2.5em;
           margin-left: 0.5em;
-          margin-right: 0.5em; }
+          margin-right: 0.5em;
+          margin-top: 2.5em; }
     .main .contenedor .historia2 {
       display: flex;
       flex-direction: row;
@@ -521,8 +521,8 @@ main .img-g {
         line-height: 2em;
         color: #0e090a; }
       .main .contenedor .historia2 img {
-        width: 300px;
-        height: 300px;
+        width: 18.75em;
+        height: 18.75em;
         border-radius: 50em; }
 
 * {
@@ -932,23 +932,22 @@ footer {
     .galeria-imagenes div img {
       width: 19em;
       height: 19em; }
-  .textoLargo {
+  .main .contenedor .textoLargo {
     flex-wrap: wrap; }
-  .alexiaImg img {
-    max-width: 100%; }
-  .historia1 p {
-    font-size: 1em;
-    line-height: 1em; }
-  .historia2 {
+    .main .contenedor .textoLargo .alexiaImg img {
+      max-width: 100%; }
+    .main .contenedor .textoLargo .historia1 p {
+      font-size: 1.3em;
+      line-height: 1.9em; }
+  .main .contenedor .historia2 {
     flex-wrap: wrap; }
-    .historia2 div p {
+    .main .contenedor .historia2 div p {
       text-align: justify;
-      font-size: 1em;
-      padding: 2em;
+      font-size: 1.3em;
+      padding: 1em;
       font-family: 'Thasadith', sans-serif;
-      color: #0e090a;
-      line-height: 1em; }
-    .historia2 img {
+      line-height: 1.8em; }
+    .main .contenedor .historia2 img {
       max-width: 100%; }
   .cuerpo {
     padding: 1em; }
@@ -1038,21 +1037,22 @@ footer {
         height: 26em; }
   .cuerpo form .div-input {
     display: block; }
-  .textoLargo {
+  .main .contenedor .textoLargo {
     flex-wrap: wrap; }
-    .textoLargo .alexiaImg img {
+    .main .contenedor .textoLargo .alexiaImg img {
       max-width: 100%; }
-    .textoLargo .historia1 {
+    .main .contenedor .textoLargo .historia1 {
       margin-right: 0.5em;
       margin-left: 0.5em; }
-      .textoLargo .historia1 p {
-        font-size: 1em;
-        line-height: 1em; }
-  .historia2 {
+      .main .contenedor .textoLargo .historia1 p {
+        font-size: 1.3em;
+        line-height: 1.9em; }
+  .main .contenedor .historia2 {
     flex-wrap: wrap; }
-    .historia2 div p {
-      font-size: 1em;
-      line-height: 1em; }
+    .main .contenedor .historia2 div p {
+      font-size: 1.3em;
+      line-height: 1.8em;
+      padding: 1em; }
   .conoce2 {
     text-align: center; } }
 
@@ -1119,16 +1119,19 @@ footer {
     margin-bottom: 6em; }
     .section3 .clientes-divs .card-cliente {
       width: 18.75em; }
-  .textoLargo {
+  .main .contenedor .textoLargo {
     flex-wrap: wrap; }
-    .textoLargo .alexiaImg img {
+    .main .contenedor .textoLargo .alexiaImg img {
       max-width: 100%; }
-    .textoLargo .historia1 {
+    .main .contenedor .textoLargo .historia1 {
       margin-right: 0.5em;
       margin-left: 0.5em; }
-      .textoLargo .historia1 p {
-        font-size: 1em;
-        line-height: 1em; } }
+      .main .contenedor .textoLargo .historia1 p {
+        font-size: 1.3em;
+        line-height: 1.9em; }
+    .main .contenedor .textoLargo .historia2 div p {
+      font-size: 1.3em;
+      padding: 1em; } }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   header {
@@ -1193,13 +1196,16 @@ footer {
       .section3 .clientes-divs .card-cliente .cliente {
         width: 9em;
         height: 9em; }
-  .textoLargo {
+  .main .contenedor .textoLargo {
     flex-wrap: wrap; }
-    .textoLargo .alexiaImg img {
+    .main .contenedor .textoLargo .alexiaImg img {
       max-width: 100%; }
-    .textoLargo .historia1 {
+    .main .contenedor .textoLargo .historia1 {
       margin-right: 0.5em;
       margin-left: 0.5em; }
-      .textoLargo .historia1 p {
-        font-size: 1em;
-        line-height: 1em; } }
+      .main .contenedor .textoLargo .historia1 p {
+        font-size: 1.5em;
+        line-height: 1.9em; }
+    .main .contenedor .textoLargo .historia2 div p {
+      font-size: 1.5em;
+      padding: 1em; } }

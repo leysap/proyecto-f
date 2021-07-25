@@ -28,6 +28,14 @@
     border-top-left-radius: $left;
     border-top-right-radius: $right; 
 }
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin margin($left, $right){
+    margin-left: $left;
+    margin-right: $right;
+}
 /*PAGINA QUIENES SOMOS*/
 .main{
     @include background($colorheader);
@@ -46,20 +54,17 @@
             margin: 0.5em;
             .alexiaImg{
                 img{
+                    @include sizes(37.5em,auto );
                     margin-top: 0.5em;
-                    width: 600px;
-                    height: auto;
                     border-radius: 0.3em;
                 }
             }           
             .historia1{
-                margin-left: 0.5em;
-                margin-right: 0.5em;
+                @include margin(0.5em,0.5em );
                 p{
                     @include font-align-size-padding-line(justify,1.2em ,none,2em );
+                    @include margin(0.5em,0.5em );
                     margin-top: 2.5em;
-                    margin-left: 0.5em;
-                    margin-right: 0.5em;
                 }
             }
         }
@@ -74,8 +79,7 @@
                 }
             }
             img{
-                width:300px;
-                height: 300px;
+                @include sizes(18.75em,18.75em );
                 border-radius: 50em;
             }  
         } 

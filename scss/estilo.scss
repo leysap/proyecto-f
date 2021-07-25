@@ -471,34 +471,37 @@ footer{
         }  
     } 
     //QUIENES SOMOS//
-    .textoLargo{
-        flex-wrap: wrap;
-    }
-    .alexiaImg{
-        img{
-            max-width: 100%;
-        }
-    } 
-    .historia1{
-        p{
-            font-size: 1em;
-            line-height: 1em;
-        }
-    }
-    .historia2{
-        flex-wrap: wrap;
-        div{
-            p{
-                @include text-size-padding(justify, 1em ,2em);
-                font-family:'Thasadith', sans-serif;
-                color:rgb(14, 9, 10);
-                line-height: 1em;
+    .main{
+        .contenedor{
+            .textoLargo{
+                flex-wrap: wrap;
+                .alexiaImg{
+                    img{
+                        max-width: 100%;
+                    }
+                } 
+                .historia1{
+                    p{
+                        font-size: 1.3em;
+                        line-height: 1.9em;
+                    }
+                }
             }
+            .historia2{
+                flex-wrap: wrap;
+                div{
+                    p{
+                        @include text-size-padding(justify, 1.3em ,1em);
+                        font-family:'Thasadith', sans-serif;
+                        line-height: 1.8em;
+                    }
+                }
+                img{
+                    max-width: 100%;
+                }  
+            } 
         }
-        img{
-            max-width: 100%;
-        }  
-    } 
+    }
     //HACE TU PEDIDO// 
     .cuerpo{
         padding: 1em;
@@ -636,30 +639,35 @@ footer{
         }
     }
     //QUIENES SOMOS//
-    .textoLargo{
-        flex-wrap: wrap;
-        .alexiaImg{
-            img{
-                max-width: 100%;
+    .main{
+        .contenedor{
+            .textoLargo{
+                flex-wrap: wrap;
+                .alexiaImg{
+                    img{
+                        max-width: 100%;
+                    }
+                }           
+                .historia1{
+                    @include mrightleft(0.5em ,0.5em);
+                    p{
+                        font-size: 1.3em;
+                        line-height: 1.9em;
+                    }
+                }
             }
-        }           
-        .historia1{
-            @include mrightleft(0.5em ,0.5em);
-            p{
-                font-size: 1em;
-                line-height: 1em;
-            }
+            .historia2{
+                flex-wrap: wrap;
+                div{
+                    p{
+                        font-size: 1.3em;
+                        line-height: 1.8em;
+                        padding: 1em;
+                    }
+                } 
+            } 
         }
     }
-    .historia2{
-        flex-wrap: wrap;
-        div{
-            p{
-                font-size: 1em;
-                line-height: 1em;
-            }
-        } 
-    } 
     //INFORMACION// 
     .conoce2{
     text-align: center;
@@ -746,21 +754,34 @@ footer{
         }
     }   
     //QUIENES SOMOS//
-    .textoLargo{
-        flex-wrap: wrap;
-        .alexiaImg{
-            img{
-                max-width: 100%;
-            }
-        }           
-        .historia1{
-            @include mrightleft(0.5em ,0.5em);
-            p{
-                font-size: 1em;
-                line-height: 1em;
+    .main{
+        .contenedor{
+            .textoLargo{
+                flex-wrap: wrap;
+                .alexiaImg{
+                    img{
+                        max-width: 100%;
+                    }
+                }           
+                .historia1{
+                    @include mrightleft(0.5em ,0.5em);
+                    p{
+                        font-size: 1.3em;
+                        line-height: 1.9em;
+                    }
+                }
+                .historia2{
+                    div{
+                        p{
+                            font-size: 1.3em;
+                            padding: 1em;
+                        }
+                    }
+                }
             }
         }
     }
+   
 }
 @media (min-width:992px) and (max-width:1200px){
     header{
@@ -844,18 +865,31 @@ footer{
             }
         }  
     }   
-    .textoLargo{
-        flex-wrap: wrap;
-        .alexiaImg{
-            img{
-                max-width: 100%;
-            }
-        }           
-        .historia1{
-            @include mrightleft(0.5em ,0.5em);
-            p{
-                font-size: 1em;
-                line-height: 1em;
+    //QUIENES SOMOS//
+    .main{
+        .contenedor{
+            .textoLargo{
+                flex-wrap: wrap;
+                .alexiaImg{
+                    img{
+                        max-width: 100%;
+                    }
+                }           
+                .historia1{
+                    @include mrightleft(0.5em ,0.5em);
+                    p{
+                        font-size: 1.5em;
+                        line-height: 1.9em;
+                    }
+                }
+                .historia2{
+                    div{
+                        p{
+                            font-size: 1.5em;
+                            padding: 1em;
+                        }
+                    }
+                }
             }
         }
     }
