@@ -62,11 +62,12 @@ $size: 4em;
 /* PAGINA INDEX */
 /*HEADER*/
 header{
+    margin-bottom: 1em;
     .header-nav{
         padding-right: 0;
         a{
             .logo{
-                @include sizes(7.5em, auto);          
+                @include sizes(7em, auto);          
             }
         }
         div{
