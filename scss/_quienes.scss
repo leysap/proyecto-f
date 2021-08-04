@@ -47,15 +47,15 @@
         @include border(0.5em, 0.5em );
     }
     .contenedor{
-        margin: 0.5em;
+        padding: 0.8em;
+        @include margin(0.5em,0.5em );
         .textoLargo{
             @include flex();
-            margin-bottom:1em;
-            margin: 0.5em;
             .alexiaImg{
                 img{
                     @include sizes(37.5em,auto );
                     margin-top: 0.5em;
+                    margin-bottom: 0.5em;
                     border-radius: 0.3em;
                 }
             }           
@@ -63,25 +63,17 @@
                 @include margin(0.5em,0.5em );
                 p{
                     @include font-align-size-padding-line(justify,1.2em ,none,2em );
-                    @include margin(0.5em,0.5em );
+                    @include margin(0.5em,none );
                     margin-top: 2.5em;
+                    font-weight: 600;
+                }
+                h2{
+                    text-align: right;
+                    font-size: 1.2em;
+                    font-family:'Thasadith', sans-serif;
+                    font-weight: bold;
                 }
             }
         }
-        .historia2{
-            @include flex();
-            align-items: center;
-            padding: 1em;
-            div{
-                p{
-                    @include font-align-size-padding-line(justify,1.2em ,2em ,2em );
-                    color:rgb(14, 9, 10);
-                }
-            }
-            img{
-                @include sizes(18.75em,18.75em );
-                border-radius: 50em;
-            }  
-        } 
     }
 }

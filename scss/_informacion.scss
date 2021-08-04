@@ -37,6 +37,21 @@
     font-weight: $weight;
     font-family: $family;
 }
+@mixin grid($gridarea, $borderight) {
+    grid-area: $gridarea;
+    border-right: $borderight;
+    padding:1em;
+    font-family:'Thasadith', sans-serif;
+    font-weight: bold;  
+}
+@mixin grid-img-h4 {
+    h4{
+        font-weight: bold;
+    }
+    img{
+        margin-bottom: 1em;
+    } 
+}
 /*PAGINA INFORMACION*/
 main{
     .titulo-informacion{
@@ -213,30 +228,25 @@ main{
             }
         }
     }
-    .img-g{
-        @include margin(4em,4em ,2em ,2em);
-        background-image: url(/imagenes/tic-tac-toe.png);
-        padding: 0.8em;
-        h2{
-            @include background($colorfooter);
-            @include fonts(2.2em, left , none ,'Caveat');
-            padding: 0.5em;
-            border-radius: 0.2em;
+    .contenedor-grid{
+        @include margin(4em,4em ,2em ,2em );
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "consulta medio sitio";
+        text-align: center; 
+        .consultas{
+            @include grid(consulta, 2px solid $coloraliveri);
+            @include grid-img-h4();
         }
-        .img-info{
-            @include flex();
-            .img-img{
-                width: 18.75em;
-                height: 18.75em;
-                border-radius: 1em;
-                margin: 0.5em;
-                opacity: 0.8;
-                transition: 1s all ease;
-                &:hover{
-                    opacity: 1;
-                    transform: scale(1.1,1.1);             
-                }
-            }
+        .medios{
+            @include grid(medio,2px solid $coloraliveri);
+            @include grid-img-h4();
+        }
+        .sitio{
+            @include grid(sitio, none );
+            @include grid-img-h4();
         }
     }
 }           

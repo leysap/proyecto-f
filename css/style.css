@@ -111,11 +111,10 @@
         .seccion-delicias main .section-productos .productos-contenedor .card-div img {
           width: 18.188em;
           height: 18.188em;
-          padding: 0.2em;
           margin-top: 0.2em;
-          transition: 2s all ease; }
+          transition: 1s all ease; }
           .seccion-delicias main .section-productos .productos-contenedor .card-div img:hover {
-            transform: scale(1.1, 1.1); }
+            opacity: 0.9; }
         .seccion-delicias main .section-productos .productos-contenedor .card-div h3 {
           background-color: #E79E85;
           color: #ffffff;
@@ -143,7 +142,6 @@
           margin-left: none; }
           .seccion-delicias main .section-productos .productos-contenedor .card-div .card-pedidos .link-pedido {
             color: #E79E85;
-            text-decoration: none;
             padding: 1.2em; }
             .seccion-delicias main .section-productos .productos-contenedor .card-div .card-pedidos .link-pedido:hover {
               color: black; }
@@ -197,12 +195,14 @@
     .cuerpo form .div-input .nombreFormu {
       padding: 0.313em;
       font-family: 'Thasadith', sans-serif;
-      font-weight: bold; }
+      font-weight: bold;
+      font-size: 1.1em; }
   .cuerpo form div .tituloFavorito {
     margin-top: 1em;
     text-decoration: underline;
     font-size: 1.7em;
-    font-family: 'Thasadith', sans-serif; }
+    font-family: 'Thasadith', sans-serif;
+    font-weight: 600; }
   .cuerpo form div .opcion-torta {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -221,7 +221,7 @@
     margin-bottom: 1em; }
     .cuerpo form .envio-nov .envio-si {
       display: block;
-      margin-top: 2em;
+      margin-top: 1em;
       font-size: 1em; }
   .cuerpo form .botones-limp-env {
     margin: 1em; }
@@ -434,37 +434,46 @@ main .menu {
     main .menu .boton2 a {
       font-family: 'Thasadith', sans-serif; }
 
-main .img-g {
+main .contenedor-grid {
   margin-top: 4em;
   margin-bottom: 4em;
   margin-right: 2em;
   margin-left: 2em;
-  background-image: url(/imagenes/tic-tac-toe.png);
-  padding: 0.8em; }
-  main .img-g h2 {
-    background-color: #E79E85;
-    color: #ffffff;
-    font-size: 2.2em;
-    text-align: left;
-    font-weight: none;
-    font-family: "Caveat";
-    padding: 0.5em;
-    border-radius: 0.2em; }
-  main .img-g .img-info {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around; }
-    main .img-g .img-info .img-img {
-      width: 18.75em;
-      height: 18.75em;
-      border-radius: 1em;
-      margin: 0.5em;
-      opacity: 0.8;
-      transition: 1s all ease; }
-      main .img-g .img-info .img-img:hover {
-        opacity: 1;
-        transform: scale(1.1, 1.1); }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "consulta medio sitio";
+  text-align: center; }
+  main .contenedor-grid .consultas {
+    grid-area: consulta;
+    border-right: 2px solid #e08465;
+    padding: 1em;
+    font-family: 'Thasadith', sans-serif;
+    font-weight: bold; }
+    main .contenedor-grid .consultas h4 {
+      font-weight: bold; }
+    main .contenedor-grid .consultas img {
+      margin-bottom: 1em; }
+  main .contenedor-grid .medios {
+    grid-area: medio;
+    border-right: 2px solid #e08465;
+    padding: 1em;
+    font-family: 'Thasadith', sans-serif;
+    font-weight: bold; }
+    main .contenedor-grid .medios h4 {
+      font-weight: bold; }
+    main .contenedor-grid .medios img {
+      margin-bottom: 1em; }
+  main .contenedor-grid .sitio {
+    grid-area: sitio;
+    border-right: none;
+    padding: 1em;
+    font-family: 'Thasadith', sans-serif;
+    font-weight: bold; }
+    main .contenedor-grid .sitio h4 {
+      font-weight: bold; }
+    main .contenedor-grid .sitio img {
+      margin-bottom: 1em; }
 
 /*PAGINA QUIENES SOMOS*/
 .main {
@@ -484,17 +493,18 @@ main .img-g {
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em; }
   .main .contenedor {
-    margin: 0.5em; }
+    padding: 0.8em;
+    margin-left: 0.5em;
+    margin-right: 0.5em; }
     .main .contenedor .textoLargo {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-      margin-bottom: 1em;
-      margin: 0.5em; }
+      justify-content: space-around; }
       .main .contenedor .textoLargo .alexiaImg img {
         width: 37.5em;
         height: auto;
         margin-top: 0.5em;
+        margin-bottom: 0.5em;
         border-radius: 0.3em; }
       .main .contenedor .textoLargo .historia1 {
         margin-left: 0.5em;
@@ -506,25 +516,14 @@ main .img-g {
           padding: none;
           line-height: 2em;
           margin-left: 0.5em;
-          margin-right: 0.5em;
-          margin-top: 2.5em; }
-    .main .contenedor .historia2 {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      padding: 1em; }
-      .main .contenedor .historia2 div p {
-        font-family: 'Thasadith', sans-serif;
-        text-align: justify;
-        font-size: 1.2em;
-        padding: 2em;
-        line-height: 2em;
-        color: #0e090a; }
-      .main .contenedor .historia2 img {
-        width: 18.75em;
-        height: 18.75em;
-        border-radius: 50em; }
+          margin-right: none;
+          margin-top: 2.5em;
+          font-weight: 600; }
+        .main .contenedor .textoLargo .historia1 h2 {
+          text-align: right;
+          font-size: 1.2em;
+          font-family: 'Thasadith', sans-serif;
+          font-weight: bold; }
 
 * {
   margin: 0%;
@@ -566,7 +565,7 @@ header {
           header .header-nav div .menuPrincipal li a:active {
             color: #0e0b0e; }
 
-.contenedor-principal div h3 {
+.contenedor-carrusel .contenedor-principal div h3 {
   margin-right: 9em;
   margin-left: 9em;
   text-align: center;
@@ -577,27 +576,23 @@ header {
   background-color: rgba(224, 133, 103, 0.596);
   border-radius: 0.2em; }
 
-.contenedor-principal div .titulo-cheese {
-  margin-right: 5.5em;
-  margin-left: 5.5em; }
+.contenedor-carrusel .contenedor-principal div .titulo-choco {
+  margin-right: 6.5em;
+  margin-left: 6.5em; }
 
-.contenedor-principal div .titulo-choco {
-  margin-right: 4.5em;
-  margin-left: 4.5em; }
-
-.contenedor-principal div p {
+.contenedor-carrusel .contenedor-principal div p {
   font-size: 1.3em; }
 
-.contenedor-principal div .boton2 {
+.contenedor-carrusel .contenedor-principal div .boton2 {
   background-color: #ffffff;
   border: 0.063em solid #e08465; }
-  .contenedor-principal div .boton2:hover {
+  .contenedor-carrusel .contenedor-principal div .boton2:hover {
     background-color: #e08465; }
-  .contenedor-principal div .boton2 a {
+  .contenedor-carrusel .contenedor-principal div .boton2 a {
     text-decoration: none;
     color: #e08465;
     font-weight: 500; }
-    .contenedor-principal div .boton2 a:hover {
+    .contenedor-carrusel .contenedor-principal div .boton2 a:hover {
       color: #ffffff; }
 
 .botonesPrincipales {
@@ -621,9 +616,7 @@ header {
   margin-top: 10em;
   margin-bottom: 10em;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   border-top: 0.125em solid #e08465;
   border-bottom: 0.125em solid #e08465;
   padding: 3em;
@@ -638,7 +631,8 @@ header {
     text-align: center;
     font-size: 1.3em;
     padding: 1.5em;
-    line-height: 2.5em; }
+    line-height: 2.5em;
+    font-style: italic; }
 
 .boton {
   margin-top: 1em;
@@ -686,6 +680,7 @@ header {
       color: black;
       width: 18em;
       height: 24.063em;
+      box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.12);
       border: 1px #E79E85 solid;
       margin: 0.2em;
       text-align: center; }
@@ -808,6 +803,7 @@ header {
       height: auto;
       background-color: #ffffff;
       color: black;
+      box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.12);
       margin: 2em;
       text-align: center; }
       .section3 .clientes-divs .card-cliente .cliente {
@@ -879,6 +875,8 @@ footer {
         border-bottom-right-radius: 1em; }
         header .header-nav div .menuPrincipal li a {
           font-size: 1.5em; }
+          header .header-nav div .menuPrincipal li a:hover {
+            padding: 0.2em; }
   .section1 {
     margin-right: 1em;
     margin-left: 1em;
@@ -915,19 +913,30 @@ footer {
   footer {
     display: block;
     text-align: center; }
-    footer .menuFinal nav ul li a {
+    footer .menuFinal ul li a {
       text-align: center;
       margin-right: 2em;
-      font-size: 1.3em; }
+      font-size: 1.6em; }
+      footer .menuFinal ul li a:hover {
+        padding: 0.1em; }
+    footer .contacto {
+      margin-top: 2em; }
+      footer .contacto h5 {
+        font-size: 1.4em; }
+      footer .contacto p {
+        font-size: 1.3em; }
     footer div a .logoFinal {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
       width: 8em;
       height: 8em; }
     footer div a .tamaño {
-      margin-top: 1em;
       width: 2em;
-      height: 2em; }
+      height: 2em;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em; }
+    footer div p {
+      font-size: 1.3em; }
   .galeria-imagenes {
     display: flex;
     flex-direction: column;
@@ -942,16 +951,6 @@ footer {
     .main .contenedor .textoLargo .historia1 p {
       font-size: 1.3em;
       line-height: 1.9em; }
-  .main .contenedor .historia2 {
-    flex-wrap: wrap; }
-    .main .contenedor .historia2 div p {
-      text-align: justify;
-      font-size: 1.3em;
-      padding: 1em;
-      font-family: 'Thasadith', sans-serif;
-      line-height: 1.8em; }
-    .main .contenedor .historia2 img {
-      max-width: 100%; }
   .cuerpo {
     padding: 1em; }
     .cuerpo form .div-input {
@@ -959,7 +958,18 @@ footer {
       .cuerpo form .div-input .nombreFormu {
         display: block; }
   main .seccion-contenido .conoce2 {
-    text-align: center; } }
+    text-align: center; }
+  main .contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "consulta" "medio" "sitio"; }
+    main .contenedor-grid .consultas {
+      border-right: none;
+      border-bottom: 2px solid #e08465; }
+    main .contenedor-grid .medios {
+      border-right: none;
+      border-bottom: 2px solid #e08465; } }
 
 @media (min-width: 480px) and (max-width: 800px) {
   header {
@@ -972,17 +982,18 @@ footer {
         border-bottom-right-radius: 1em; }
         header .header-nav div .menuPrincipal li a {
           font-size: 1.9em; }
-  .contenedor-principal div h3 {
+          header .header-nav div .menuPrincipal li a:hover {
+            padding: 0.2em; }
+  .contenedor-carrusel .contenedor-principal div h3 {
     margin-right: 4.5em;
     margin-left: 4.5em; }
-  .contenedor-principal div .titulo-cheese {
-    margin-right: 1em;
-    margin-left: 1em; }
-  .contenedor-principal div .titulo-choco {
-    margin-right: 0.5em;
-    margin-left: 0.5em; }
-  .contenedor-principal div p {
+  .contenedor-carrusel .contenedor-principal div .titulo-choco {
+    margin-right: 2em;
+    margin-left: 2em; }
+  .contenedor-carrusel .contenedor-principal div p {
     font-size: 1.2em; }
+  .botonesPrincipales {
+    margin-bottom: 5em; }
   .section1 {
     margin-right: 1em;
     margin-left: 1em;
@@ -1006,6 +1017,8 @@ footer {
   .seccion-contenido {
     margin-bottom: 6em;
     text-align: center; }
+    .seccion-contenido .imagenes-delicias {
+      padding: 3.5em; }
     .seccion-contenido .conoce-delicias h5 {
       margin-top: 1em;
       margin-bottom: 1em; }
@@ -1016,20 +1029,34 @@ footer {
       width: 20em; }
   footer {
     display: block;
-    text-align: center; }
-    footer .menuFinal nav ul li a {
-      text-align: center;
-      margin-right: 2em;
-      font-size: 1.5em; }
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em; }
+    footer .menuFinal ul {
+      margin-top: 2em; }
+      footer .menuFinal ul li a {
+        text-align: center;
+        margin-right: 2em;
+        font-size: 1.6em; }
+    footer .contacto {
+      margin-top: 2em;
+      margin-bottom: 2em; }
+      footer .contacto h5 {
+        font-size: 1.4em; }
+      footer .contacto p {
+        font-size: 1.3em; }
     footer div a .logoFinal {
-      margin-top: 1.5em;
-      margin-bottom: 1.5em;
-      width: 8em;
-      height: 8em; }
+      margin-top: 2em;
+      margin-bottom: 2em;
+      width: 9em;
+      height: 9em; }
     footer div a .tamaño {
+      width: 2.5em;
+      height: 2.5em;
       margin-top: 1em;
-      width: 2em;
-      height: 2em; }
+      margin-bottom: 1em; }
+    footer div p {
+      font-size: 1.3em; }
   .galeria-imagenes {
     display: flex;
     flex-wrap: wrap; }
@@ -1050,12 +1077,6 @@ footer {
       .main .contenedor .textoLargo .historia1 p {
         font-size: 1.3em;
         line-height: 1.9em; }
-  .main .contenedor .historia2 {
-    flex-wrap: wrap; }
-    .main .contenedor .historia2 div p {
-      font-size: 1.3em;
-      line-height: 1.8em;
-      padding: 1em; }
   main .seccion-contenido .conoce2 {
     text-align: center; } }
 
@@ -1070,15 +1091,14 @@ footer {
         border-bottom-right-radius: 1em; }
         header .header-nav div .menuPrincipal li a {
           font-size: 1.9em; }
-  .contenedor-principal div h3 {
+          header .header-nav div .menuPrincipal li a:hover {
+            padding: 0.2em; }
+  .contenedor-carrusel .contenedor-principal div h3 {
     margin-right: 4.5em;
     margin-left: 4.5em; }
-  .contenedor-principal div .titulo-cheese {
-    margin-right: 1em;
-    margin-left: 1em; }
-  .contenedor-principal div .titulo-choco {
-    margin-right: 0.5em;
-    margin-left: 0.5em; }
+  .contenedor-carrusel .contenedor-principal div .titulo-choco {
+    margin-right: 2em;
+    margin-left: 2em; }
   .section1 {
     margin-top: 6em;
     margin-bottom: 6em;
@@ -1131,25 +1151,19 @@ footer {
       margin-left: 0.5em; }
       .main .contenedor .textoLargo .historia1 p {
         font-size: 1.3em;
-        line-height: 1.9em; }
-    .main .contenedor .textoLargo .historia2 div p {
-      font-size: 1.3em;
-      padding: 1em; } }
+        line-height: 1.9em; } }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   header {
     text-align: center; }
     header .header-nav div .menuPrincipal li a {
       font-size: 1.4em; }
-  .contenedor-principal div h3 {
+  .contenedor-carrusel .contenedor-principal div h3 {
     margin-right: 7em;
     margin-left: 7em; }
-  .contenedor-principal div .titulo-cheese {
-    margin-right: 3.5em;
-    margin-left: 3.5em; }
-  .contenedor-principal div .titulo-choco {
-    margin-right: 3em;
-    margin-left: 3em; }
+  .contenedor-carrusel .contenedor-principal div .titulo-choco {
+    margin-right: 4.5em;
+    margin-left: 4.5em; }
   .section1 {
     margin-top: 6em;
     margin-bottom: 6em;
@@ -1208,7 +1222,4 @@ footer {
       margin-left: 0.5em; }
       .main .contenedor .textoLargo .historia1 p {
         font-size: 1.5em;
-        line-height: 1.9em; }
-    .main .contenedor .textoLargo .historia2 div p {
-      font-size: 1.5em;
-      padding: 1em; } }
+        line-height: 1.9em; } }

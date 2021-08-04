@@ -100,42 +100,42 @@ header{
     }            
 }
 //CARROUSEL//
-.contenedor-principal{
-    div{
-        h3{
-            @include mrightleft(9em,9em );
-            @include text-size-padding(center,2em ,0.1em );
-            font-family:  'Thasadith', sans-serif;
-            color: $colortitulo;
-            background-color: hsla(15, 66%, 64%, 0.596);
-            border-radius: 0.2em;
-        }
-        .titulo-cheese{
-            @include mrightleft(5.5em, 5.5em );
-        }
-        .titulo-choco{
-            @include mrightleft(4.5em,4.5em );
-        }
-        p{
-            font-size: 1.3em;
-        }
-        .boton2{
-            background-color: $colortitulo;
-            border: 0.063em solid $coloraliveri;
-            &:hover{
-                background-color: $coloraliveri;
+.contenedor-carrusel{
+    .contenedor-principal{
+        div{
+            h3{
+                @include mrightleft(9em,9em );
+                @include text-size-padding(center,2em ,0.1em );
+                font-family:  'Thasadith', sans-serif;
+                color: $colortitulo;
+                background-color: hsla(15, 66%, 64%, 0.596);
+                border-radius: 0.2em;
             }
-            a{
-                text-decoration: none;
-                color: $coloraliveri;
-                font-weight: 500;
+            .titulo-choco{
+                @include mrightleft(6.5em,6.5em );
+            }
+            p{
+                font-size: 1.3em;
+            }
+            .boton2{
+                background-color: $colortitulo;
+                border: 0.063em solid $coloraliveri;
                 &:hover{
-                    color: $colortitulo;
+                    background-color: $coloraliveri;
+                }
+                a{
+                    text-decoration: none;
+                    color: $coloraliveri;
+                    font-weight: 500;
+                    &:hover{
+                        color: $colortitulo;
+                    }
                 }
             }
         }
     }
 }
+
 .botonesPrincipales{
     position:fixed;
     bottom: 0;
@@ -155,7 +155,8 @@ header{
 .section1{
     @include mrightleft(4em, 4em);
     @include margin(10em, 10em);
-    @include flex(center); 
+    display: flex;
+    flex-direction: column;
     border-top: 0.125em solid $coloraliveri;
     border-bottom: 0.125em solid $coloraliveri;
     padding: 3em;
@@ -168,6 +169,7 @@ header{
     .presentacion{
         @include text-size-padding(center,1.3em ,1.5em);
         line-height: $size/1.6;
+        font-style: italic;
     }    
 }
 //BOTON QUIENES SOMOS, VER TODOS Y BOTON EN SECCION INFORMACIÓN//
@@ -208,6 +210,7 @@ header{
         .imagen-destacada1{
             @include background($clientes);
             @include sizes(18em, 24.063em);
+            box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.12);
             border: 1px $colorfooter solid;
             margin: 0.2em;
             text-align: center;
@@ -309,6 +312,7 @@ header{
         .card-cliente{
             @include sizes(12em, auto);
             @include background($colortitulo);
+            box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.12);
             margin: $size/2;
             text-align: center;
             .cliente{
@@ -332,7 +336,7 @@ header{
 footer{
     @include background($colorfooter);
     @include flex(space-around);
-    font-family:'Thasadith', sans-serif;;
+    font-family:'Thasadith', sans-serif;
     align-items: center;
     padding-top: $size/1.6;
     padding-bottom: $size/1.6;
@@ -386,6 +390,9 @@ footer{
                     li{
                         a{
                             font-size: 1.5em;
+                            &:hover{
+                                padding: 0.2em
+                            }
                         }
                     }
                 }
@@ -435,16 +442,26 @@ footer{
         display: block;
         text-align: center;
         .menuFinal{
-            nav{
-                ul{
-                    li{
-                        a{
-                            text-align: center;
-                            margin-right: $size/2;
-                            font-size: 1.3em;
+            ul{
+                li{
+                    a{
+                        text-align: center;
+                        margin-right: $size/2;
+                        font-size: 1.6em;
+                        &:hover{
+                            padding: 0.1em;
                         }
                     }
                 }
+            }
+        }
+        .contacto{
+            margin-top: 2em;
+            h5{
+                font-size: 1.4em;
+            }
+            p{
+                font-size: 1.3em;
             }
         }
         div{
@@ -454,13 +471,16 @@ footer{
                     @include sizes(8em,8em );
                 }
                 .tamaño{
-                    margin-top: 1em;
                     @include sizes(2em,2em );
+                    @include margin(1.5em,1.5em );
                 }
+            }
+            p{
+                font-size: 1.3em;
             }
         } 
     }
-   // SECCION DELICIAS//
+   //SECCION DELICIAS//
     .galeria-imagenes{
         display: flex;
         flex-direction: column;
@@ -471,7 +491,7 @@ footer{
             }    
         }  
     } 
-    //QUIENES SOMOS//
+    //QUIÉNES SOMOS//
     .main{
         .contenedor{
             .textoLargo{
@@ -488,19 +508,6 @@ footer{
                     }
                 }
             }
-            .historia2{
-                flex-wrap: wrap;
-                div{
-                    p{
-                        @include text-size-padding(justify, 1.3em ,1em);
-                        font-family:'Thasadith', sans-serif;
-                        line-height: 1.8em;
-                    }
-                }
-                img{
-                    max-width: 100%;
-                }  
-            } 
         }
     }
     //HACE TU PEDIDO// 
@@ -515,11 +522,28 @@ footer{
             }
         }
     }
-    //INFORMACION// 
+    //INFORMACIÓN// 
     main{
         .seccion-contenido{
             .conoce2{
                 text-align: center;
+            }
+        }
+        .contenedor-grid{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3,auto);
+            grid-template-areas: 
+            "consulta"
+            "medio"
+            "sitio";
+            .consultas{
+                border-right: none;
+                border-bottom: 2px solid $coloraliveri;
+            }
+            .medios{
+                border-right: none;
+                border-bottom: 2px solid $coloraliveri;
             }
         }
     }
@@ -536,28 +560,33 @@ footer{
                     li{
                         a{
                             font-size: 1.9em;
+                            &:hover{
+                                padding: 0.2em
+                            }
                         }
                     }
                 }
             }
         }
     }
-    //carrousell//
-    .contenedor-principal{
-        div{
-            h3{
-                @include mrightleft(4.5em,4.5em );
-            }
-            .titulo-cheese{
-                @include mrightleft(1em, 1em );
-            }
-            .titulo-choco{
-                @include mrightleft(0.5em,0.5em );
-            }
-            p{
-                font-size: 1.2em;
+    //CARROUSEL//
+    .contenedor-carrusel{
+        .contenedor-principal{
+            div{
+                h3{
+                    @include mrightleft(4.5em,4.5em );
+                }
+                .titulo-choco{
+                    @include mrightleft(2em,2em );
+                }
+                p{
+                    font-size: 1.2em;
+                }
             }
         }
+    }   
+    .botonesPrincipales{
+        margin-bottom: 5em;
     }
     .section1{
         @include mrightleft(1em,1em);
@@ -581,6 +610,9 @@ footer{
     .seccion-contenido{
         margin-bottom: 6em;
         text-align: center;
+        .imagenes-delicias{
+           padding: 3.5em;          
+        }
         .conoce-delicias{
             h5{
                 @include margin(1em,1em );
@@ -598,29 +630,42 @@ footer{
     footer{
         display: block;
         text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
         .menuFinal{
-            nav{
-                ul{
-                    li{
-                        a{
-                            text-align: center;
-                            margin-right: $size/2;
-                            font-size: 1.5em
-                        }
+            ul{
+                margin-top: 2em;
+                li{
+                    a{
+                        text-align: center;
+                        margin-right: $size/2;
+                        font-size: 1.6em;
                     }
                 }
+            }
+        }
+        .contacto{
+            @include margin(2em,2em );
+            h5{
+                font-size: 1.4em;
+            }
+            p{
+                font-size: 1.3em;
             }
         }
         div{
             a{
                 .logoFinal{
-                    @include margin(1.5em,1.5em );
-                    @include sizes(8em,8em );
+                    @include margin(2em,2em );
+                    @include sizes(9em,9em );
                 }
                 .tamaño{
-                    margin-top: 1em;
-                    @include sizes(2em,2em );
+                    @include sizes(2.5em,2.5em );
+                    @include margin(1em,1em );
                 }
+            }
+            p{
+                font-size: 1.3em;
             }
         }  
     }
@@ -643,7 +688,7 @@ footer{
             }
         }
     }
-    //QUIENES SOMOS//
+    //QUIÉNES SOMOS//
     .main{
         .contenedor{
             .textoLargo{
@@ -661,16 +706,6 @@ footer{
                     }
                 }
             }
-            .historia2{
-                flex-wrap: wrap;
-                div{
-                    p{
-                        font-size: 1.3em;
-                        line-height: 1.8em;
-                        padding: 1em;
-                    }
-                } 
-            } 
         }
     }
     //INFORMACION// 
@@ -694,22 +729,24 @@ footer{
                     li{
                         a{
                             font-size: 1.9em;
+                            &:hover{
+                                padding: 0.2em;
+                            }
                         }
                     }
                 }
             }
         }
     }
-    .contenedor-principal{
-        div{
-            h3{
-                @include mrightleft(4.5em,4.5em );
-            }
-            .titulo-cheese{
-                @include mrightleft(1em, 1em );
-            }
-            .titulo-choco{
-                @include mrightleft(0.5em,0.5em );
+    .contenedor-carrusel{
+        .contenedor-principal{
+            div{
+                h3{
+                    @include mrightleft(4.5em,4.5em );
+                }
+                .titulo-choco{
+                    @include mrightleft(2em,2em );
+                }
             }
         }
     }
@@ -762,7 +799,7 @@ footer{
             }
         }
     }   
-    //QUIENES SOMOS//
+    //QUIÉNES SOMOS//
     .main{
         .contenedor{
             .textoLargo{
@@ -777,14 +814,6 @@ footer{
                     p{
                         font-size: 1.3em;
                         line-height: 1.9em;
-                    }
-                }
-                .historia2{
-                    div{
-                        p{
-                            font-size: 1.3em;
-                            padding: 1em;
-                        }
                     }
                 }
             }
@@ -806,16 +835,15 @@ footer{
             }
         }
     }
-    .contenedor-principal{
-        div{
-            h3{
-                @include mrightleft(7em,7em );
-            }
-            .titulo-cheese{
-                @include mrightleft(3.5em, 3.5em );
-            }
-            .titulo-choco{
-                @include mrightleft(3em,3em );
+    .contenedor-carrusel{
+        .contenedor-principal{
+            div{
+                h3{
+                    @include mrightleft(7em,7em );
+                }
+                .titulo-choco{
+                    @include mrightleft(4.5em,4.5em );
+                }
             }
         }
     }
@@ -873,7 +901,7 @@ footer{
             }
         }  
     }   
-    //QUIENES SOMOS//
+    //QUIÉNES SOMOS//
     .main{
         .contenedor{
             .textoLargo{
@@ -888,14 +916,6 @@ footer{
                     p{
                         font-size: 1.5em;
                         line-height: 1.9em;
-                    }
-                }
-                .historia2{
-                    div{
-                        p{
-                            font-size: 1.5em;
-                            padding: 1em;
-                        }
                     }
                 }
             }

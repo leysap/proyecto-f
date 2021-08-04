@@ -128,11 +128,10 @@
                     border: 2px solid $colorfooter;
                     img{
                         @include sizes(18.188em, 18.188em );
-                        padding: 0.2em;
                         margin-top: 0.2em;
-                        transition: 2s all ease;
+                        transition: 1s all ease;
                         &:hover{
-                            transform: scale(1.1,1.1);
+                            opacity: 0.9;
                         }
                     }
                     h3{
@@ -141,8 +140,7 @@
                         font-family: 'Caveat', cursive;
                         font-size: 2em;
                         padding: 0.2em;
-                    }
-                   
+                    }                  
                     ul{
                         text-align: center;
                         background-color: $colortitulo;
@@ -156,7 +154,6 @@
                         @include margin(1em,1em ,none ,none );
                         .link-pedido{
                             color: $colorfooter;
-                            text-decoration: none;
                             padding: 1.2em;
                             &:hover{
                                 color: black;
