@@ -454,6 +454,13 @@ main .contenedor-grid {
       font-weight: bold; }
     main .contenedor-grid .consultas img {
       margin-bottom: 1em; }
+    main .contenedor-grid .consultas img {
+      border-top-left-radius: 0.8em;
+      border-top-right-radius: 0.8em;
+      border-bottom-right-radius: 0.8em;
+      opacity: 1; }
+      main .contenedor-grid .consultas img:hover {
+        opacity: 0.8; }
   main .contenedor-grid .medios {
     grid-area: medio;
     border-right: 2px solid #e08465;
@@ -464,6 +471,9 @@ main .contenedor-grid {
       font-weight: bold; }
     main .contenedor-grid .medios img {
       margin-bottom: 1em; }
+    main .contenedor-grid .medios img {
+      border-radius: 0.3em;
+      background-color: none; }
   main .contenedor-grid .sitio {
     grid-area: sitio;
     border-right: none;
@@ -474,6 +484,9 @@ main .contenedor-grid {
       font-weight: bold; }
     main .contenedor-grid .sitio img {
       margin-bottom: 1em; }
+    main .contenedor-grid .sitio img {
+      border-radius: 0.3em;
+      background-color: none; }
 
 /*PAGINA QUIENES SOMOS*/
 .main {
@@ -595,17 +608,21 @@ header {
     .contenedor-carrusel .contenedor-principal div .boton2 a:hover {
       color: #ffffff; }
 
-.botonesPrincipales {
+.boton-whatsapp {
   position: fixed;
   bottom: 0;
   right: 0;
   margin-right: 1.8em;
   margin-bottom: 1.8em;
-  z-index: 100; }
-  .botonesPrincipales .foto-whatsapp {
+  z-index: 100;
+  background-color: #53e453;
+  padding: 0.7em;
+  border-radius: 2em;
+  opacity: 1; }
+  .boton-whatsapp .foto-whatsapp {
     width: 3em;
     height: 3em; }
-    .botonesPrincipales .foto-whatsapp:hover {
+    .boton-whatsapp .foto-whatsapp:hover {
       opacity: 0.8; }
 
 /*SECCIONES*/
@@ -715,26 +732,35 @@ header {
           color: #ffffff; }
 
 /* SECCION PEDIDO/MEDIO DE PAGO*/
-.flex-padre {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-right: 4em;
-  margin-left: 4em;
+.grid-contenedor {
   margin-top: 10em;
   margin-bottom: 10em;
-  padding: 2em;
-  text-align: center; }
-  .flex-padre div {
-    padding: 1em; }
-    .flex-padre div .flex-image {
-      width: 3.75em;
-      height: 3.75em; }
-    .flex-padre div h4 {
-      margin-top: 0.625em;
-      font-family: 'Thasadith', sans-serif;
-      font-size: 1.4em; }
+  display: grid;
+  text-align: center;
+  font-family: 'Thasadith', sans-serif;
+  font-weight: bold;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "consult medio"; }
+  .grid-contenedor .consulta {
+    grid-area: consult;
+    border-right: 2px solid #e08465; }
+    .grid-contenedor .consulta h4 {
+      font-weight: bold;
+      font-size: 1.7em; }
+    .grid-contenedor .consulta p {
+      font-size: 1.3em; }
+    .grid-contenedor .consulta img {
+      margin-bottom: 1em; }
+  .grid-contenedor .medio {
+    grid-area: medio; }
+    .grid-contenedor .medio h4 {
+      font-weight: bold;
+      font-size: 1.7em; }
+    .grid-contenedor .medio p {
+      font-size: 1.3em; }
+    .grid-contenedor .medio img {
+      margin-bottom: 1em; }
 
 /*SECCION CONOCE NUESTRAS DELICIAS*/
 .seccion-contenido {
@@ -771,10 +797,7 @@ header {
         width: 13.156em;
         height: 13.156em;
         padding: 0.4em;
-        border-radius: 0.7em;
-        opacity: 1; }
-        .seccion-contenido .imagenes-delicias .div-img-delicias .tort:hover {
-          opacity: 0.8; }
+        border-radius: 0.7em; }
 
 /*SECTION 3*: CLIENTES*/
 .section3 {
@@ -851,6 +874,11 @@ footer {
       color: black; }
   footer div h5 {
     font-weight: 400; }
+  footer div p a {
+    text-decoration: none;
+    color: #ffffff; }
+    footer div p a:hover {
+      color: black; }
   footer .logoFinal {
     width: 7.5em;
     height: 7.5em; }
@@ -874,40 +902,52 @@ footer {
         border-top-right-radius: 1em;
         border-bottom-right-radius: 1em; }
         header .header-nav div .menuPrincipal li a {
-          font-size: 1.5em; }
+          font-size: 1.3em; }
           header .header-nav div .menuPrincipal li a:hover {
             padding: 0.2em; }
   .section1 {
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
     margin-top: 6em;
-    margin-bottom: 6em; }
+    margin-bottom: 6em;
+    padding: 1em; }
     .section1 .aliveri {
-      font-size: 3rem; }
+      font-size: 3em; }
     .section1 .presentacion {
       text-align: center;
-      font-size: 0.9em;
-      padding: 0;
-      display: block; }
+      font-size: 1.2em;
+      padding: none; }
   .section2 {
     margin-top: 6em;
     margin-bottom: 6em; }
-  .flex-padre {
+    .section2 .destacado-title {
+      font-size: 2.1em; }
+  .grid-contenedor {
     margin-top: 6em;
     margin-bottom: 6em;
     font-size: 0.9em;
-    padding: 1em; }
+    padding: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "consult" "medio"; }
+    .grid-contenedor .consulta {
+      border-right: none;
+      border-bottom: 2px solid #e08465; }
+    .grid-contenedor .medio {
+      margin-top: 3em; }
   .seccion-contenido {
     margin-top: 6em;
     margin-bottom: 6em;
     text-align: center; }
     .seccion-contenido .conoce-delicias h5 {
-      font-size: 1.8em; }
+      font-size: 2em; }
     .seccion-contenido .conoce-delicias p {
       margin-top: 2em; }
   .section3 {
     margin-top: 6em;
     margin-bottom: 6em; }
+    .section3 .tituloCliente {
+      font-size: 2.1em; }
     .section3 .clientes-divs .card-cliente {
       width: 19em; }
   footer {
@@ -916,7 +956,7 @@ footer {
     footer .menuFinal ul li a {
       text-align: center;
       margin-right: 2em;
-      font-size: 1.6em; }
+      font-size: 1.4em; }
       footer .menuFinal ul li a:hover {
         padding: 0.1em; }
     footer .contacto {
@@ -981,7 +1021,7 @@ footer {
         border-top-right-radius: 1em;
         border-bottom-right-radius: 1em; }
         header .header-nav div .menuPrincipal li a {
-          font-size: 1.9em; }
+          font-size: 1.5em; }
           header .header-nav div .menuPrincipal li a:hover {
             padding: 0.2em; }
   .contenedor-carrusel .contenedor-principal div h3 {
@@ -1003,17 +1043,24 @@ footer {
       font-size: 3em; }
     .section1 .presentacion {
       text-align: center;
-      font-size: 0.9em;
-      padding: 0;
-      display: block; }
+      font-size: 1.2em;
+      padding: 0; }
   .section2 {
     margin-top: 6em;
     margin-bottom: 6em; }
-  .flex-padre {
+    .section2 .destacado-title {
+      font-size: 2.1em; }
+  .grid-contenedor {
     margin-top: 6em;
-    margin-bottom: 6em;
-    font-size: 0.9em;
-    padding: 1em; }
+    margin-bottom: 6em; }
+    .grid-contenedor .consulta {
+      padding: 0.5em; }
+      .grid-contenedor .consulta h4 {
+        font-size: 1.5em; }
+    .grid-contenedor .medio {
+      padding: 0.5em; }
+      .grid-contenedor .medio h4 {
+        font-size: 1.5em; }
   .seccion-contenido {
     margin-bottom: 6em;
     text-align: center; }
@@ -1021,10 +1068,13 @@ footer {
       padding: 3.5em; }
     .seccion-contenido .conoce-delicias h5 {
       margin-top: 1em;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      font-size: 2em; }
   .section3 {
     margin-top: 6em;
     margin-bottom: 6em; }
+    .section3 .tituloCliente {
+      font-size: 2.1em; }
     .section3 .clientes-divs .card-cliente {
       width: 20em; }
   footer {
@@ -1037,7 +1087,7 @@ footer {
       footer .menuFinal ul li a {
         text-align: center;
         margin-right: 2em;
-        font-size: 1.6em; }
+        font-size: 1.5em; }
     footer .contacto {
       margin-top: 2em;
       margin-bottom: 2em; }
@@ -1051,8 +1101,8 @@ footer {
       width: 9em;
       height: 9em; }
     footer div a .tamaño {
-      width: 2.5em;
-      height: 2.5em;
+      width: 2.2em;
+      height: 2.2em;
       margin-top: 1em;
       margin-bottom: 1em; }
     footer div p {
@@ -1090,7 +1140,7 @@ footer {
         border-top-right-radius: 1em;
         border-bottom-right-radius: 1em; }
         header .header-nav div .menuPrincipal li a {
-          font-size: 1.9em; }
+          font-size: 1.6em; }
           header .header-nav div .menuPrincipal li a:hover {
             padding: 0.2em; }
   .contenedor-carrusel .contenedor-principal div h3 {
@@ -1105,12 +1155,11 @@ footer {
     margin-right: 1em;
     margin-left: 1em; }
     .section1 .aliveri {
-      font-size: 3em; }
+      font-size: 4em; }
     .section1 .presentacion {
       text-align: center;
-      font-size: 0.9em;
-      padding: 0;
-      display: block; }
+      font-size: 1.2em;
+      padding: 0; }
   .section2 {
     margin-top: 6em;
     margin-bottom: 6em; }
@@ -1126,7 +1175,7 @@ footer {
         font-size: 1em;
         padding: 0.2em;
         margin-top: 0.5em; }
-  .flex-padre {
+  .grid-contenedor {
     margin-top: 6em;
     margin-bottom: 6em;
     font-size: 0.8em;
@@ -1136,7 +1185,10 @@ footer {
     text-align: center; }
     .seccion-contenido .conoce-delicias h5 {
       margin-top: 1em;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      font-size: 2.4em; }
+    .seccion-contenido .conoce-delicias p {
+      font-size: 1.2em; }
   .section3 {
     margin-top: 6em;
     margin-bottom: 6em; }
@@ -1170,12 +1222,11 @@ footer {
     margin-right: 1em;
     margin-left: 1em; }
     .section1 .aliveri {
-      font-size: 3em; }
+      font-size: 4em; }
     .section1 .presentacion {
       text-align: center;
-      font-size: 0.9em;
-      padding: 0;
-      display: block; }
+      font-size: 1.2em;
+      padding: 0; }
   .section2 {
     margin-top: 6em;
     margin-bottom: 6em; }
@@ -1191,7 +1242,7 @@ footer {
         font-size: 1em;
         padding: 0.2em;
         margin-top: 0.5em; }
-  .flex-padre {
+  .grid-contenedor {
     margin-top: 6em;
     margin-bottom: 6em;
     font-size: 0.8em;
@@ -1204,7 +1255,8 @@ footer {
       padding: 1em; }
       .seccion-contenido .conoce-delicias h5 {
         margin-top: 1em;
-        margin-bottom: 1em; }
+        margin-bottom: 1em;
+        font-size: 1.6em; }
   .section3 {
     margin-top: 6em;
     margin-bottom: 6em; }

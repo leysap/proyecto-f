@@ -31,6 +31,11 @@ $size: 4em;
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
 }
+@mixin grid {
+    border-right: none;
+    border-bottom: 2px solid $coloraliveri;
+    
+}
 @mixin background($color) {
     background-color: $color;
     //APLICANDO CONDICIONALES//
@@ -136,13 +141,17 @@ header{
     }
 }
 
-.botonesPrincipales{
+.boton-whatsapp{
     position:fixed;
     bottom: 0;
     right: 0;
     margin-right:1.8em;
     margin-bottom: 1.8em;
     z-index: 100;
+    background-color: rgb(83, 228, 83);
+    padding: 0.7em;
+    border-radius: 2em;
+    opacity: 1;
     .foto-whatsapp{
         @include sizes(3em, 3em);
         &:hover{
@@ -243,21 +252,41 @@ header{
     }
 }
 /* SECCION PEDIDO/MEDIO DE PAGO*/
-.flex-padre{
-    @include flex(space-around);
-    @include mrightleft(4em, 4em);
-    @include margin(10em, 10em);
-    padding: $size/2;
+.grid-contenedor{
+    @include margin(10em,10em);
+    display: grid;
     text-align: center;
-    div{
-        padding: 1em;
-        .flex-image{
-            @include sizes(3.75em,3.75em);
-        }
+    font-family: 'Thasadith', sans-serif; 
+    font-weight: bold;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "consult medio";
+    .consulta{
+        grid-area: consult;
+        border-right: 2px solid $coloraliveri;
         h4{
-            margin-top: 0.625em;
-            font-family: 'Thasadith', sans-serif;
-            font-size: 1.4em;
+            font-weight: bold;
+            font-size: 1.7em;
+        }
+        p{
+            font-size: 1.3em;
+        }
+        img{
+            margin-bottom: 1em;
+        }  
+    }
+    .medio{
+        grid-area: medio;
+        h4{
+            font-weight: bold;
+            font-size: 1.7em;
+        }
+        p{
+            font-size: 1.3em;
+        }
+        img{
+            margin-bottom: 1em;
         }
     }
 }
@@ -288,10 +317,6 @@ header{
                 @include sizes(13.156em, 13.156em);
                 padding: 0.4em;
                 border-radius: 0.7em;
-                opacity: 1;
-                &:hover{
-                    opacity: 0.8;
-                }
             }
         }
     }
@@ -363,6 +388,15 @@ footer{
         h5{
             font-weight: 400;
         }
+        p{
+            a{
+                text-decoration: none;
+                color: $colortitulo;
+                &:hover{
+                    color: black;
+                }
+            }
+        }
     }
     .logoFinal{
         @include sizes(7.5em, 7.5em);
@@ -389,7 +423,7 @@ footer{
                     @include bordertop();
                     li{
                         a{
-                            font-size: 1.5em;
+                            font-size: 1.3em;
                             &:hover{
                                 padding: 0.2em
                             }
@@ -400,30 +434,45 @@ footer{
         }
     }
     .section1{
-        @include mrightleft(1em, 1em);
+        @include mrightleft(0.5em, 0.5em);
         @include margin(6em, 6em);
+        padding: 1em;
         .aliveri{
-            font-size: 3rem
+            font-size: 3em;
         }
         .presentacion{
-            @include text-size-padding(center, 0.9em , 0);
-            display: block;
+            @include text-size-padding(center, 1.2em , none);
         }
     }
     .section2{
-        @include margin(6em, 6em);  
+        @include margin(6em, 6em);
+        .destacado-title{
+            font-size: 2.1em;
+        }  
     }
-    .flex-padre{
+    .grid-contenedor{
         @include margin(6em, 6em);
         font-size: 0.9em;
         padding:1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+        "consult"
+        "medio";
+        .consulta{
+            border-right: none;
+            border-bottom: 2px solid $coloraliveri;
+        }
+        .medio{
+            margin-top: 3em;
+        }
     }
     .seccion-contenido{
         @include margin(6em,6em);
         text-align: center;
         .conoce-delicias{
             h5{
-                font-size: 1.8em;
+                font-size: 2em;
             }
             p{
                 margin-top:2em;
@@ -432,6 +481,9 @@ footer{
     }
     .section3{
         @include margin(6em,6em);
+        .tituloCliente{
+            font-size: 2.1em;
+        }
         .clientes-divs{
             .card-cliente{
                 width: 19em;
@@ -447,7 +499,7 @@ footer{
                     a{
                         text-align: center;
                         margin-right: $size/2;
-                        font-size: 1.6em;
+                        font-size: 1.4em;
                         &:hover{
                             padding: 0.1em;
                         }
@@ -538,12 +590,10 @@ footer{
             "medio"
             "sitio";
             .consultas{
-                border-right: none;
-                border-bottom: 2px solid $coloraliveri;
+                @include grid();
             }
             .medios{
-                border-right: none;
-                border-bottom: 2px solid $coloraliveri;
+               @include grid();
             }
         }
     }
@@ -559,7 +609,7 @@ footer{
                     @include bordertop();
                     li{
                         a{
-                            font-size: 1.9em;
+                            font-size: 1.5em;
                             &:hover{
                                 padding: 0.2em
                             }
@@ -595,17 +645,29 @@ footer{
             font-size: 3em;
         }
         .presentacion{
-            @include text-size-padding(center, 0.9em ,0);
-            display: block;
+            @include text-size-padding(center, 1.2em ,0);
         }
     }
     .section2{
-        @include margin(6em,6em);  
+        @include margin(6em,6em);
+        .destacado-title{
+            font-size: 2.1em;
+        }  
     }
-    .flex-padre{
+    .grid-contenedor{
         @include margin(6em, 6em);
-        font-size: 0.9em;
-        padding:1em;
+        .consulta{
+            padding: 0.5em;
+            h4{
+                font-size: 1.5em;
+            }
+        }
+        .medio{
+            padding: 0.5em;
+            h4{
+                font-size: 1.5em;
+            }
+        }
     }
     .seccion-contenido{
         margin-bottom: 6em;
@@ -616,11 +678,15 @@ footer{
         .conoce-delicias{
             h5{
                 @include margin(1em,1em );
+                font-size: 2em;
             }
         }
     }
     .section3{
         @include margin(6em ,6em);
+        .tituloCliente{
+            font-size: 2.1em;
+        }
         .clientes-divs{
             .card-cliente{
                 width: 20em;
@@ -639,7 +705,7 @@ footer{
                     a{
                         text-align: center;
                         margin-right: $size/2;
-                        font-size: 1.6em;
+                        font-size: 1.5em;
                     }
                 }
             }
@@ -660,7 +726,7 @@ footer{
                     @include sizes(9em,9em );
                 }
                 .tamaño{
-                    @include sizes(2.5em,2.5em );
+                    @include sizes(2.2em,2.2em );
                     @include margin(1em,1em );
                 }
             }
@@ -728,7 +794,7 @@ footer{
                     @include bordertop();
                     li{
                         a{
-                            font-size: 1.9em;
+                            font-size: 1.6em;
                             &:hover{
                                 padding: 0.2em;
                             }
@@ -754,15 +820,14 @@ footer{
         @include margin(6em,6em );
         @include mrightleft(1em, 1em );
         .aliveri{
-            font-size: 3em
+            font-size: 4em;
         }
         .presentacion{
-            @include text-size-padding(center, 0.9em ,0);
-            display: block;
+            @include text-size-padding(center, 1.2em ,0);
         }
     }
     .section2{
-        @include margin(6em,6em);  
+        @include margin(6em,6em); 
         .divs-destacados{
             .imagen-destacada1{
                 @include sizes(14em, 18em);
@@ -777,7 +842,7 @@ footer{
             }
         }
     }
-    .flex-padre{
+    .grid-contenedor{
         @include margin(6em, 6em);
         font-size: 0.8em;
         padding:1em;
@@ -788,6 +853,10 @@ footer{
         .conoce-delicias{
             h5{
                 @include margin(1em,1em );
+                font-size: 2.4em;
+            }
+            p{
+                font-size: 1.2em;
             }
         }
     }
@@ -851,11 +920,10 @@ footer{
         @include margin(6em,6em );
         @include mrightleft(1em, 1em );
         .aliveri{
-            font-size: 3em
+            font-size: 4em;
         }
         .presentacion{
-            @include text-size-padding(center, 0.9em ,0);
-            display: block;
+            @include text-size-padding(center, 1.2em ,0);
         }
     }
     .section2{
@@ -874,7 +942,7 @@ footer{
             }
         }
     }
-    .flex-padre{
+    .grid-contenedor{
         @include margin(6em, 6em);
         font-size: 0.8em;
         padding:1em;
@@ -887,6 +955,7 @@ footer{
             padding: 1em;
             h5{
                 @include margin(1em,1em );
+                font-size: 1.6em;
             }
         }
     }
