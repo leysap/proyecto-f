@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*PAGINA DOS: DELICIAS*/
 .seccion-delicias {
-  font-family: 'Thasadith', sans-serif; }
+  font-family: "Thasadith", sans-serif; }
   .seccion-delicias main .titulo-delicias {
     background-color: #E79E85;
     color: #ffffff;
@@ -29,7 +29,8 @@
         padding: 1em;
         border-radius: 0.2em;
         max-width: 100%;
-        max-height: auto; }
+        max-height: auto;
+        transition: all 1s ease; }
         .seccion-delicias main .galeria .galeria-imagenes div .imagen-g:hover {
           opacity: 0.9; }
   .seccion-delicias main .seccionMenu {
@@ -112,7 +113,8 @@
           width: 18.188em;
           height: 18.188em;
           margin-top: 0.2em;
-          transition: 1s all ease; }
+          transition: all 1s ease;
+          opacity: 1; }
           .seccion-delicias main .section-productos .productos-contenedor .card-div img:hover {
             opacity: 0.9; }
         .seccion-delicias main .section-productos .productos-contenedor .card-div h3 {
@@ -144,9 +146,9 @@
             color: #E79E85;
             padding: 1.2em; }
             .seccion-delicias main .section-productos .productos-contenedor .card-div .card-pedidos .link-pedido:hover {
-              color: black; }
+              color: #000000; }
 
-/*Boton arriba*/
+/*BOTÓN ARRIBA*/
 .boton-arriba {
   margin-top: none;
   margin-bottom: 1.8em;
@@ -160,19 +162,22 @@
   .boton-arriba button {
     padding: 0.5em;
     border-radius: 1em;
-    background-color: #E79E85; }
+    background-color: #E79E85;
+    border: 2px solid #ffffff;
+    transition: 1s all ease; }
     .boton-arriba button:hover {
-      opacity: 0.7;
-      transition: all 1s ease; }
+      opacity: 0.9; }
+    .boton-arriba button:active {
+      background-color: #ffffff; }
     .boton-arriba button .img-flecha {
-      width: 1.563em;
-      height: 1.563em; }
+      width: 1.875em;
+      height: 1.875em; }
 
 /*PAGINA HACE TU PEDIDO*/
 /*MAIN*/
 .cuerpo {
   background-color: #F2E9D0;
-  color: black;
+  color: #000000;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
   text-align: center;
@@ -186,23 +191,24 @@
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
     font-family: 'Thasadith', sans-serif;
+    font-weight: none;
+    font-size: 2em;
     text-align: center;
-    padding: 0.8em;
-    font-size: 2em; }
+    padding: 0.8em; }
   .cuerpo form .div-input {
     margin-top: 0.5em;
     margin-bottom: 0.5em; }
     .cuerpo form .div-input .nombreFormu {
-      padding: 0.313em;
       font-family: 'Thasadith', sans-serif;
       font-weight: bold;
-      font-size: 1.1em; }
+      font-size: 1.1em;
+      padding: 0.313em; }
   .cuerpo form div .tituloFavorito {
-    margin-top: 1em;
-    text-decoration: underline;
-    font-size: 1.7em;
     font-family: 'Thasadith', sans-serif;
-    font-weight: 600; }
+    font-weight: 600;
+    font-size: 1.7em;
+    margin-top: 1em;
+    text-decoration: underline; }
   .cuerpo form div .opcion-torta {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -232,7 +238,7 @@
       transition: all 1s ease; }
       .cuerpo form .botones-limp-env .limpiar:hover {
         background-color: #ffffff;
-        color: black; }
+        color: #000000; }
 
 /*PAGINA INFORMACION*/
 main .titulo-informacion {
@@ -246,19 +252,19 @@ main .titulo-informacion {
   text-align: center;
   font-weight: none;
   font-family: "Thasadith";
-  border-radius: 0.5em;
-  padding: 0.8em; }
+  padding: 0.8em;
+  border-radius: 0.5em; }
 
 main .seccion-info {
   padding: 1em;
   border-radius: none;
   background-color: #F2E9D0;
-  color: black;
+  color: #000000;
   margin-top: 2em;
   margin-bottom: 2em;
   margin-right: none;
   margin-left: none;
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Thasadith", sans-serif;
   border-radius: 0.2em; }
   main .seccion-info .pedidos {
     padding: 1em;
@@ -275,13 +281,13 @@ main .seccion-info {
     main .seccion-info .pedidos div .pedidos-titulo {
       padding: 0.5em;
       border-radius: 0.1em;
-      border-top: 0.063em solid black;
-      border-bottom: 0.063emsolid black;
+      border-top: 0.063em solid #000000;
+      border-bottom: 0.063emsolid #000000;
       color: #e08465;
       text-align: center;
       font-size: 1.4em; }
       main .seccion-info .pedidos div .pedidos-titulo a {
-        color: black; }
+        color: #000000; }
         main .seccion-info .pedidos div .pedidos-titulo a:hover {
           color: #e08465; }
     main .seccion-info .pedidos div ul {
@@ -289,7 +295,7 @@ main .seccion-info {
       main .seccion-info .pedidos div ul li {
         text-align: center; }
     main .seccion-info .pedidos .enlace-web a {
-      color: black; }
+      color: #000000; }
       main .seccion-info .pedidos .enlace-web a:hover {
         color: #e08465; }
     main .seccion-info .pedidos .alerta {
@@ -328,9 +334,9 @@ main .info-importante {
   text-align: center;
   font-weight: bold;
   font-family: "Thasadith";
-  line-height: 2em;
   padding: 4em;
   border-radius: 0.2em;
+  line-height: 2em;
   background-color: #F2E9D0; }
   main .info-importante .importante {
     background-color: #ffffff;
@@ -348,7 +354,7 @@ main .seccion-contenido {
   margin-right: none;
   margin-left: none; }
   main .seccion-contenido .conoce2 {
-    font-family: 'Thasadith', sans-serif; }
+    font-family: "Thasadith", sans-serif; }
     main .seccion-contenido .conoce2 h4 {
       font-size: 2em; }
     main .seccion-contenido .conoce2 p {
@@ -428,11 +434,11 @@ main .menu {
         main .menu .flex-container div ul li {
           text-align: left;
           padding: 0.6em;
-          font-family: 'Thasadith', sans-serif; }
+          font-family: "Thasadith", sans-serif; }
   main .menu .boton2 {
     text-align: center; }
     main .menu .boton2 a {
-      font-family: 'Thasadith', sans-serif; }
+      font-family: "Thasadith", sans-serif; }
 
 main .contenedor-grid {
   margin-top: 4em;
@@ -491,7 +497,7 @@ main .contenedor-grid {
 /*PAGINA QUIENES SOMOS*/
 .main {
   background-color: #F2E9D0;
-  color: black;
+  color: #000000;
   border-top-left-radius: 0.8em;
   border-top-right-radius: 0.8em;
   margin: 2em; }
@@ -535,7 +541,7 @@ main .contenedor-grid {
         .main .contenedor .textoLargo .historia1 h2 {
           text-align: right;
           font-size: 1.2em;
-          font-family: 'Thasadith', sans-serif;
+          font-family: "Thasadith", sans-serif;
           font-weight: bold; }
 
 * {
@@ -554,7 +560,7 @@ header {
       height: auto; }
     header .header-nav div .menuPrincipal {
       background-color: #E79E85;
-      font-family: 'Thasadith', sans-serif;
+      font-family: "Thasadith", sans-serif;
       color: #ffffff;
       border-bottom-left-radius: 1em;
       border-top-left-radius: 1em;
@@ -655,7 +661,7 @@ header {
   margin-top: 1em;
   margin-bottom: 1em;
   background-color: #E79E85;
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Thasadith", sans-serif;
   padding-left: 1em;
   padding-right: 1em;
   text-align: center; }
@@ -672,18 +678,18 @@ header {
 /*SECTION 2: DESTACADOS*/
 .section2 {
   background-color: #FFD3B6;
-  font-family: 'Thasadith', sans-serif;
-  color: black;
+  font-family: "Thasadith", sans-serif;
+  color: #000000;
   margin-top: 10em;
   margin-bottom: 10em; }
   .section2 .destacado-title {
     background-color: #E79E85;
-    font-family: 'Thasadith', sans-serif;
+    font-family: "Thasadith", sans-serif;
     color: #ffffff;
     text-align: center;
     font-size: 2.4em;
     padding: 0.5em;
-    font-family: 'Thasadith', sans-serif; }
+    font-family: "Thasadith", sans-serif; }
   .section2 .boton-ver {
     text-align: center; }
   .section2 .divs-destacados {
@@ -693,8 +699,8 @@ header {
     justify-content: space-around; }
     .section2 .divs-destacados .imagen-destacada1 {
       background-color: #FFE8CF;
-      font-family: 'Thasadith', sans-serif;
-      color: black;
+      font-family: "Thasadith", sans-serif;
+      color: #000000;
       width: 18em;
       height: 24.063em;
       box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.12);
@@ -712,7 +718,7 @@ header {
         margin-right: 0.2em;
         margin-left: 0.2em;
         background-color: #E79E85;
-        font-family: 'Thasadith', sans-serif;
+        font-family: "Thasadith", sans-serif;
         color: #ffffff;
         text-align: none;
         font-size: 1.2em;
@@ -722,13 +728,13 @@ header {
       .section2 .divs-destacados .imagen-destacada1 .boton-hace-tu-pedido {
         margin-top: 0.5em;
         margin-bottom: 0.5em;
-        font-family: 'Thasadith', sans-serif;
+        font-family: "Thasadith", sans-serif;
         color: #e08465;
         border: 0.063em solid #E79E85;
         font-weight: bolder; }
         .section2 .divs-destacados .imagen-destacada1 .boton-hace-tu-pedido:hover {
           background-color: #E79E85;
-          font-family: 'Thasadith', sans-serif;
+          font-family: "Thasadith", sans-serif;
           color: #ffffff; }
 
 /* SECCION PEDIDO/MEDIO DE PAGO*/
@@ -737,7 +743,7 @@ header {
   margin-bottom: 10em;
   display: grid;
   text-align: center;
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Thasadith", sans-serif;
   font-weight: bold;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
@@ -769,7 +775,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: #E79E85;
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Thasadith", sans-serif;
   color: #ffffff;
   margin-top: 10em;
   margin-bottom: 10em;
@@ -797,20 +803,24 @@ header {
         width: 13.156em;
         height: 13.156em;
         padding: 0.4em;
-        border-radius: 0.7em; }
+        border-radius: 0.7em;
+        opacity: 1;
+        transition: all ease 1s; }
+        .seccion-contenido .imagenes-delicias .div-img-delicias .tort:hover {
+          opacity: 0.8; }
 
 /*SECTION 3*: CLIENTES*/
 .section3 {
   background-color: #FFE8CF;
-  font-family: 'Thasadith', sans-serif;
-  color: black;
+  font-family: "Thasadith", sans-serif;
+  color: #000000;
   margin-top: 10em;
   margin-bottom: 10em;
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Thasadith", sans-serif;
   font-weight: bold; }
   .section3 .tituloCliente {
     background-color: #E79E85;
-    font-family: 'Thasadith', sans-serif;
+    font-family: "Thasadith", sans-serif;
     color: #ffffff;
     text-align: center;
     font-size: 2.4em;
@@ -820,12 +830,12 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    font-family: 'Thasadith', sans-serif; }
+    font-family: "Thasadith", sans-serif; }
     .section3 .clientes-divs .card-cliente {
       width: 12em;
       height: auto;
       background-color: #ffffff;
-      color: black;
+      color: #000000;
       box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.12);
       margin: 2em;
       text-align: center; }
@@ -835,7 +845,7 @@ header {
         padding: 0.8em; }
       .section3 .clientes-divs .card-cliente h5 {
         background-color: #E79E85;
-        font-family: 'Thasadith', sans-serif;
+        font-family: "Thasadith", sans-serif;
         color: #ffffff;
         text-align: none;
         font-size: 1.4em;
@@ -849,13 +859,13 @@ header {
 /*FOOTER*/
 footer {
   background-color: #E79E85;
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Thasadith", sans-serif;
   color: #ffffff;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Thasadith", sans-serif;
   align-items: center;
   padding-top: 2.5em;
   padding-bottom: 2.5em;
@@ -865,7 +875,7 @@ footer {
     list-style: none; }
   footer .menuFinal a {
     color: #ffffff;
-    font-family: 'Thasadith', sans-serif;
+    font-family: "Thasadith", sans-serif;
     text-align: justify;
     text-decoration: none; }
     footer .menuFinal a:hover {
@@ -934,7 +944,7 @@ footer {
       border-right: none;
       border-bottom: 2px solid #e08465; }
     .grid-contenedor .medio {
-      margin-top: 3em; }
+      margin-top: 6em; }
   .seccion-contenido {
     margin-top: 6em;
     margin-bottom: 6em;
@@ -977,13 +987,8 @@ footer {
       margin-bottom: 1.5em; }
     footer div p {
       font-size: 1.3em; }
-  .galeria-imagenes {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; }
-    .galeria-imagenes div img {
-      width: 19em;
-      height: 19em; }
+  .galeria {
+    display: none; }
   .main .contenedor .textoLargo {
     flex-wrap: wrap; }
     .main .contenedor .textoLargo .alexiaImg img {
@@ -993,10 +998,6 @@ footer {
       line-height: 1.9em; }
   .cuerpo {
     padding: 1em; }
-    .cuerpo form .div-input {
-      display: block; }
-      .cuerpo form .div-input .nombreFormu {
-        display: block; }
   main .seccion-contenido .conoce2 {
     text-align: center; }
   main .contenedor-grid {
@@ -1115,8 +1116,8 @@ footer {
       .galeria-imagenes div img {
         width: 26em;
         height: 26em; }
-  .cuerpo form .div-input {
-    display: block; }
+  .cuerpo {
+    padding: 1em; }
   .main .contenedor .textoLargo {
     flex-wrap: wrap; }
     .main .contenedor .textoLargo .alexiaImg img {

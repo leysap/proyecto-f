@@ -7,7 +7,7 @@
     background-color: $color;
     //APLICANDO CONDICIONALES//
     @if $color == $colorheader {
-        color: black;
+        color: #000000;
     }
         @else if $color == $colorfooter{
             color: $colortitulo;
@@ -16,7 +16,7 @@
                 color: $coloraliveri;
             }
                 @else{
-                    color: black;
+                    color: #000000;
                 }
 }
 @mixin margin ($top, $bottom, $right, $left){
@@ -52,20 +52,25 @@
         margin-bottom: 1em;
     } 
 }
+@mixin img-grid {
+    img{
+        border-radius: 0.3em;
+        background-color: none;
+    }
+}
 /*PAGINA INFORMACION*/
 main{
     .titulo-informacion{
         @include background($colorfooter);
         @include margin(1em, 1.3em , 1em , 1em);
         @include fonts(2em, center ,none ,'Thasadith');
-        border-radius: 0.5em;
-        padding: 0.8em;
+        @include pb(0.8em,0.5em );
     }
     .seccion-info{
         @include pb(1em, none );
         @include background($colorheader);
         @include margin(2em, 2em  ,none ,none );
-        font-family: 'Thasadith', sans-serif;
+        font-family: $thasadith;
         border-radius: 0.2em;
         .pedidos{
             @include pb(1em, none );
@@ -77,13 +82,13 @@ main{
             div{
                 .pedidos-titulo{
                     @include pb(0.5em, 0.1em);            
-                    border-top: 0.063em solid black;
-                    border-bottom: 0.063emsolid black;
+                    border-top: 0.063em solid #000000;
+                    border-bottom: 0.063emsolid #000000;
                     color: $coloraliveri;
                     text-align: center;
                     font-size: 1.4em;
                     a{
-                        color: black;
+                        color: #000000;
                         &:hover{
                             color: $coloraliveri;
                         }
@@ -98,7 +103,7 @@ main{
             }
             .enlace-web{
                 a{
-                    color: black;
+                    color: #000000;
                     &:hover{
                         color: $coloraliveri;
                     }
@@ -133,9 +138,8 @@ main{
     .info-importante{
         @include margin(2em , 2em ,none ,none );
         @include fonts(1em, center , bold ,'Thasadith' );
+        @include pb(4em,0.2em );
         line-height: 2em;
-        padding: 4em;
-        border-radius: 0.2em;
         background-color: $colorheader;
         .importante{
             @include background($colortitulo);
@@ -150,7 +154,7 @@ main{
     .seccion-contenido{
         @include margin(4em,4em ,none ,none);
         .conoce2{
-            font-family: 'Thasadith', sans-serif;
+            font-family: $thasadith;
             h4{
                 font-size: 2em;
             }
@@ -170,8 +174,7 @@ main{
                     &:hover{
                         @include background($colortitulo);
                         @include margin(none,none ,0.3em ,0.3em );
-                        padding: 0.2em;
-                        border-radius: 0.2em;
+                        @include pb(0.2em,0.2em );
                     }
                 }
                 .tort2{
@@ -216,7 +219,7 @@ main{
                     li{
                         text-align: left;
                         padding: 0.6em;
-                        font-family: 'Thasadith', sans-serif;  
+                        font-family: $thasadith; 
                     }
                 }              
             }
@@ -224,7 +227,7 @@ main{
         .boton2{
             text-align: center;
             a{
-                font-family: 'Thasadith', sans-serif;
+                font-family: $thasadith;
             }
         }
     }
@@ -242,11 +245,8 @@ main{
             img{
                 border-top-left-radius: 0.8em;
                 border-top-right-radius: 0.8em;
-                border-bottom-right-radius:0.8em;
-             
+                border-bottom-right-radius:0.8em; 
                 opacity: 1;
-                
-                
                 &:hover{
                     opacity:0.8;
                 }
@@ -255,18 +255,12 @@ main{
         .medios{
             @include grid(medio,2px solid $coloraliveri);
             @include grid-img-h4();
-            img{
-                border-radius: 0.3em;
-                background-color: none;
-            }
+            @include img-grid();
         }
         .sitio{
             @include grid(sitio, none );
             @include grid-img-h4();
-            img{
-                border-radius: 0.3em;
-                background-color: none;
-            }
+            @include img-grid();
         }
     }
 }           

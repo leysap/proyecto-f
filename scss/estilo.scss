@@ -34,29 +34,40 @@ $size: 4em;
 @mixin grid {
     border-right: none;
     border-bottom: 2px solid $coloraliveri;
-    
+}
+@mixin h4-p-img {
+    h4{
+        font-weight: bold;
+        font-size: 1.7em;
+    }
+    p{
+        font-size: 1.3em;
+    }
+    img{
+        margin-bottom: 1em;
+    } 
 }
 @mixin background($color) {
     background-color: $color;
     //APLICANDO CONDICIONALES//
     @if $color == $colorheader {
-        font-family:'Thasadith', sans-serif;
-        color: black;
+        font-family:$thasadith;
+        color: #000000;
     }
         @else if $color == $colorfooter{
-            font-family:'Thasadith', sans-serif;
+            font-family:$thasadith;
             color: $colortitulo;
         }
             @else if $color == $colordestacado{
-                font-family:'Thasadith', sans-serif;
-                color: black;
+                font-family:$thasadith;
+                color: #000000;
             }
                 @else if $color == $clientes{
-                    font-family:'Thasadith', sans-serif;
-                    color: black;
+                    font-family:$thasadith;
+                    color: #000000;
                 }
                     @else{
-                        color: black;
+                        color: #000000;
                     }
 }
 *{
@@ -140,7 +151,6 @@ header{
         }
     }
 }
-
 .boton-whatsapp{
     position:fixed;
     bottom: 0;
@@ -181,11 +191,11 @@ header{
         font-style: italic;
     }    
 }
-//BOTON QUIENES SOMOS, VER TODOS Y BOTON EN SECCION INFORMACIÓN//
+//BOTON QUIÉNES SOMOS, VER TODOS Y BOTON EN SECCION INFORMACIÓN//
 .boton{
     @include margin(1em, 1em);
     background-color:$colorfooter;
-    font-family:'Thasadith', sans-serif;
+    font-family:$thasadith;
     padding-left: $size/4;
     padding-right: $size/4;
     text-align: center;
@@ -209,7 +219,7 @@ header{
     .destacado-title{
         @include background($colorfooter);
         @include text-size-padding(center, 2.4em , 0.5em );
-        font-family:'Thasadith', sans-serif;
+        font-family:$thasadith;
     }
     .boton-ver{
         text-align: center;
@@ -240,7 +250,7 @@ header{
             }                       
             .boton-hace-tu-pedido{
                 @include margin(0.5em, 0.5em);
-                font-family: 'Thasadith', sans-serif; 
+                font-family:$thasadith;
                 color: $coloraliveri;
                 border: 0.063em solid $colorfooter;
                 font-weight: bolder;
@@ -256,7 +266,7 @@ header{
     @include margin(10em,10em);
     display: grid;
     text-align: center;
-    font-family: 'Thasadith', sans-serif; 
+    font-family: $thasadith; 
     font-weight: bold;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -265,29 +275,11 @@ header{
     .consulta{
         grid-area: consult;
         border-right: 2px solid $coloraliveri;
-        h4{
-            font-weight: bold;
-            font-size: 1.7em;
-        }
-        p{
-            font-size: 1.3em;
-        }
-        img{
-            margin-bottom: 1em;
-        }  
+        @include h4-p-img(); 
     }
     .medio{
         grid-area: medio;
-        h4{
-            font-weight: bold;
-            font-size: 1.7em;
-        }
-        p{
-            font-size: 1.3em;
-        }
-        img{
-            margin-bottom: 1em;
-        }
+        @include h4-p-img();
     }
 }
  /*SECCION CONOCE NUESTRAS DELICIAS*/
@@ -317,6 +309,11 @@ header{
                 @include sizes(13.156em, 13.156em);
                 padding: 0.4em;
                 border-radius: 0.7em;
+                opacity: 1;
+                transition: all ease 1s;
+                &:hover{
+                    opacity: 0.8;
+                }
             }
         }
     }
@@ -325,7 +322,7 @@ header{
 .section3{
     @include background($clientes);
     @include margin(10em, 10em);
-    font-family: 'Thasadith', sans-serif;
+    font-family: $thasadith;
     font-weight: bold;
     .tituloCliente{
         @include background($colorfooter);
@@ -333,7 +330,7 @@ header{
     } 
     .clientes-divs{
         @include flex(space-around);
-        font-family: 'Thasadith', sans-serif;
+        font-family: $thasadith;
         .card-cliente{
             @include sizes(12em, auto);
             @include background($colortitulo);
@@ -361,7 +358,7 @@ header{
 footer{
     @include background($colorfooter);
     @include flex(space-around);
-    font-family:'Thasadith', sans-serif;
+    font-family:$thasadith;
     align-items: center;
     padding-top: $size/1.6;
     padding-bottom: $size/1.6;
@@ -373,7 +370,7 @@ footer{
         }
         a{
             color: $colortitulo;
-            font-family:'Thasadith', sans-serif;
+            font-family:$thasadith;
             text-align: justify;
             text-decoration: none;
             &:hover{
@@ -464,7 +461,7 @@ footer{
             border-bottom: 2px solid $coloraliveri;
         }
         .medio{
-            margin-top: 3em;
+            margin-top: 6em;
         }
     }
     .seccion-contenido{
@@ -533,16 +530,9 @@ footer{
         } 
     }
    //SECCION DELICIAS//
-    .galeria-imagenes{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        div{ 
-            img{
-                @include sizes(19em,19em );
-            }    
-        }  
-    } 
+    .galeria{
+        display: none;
+   }
     //QUIÉNES SOMOS//
     .main{
         .contenedor{
@@ -565,14 +555,6 @@ footer{
     //HACE TU PEDIDO// 
     .cuerpo{
         padding: 1em;
-        form{
-            .div-input{
-                display: block;
-                .nombreFormu{
-                    display: block;
-                }
-            }
-        }
     }
     //INFORMACIÓN// 
     main{
@@ -735,7 +717,7 @@ footer{
             }
         }  
     }
-    //seccion delicias//
+    //SECCION DELICIAS//
     .galeria-imagenes{
         display: flex;
         flex-wrap: wrap;
@@ -748,11 +730,7 @@ footer{
     }
     //HACE TU PEDIDO//
     .cuerpo{
-        form{
-            .div-input{
-                display: block;
-            }
-        }
+        padding: 1em;
     }
     //QUIÉNES SOMOS//
     .main{
@@ -965,7 +943,7 @@ footer{
             .card-cliente{
                 width: 10em;
                 .cliente{
-                    @include sizes(9em,9em )
+                    @include sizes(9em,9em );
                 }
             }
         }  

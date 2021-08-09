@@ -3,16 +3,16 @@
     background-color: $color;
     //APLICANDO CONDICIONALES//
     @if $color == $colorheader {
-        color: black;
+        color: #000000;
     }
         @else if $color == $colorfooter{
             color: $colortitulo;
         }
             @else if $color == $colortitulo{
-                color: black;
+                color: #000000;
             }
                 @else{
-                    color: black;
+                    color: #000000;
                 }
 }
 @mixin border {
@@ -22,6 +22,11 @@
 @mixin margin($top, $bottom) {
     margin-top: $top;
     margin-bottom: $bottom;
+}
+@mixin font($size, $weight) {
+    font-family:'Thasadith', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
 }
 /*PAGINA HACE TU PEDIDO*/
 /*MAIN*/
@@ -36,28 +41,23 @@
     .pedidoOnline{
         @include background($colorfooter);
         @include border();
-        font-family: 'Thasadith', sans-serif;
+        @include font(2em,none );
         text-align: center;
         padding: 0.8em;
-        font-size: 2em;
     } 
     form{
         .div-input{
             @include margin(0.5em,0.5em );
             .nombreFormu{
+                @include font(1.1em, bold );
                 padding: 0.313em;
-                font-family:'Thasadith', sans-serif;
-                font-weight: bold;
-                font-size: 1.1em;
             }
         }
         div{
             .tituloFavorito{
+                @include font(1.7em, 600 );
                 margin-top: 1em;
                 text-decoration: underline;
-                font-size: 1.7em;
-                font-family:'Thasadith', sans-serif;
-                font-weight: 600;
             }
             .opcion-torta{
                 @include margin(1.5em, 1.5em );
