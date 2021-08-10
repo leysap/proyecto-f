@@ -47,6 +47,12 @@ $size: 4em;
         margin-bottom: 1em;
     } 
 }
+@mixin size-height{
+    p{
+        font-size: 1.3em;
+        line-height: 1.9em;
+    }  
+}
 @mixin background($color) {
     background-color: $color;
     //APLICANDO CONDICIONALES//
@@ -536,10 +542,7 @@ footer{
                     }
                 } 
                 .historia1{
-                    p{
-                        font-size: 1.3em;
-                        line-height: 1.9em;
-                    }
+                    @include size-height();
                 }
             }
         }
@@ -549,8 +552,7 @@ footer{
         padding: 1em;
         .botones-limp-env{
             .limpiar{
-                margin-top: 0.3em;
-                margin-bottom: 0.3em;
+                @include margin(0.3em,0.3em );
             }
         }
     }
@@ -562,7 +564,6 @@ footer{
             }
         }
         .contenedor-grid{
-            display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3,auto);
             grid-template-areas: 
@@ -732,15 +733,12 @@ footer{
                 }           
                 .historia1{
                     @include mrightleft(0.5em ,0.5em);
-                    p{
-                        font-size: 1.3em;
-                        line-height: 1.9em;
-                    }
+                    @include size-height();
                 }
             }
         }
     }
-    //INFORMACION// 
+    //INFORMACIÓN// 
     main{
         .seccion-contenido{
             .conoce2{
@@ -846,10 +844,7 @@ footer{
                 }           
                 .historia1{
                     @include mrightleft(0.5em ,0.5em);
-                    p{
-                        font-size: 1.3em;
-                        line-height: 1.9em;
-                    }
+                    @include size-height();
                 }
             }
         }
@@ -948,10 +943,7 @@ footer{
                 }           
                 .historia1{
                     @include mrightleft(0.5em ,0.5em);
-                    p{
-                        font-size: 1.5em;
-                        line-height: 1.9em;
-                    }
+                    @include size-height();
                 }
             }
         }

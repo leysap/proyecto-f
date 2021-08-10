@@ -998,7 +998,6 @@ footer {
   main .seccion-contenido .conoce2 {
     text-align: center; }
   main .contenedor-grid {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "consulta" "medio" "sitio"; }
@@ -1262,5 +1261,5 @@ footer {
       margin-right: 0.5em;
       margin-left: 0.5em; }
       .main .contenedor .contenedor-texto .historia1 p {
-        font-size: 1.5em;
+        font-size: 1.3em;
         line-height: 1.9em; } }

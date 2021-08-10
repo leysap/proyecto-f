@@ -121,13 +121,13 @@
                 @include flex(space-around);
                 flex-wrap: wrap;
                 .card-div{
-                    @include sizes(18.75em, auto );
+                    @include sizes(18.75em, auto);
                     text-align: center;
                     background-color: $colorheader;
                     margin: 1em;
                     border: 2px solid $colorfooter;
                     img{
-                        @include sizes(18.188em, 18.188em );
+                        @include sizes(18.188em, 18.188em);
                         margin-top: 0.2em;
                         transition: all 1s ease;
                         opacity: 1;
@@ -152,7 +152,7 @@
                         }
                     }
                     .card-pedidos{
-                        @include margin(1em,1em ,none ,none );
+                        @include margin(1em,1em ,none ,none);
                         .link-pedido{
                             color: $colorfooter;
                             padding: 1.2em;
@@ -187,7 +187,6 @@
         }
         .img-flecha{
             @include sizes(1.875em,1.875em );
-
         }
     }
 }               
