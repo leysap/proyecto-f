@@ -83,7 +83,7 @@ main{
                 .pedidos-titulo{
                     @include pb(0.5em, 0.1em);            
                     border-top: 0.063em solid #000000;
-                    border-bottom: 0.063emsolid #000000;
+                    border-bottom: 0.063em solid #000000;
                     color: $coloraliveri;
                     text-align: center;
                     font-size: 1.4em;
@@ -102,10 +102,12 @@ main{
                 } 
             }
             .enlace-web{
-                a{
-                    color: #000000;
-                    &:hover{
-                        color: $coloraliveri;
+                h3{
+                    a{
+                        color: #000000;
+                        &:hover{
+                            color: $coloraliveri;
+                        }
                     }
                 }
             }
@@ -135,9 +137,10 @@ main{
             }
         }
     }
+    //SEGUNDA SECCION//
     .info-importante{
         @include margin(2em , 2em ,none ,none );
-        @include fonts(1em, center , bold ,'Thasadith' );
+        @include fonts(1em, center , bold ,'Thasadith');
         @include pb(4em,0.2em );
         line-height: 2em;
         background-color: $colorheader;
@@ -151,6 +154,7 @@ main{
             margin-top: 2em;          
         }
     }
+    //TERCERA SECCION//
     .seccion-contenido{
         @include margin(4em,4em ,none ,none);
         .conoce2{
@@ -188,6 +192,7 @@ main{
             }
         }      
     }
+    //CUARTA SECCION//
     .menu{  
         @include pb(0.7em,0.5em );
         @include margin(4em, 4em , 2em, 2em);
@@ -195,7 +200,7 @@ main{
         .menuTitulo{
             @include background($colorfooter);
             @include pb(0.5em,0.2em );
-            @include fonts(2.2em, center ,none ,'Caveat' );  
+            @include fonts(2.2em, center ,none ,'Caveat');  
         }
         .flex-container{
             @include flex();
@@ -231,6 +236,7 @@ main{
             }
         }
     }
+    //USANDO GRID//
     .contenedor-grid{
         @include margin(4em,4em ,2em ,2em );
         display: grid;

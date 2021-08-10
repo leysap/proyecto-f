@@ -122,7 +122,7 @@ header{
             h3{
                 @include mrightleft(9em,9em );
                 @include text-size-padding(center,2em ,0.1em );
-                font-family:  'Thasadith', sans-serif;
+                font-family:  $thasadith;
                 color: $colortitulo;
                 background-color: hsla(15, 66%, 64%, 0.596);
                 border-radius: 0.2em;
@@ -170,7 +170,6 @@ header{
     }
 }
  /*SECCIONES*/           
-/*SECTION 1*/
 .section1{
     @include mrightleft(4em, 4em);
     @include margin(10em, 10em);
@@ -221,9 +220,6 @@ header{
         @include text-size-padding(center, 2.4em , 0.5em );
         font-family:$thasadith;
     }
-    .boton-ver{
-        text-align: center;
-    }
     .divs-destacados{
         @include flex(space-around);
         .imagen-destacada1{
@@ -260,6 +256,9 @@ header{
             }                                    
         }
     }
+    .boton-ver{
+        text-align: center;
+    }
 }
 /* SECCION PEDIDO/MEDIO DE PAGO*/
 .grid-contenedor{
@@ -289,13 +288,13 @@ header{
     @include margin(10em, 10em);
     padding: 2em;
     .conoce-delicias{  
-        font-family: 'Thasadith', sans-serif;
+        font-family:$thasadith;
         h5{
             color:$colortitulo;
         }
         p{
             font-size: 1em;
-            color: black;
+            color: hsl(0, 0%, 0%);
         }
     }
     .imagenes-delicias{
@@ -367,19 +366,22 @@ footer{
     .menuFinal{
         ul{
             list-style: none;
-        }
-        a{
-            color: $colortitulo;
-            font-family:$thasadith;
-            text-align: justify;
-            text-decoration: none;
-            &:hover{
-                text-decoration: underline;
+            li{
+                a{
+                    color: $colortitulo;
+                    font-family:$thasadith;
+                    text-align: justify;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    &:active{
+                        color: #000000;
+                    }
+                }
             }
-            &:active{
-                color: black;
-            }
         }
+        
     }
     div{
         h5{
@@ -390,23 +392,23 @@ footer{
                 text-decoration: none;
                 color: $colortitulo;
                 &:hover{
-                    color: black;
+                    color: #000000;
                 }
             }
         }
-    }
-    .logoFinal{
-        @include sizes(7.5em, 7.5em);
-    }   
-    .tamaño{
-        @include sizes(1.5em,1.5em);
-        margin-right: 1rem;
-        opacity: 0.6;
-        &:hover{
-            margin-right: 1rem;
-            opacity:  1;
+        .logoFinal{
+            @include sizes(7.5em, 7.5em);
+        }  
+        .tamaño{
+            @include sizes(1.5em,1.5em);
+            margin-right: 1em;
+            opacity: 0.6;
+            &:hover{
+                margin-right: 1em;
+                opacity:  1;
+            }
         }
-    }
+    } 
 }         
 /*MEDIA QUERIES*/
 /*Mobile*/
@@ -457,8 +459,7 @@ footer{
         "consult"
         "medio";
         .consulta{
-            border-right: none;
-            border-bottom: 2px solid $coloraliveri;
+            @include grid();
         }
         .medio{
             margin-top: 6em;
@@ -504,15 +505,6 @@ footer{
                 }
             }
         }
-        .contacto{
-            margin-top: 2em;
-            h5{
-                font-size: 1.4em;
-            }
-            p{
-                font-size: 1.3em;
-            }
-        }
         div{
             a{
                 .logoFinal{
@@ -536,7 +528,7 @@ footer{
     //QUIÉNES SOMOS//
     .main{
         .contenedor{
-            .textoLargo{
+            .contenedor-texto{
                 flex-wrap: wrap;
                 .alexiaImg{
                     img{
@@ -552,9 +544,15 @@ footer{
             }
         }
     }
-    //HACE TU PEDIDO// 
+    //HACÉ TU PEDIDO// 
     .cuerpo{
         padding: 1em;
+        .botones-limp-env{
+            .limpiar{
+                margin-top: 0.3em;
+                margin-bottom: 0.3em;
+            }
+        }
     }
     //INFORMACIÓN// 
     main{
@@ -585,7 +583,7 @@ footer{
         text-align: center;
         background-color: $colortitulo;
         .header-nav{
-            padding-right: 0.75rem;
+            padding-right: 0.75em;
             div{
                 .menuPrincipal{
                     @include bordertop();
@@ -593,7 +591,7 @@ footer{
                         a{
                             font-size: 1.5em;
                             &:hover{
-                                padding: 0.2em
+                                padding: 0.2em;
                             }
                         }
                     }
@@ -617,9 +615,6 @@ footer{
             }
         }
     }   
-    .botonesPrincipales{
-        margin-bottom: 5em;
-    }
     .section1{
         @include mrightleft(1em,1em);
         @include margin(6em, 6em);
@@ -692,15 +687,6 @@ footer{
                 }
             }
         }
-        .contacto{
-            @include margin(2em,2em );
-            h5{
-                font-size: 1.4em;
-            }
-            p{
-                font-size: 1.3em;
-            }
-        }
         div{
             a{
                 .logoFinal{
@@ -718,16 +704,18 @@ footer{
         }  
     }
     //SECCION DELICIAS//
-    .galeria-imagenes{
-        display: flex;
-        flex-wrap: wrap;
-        div{
-            padding: 1em; 
-            img{
-                @include sizes(26em,26em );
-            }     
-        }  
-    }
+    .galeria{
+        .galeria-imagenes{
+            display: flex;
+            flex-wrap: wrap;
+            div{
+                padding: 1em; 
+                img{
+                    @include sizes(26em,26em );
+                }     
+            }  
+        }
+    }   
     //HACE TU PEDIDO//
     .cuerpo{
         padding: 1em;
@@ -735,7 +723,7 @@ footer{
     //QUIÉNES SOMOS//
     .main{
         .contenedor{
-            .textoLargo{
+            .contenedor-texto{
                 flex-wrap: wrap;
                 .alexiaImg{
                     img{
@@ -849,7 +837,7 @@ footer{
     //QUIÉNES SOMOS//
     .main{
         .contenedor{
-            .textoLargo{
+            .contenedor-texto{
                 flex-wrap: wrap;
                 .alexiaImg{
                     img{
@@ -951,7 +939,7 @@ footer{
     //QUIÉNES SOMOS//
     .main{
         .contenedor{
-            .textoLargo{
+            .contenedor-texto{
                 flex-wrap: wrap;
                 .alexiaImg{
                     img{

@@ -11,8 +11,9 @@
     margin-left: 1em;
     padding: 0.8em;
     border-radius: 0.5em;
-    text-align: center;
-    font-size: 2em; }
+    font-family: "Thasadith", sans-serif;
+    font-size: 2em;
+    text-align: center; }
   .seccion-delicias main .galeria .galeria-imagenes {
     display: flex;
     flex-direction: row;
@@ -282,7 +283,7 @@ main .seccion-info {
       padding: 0.5em;
       border-radius: 0.1em;
       border-top: 0.063em solid #000000;
-      border-bottom: 0.063emsolid #000000;
+      border-bottom: 0.063em solid #000000;
       color: #e08465;
       text-align: center;
       font-size: 1.4em; }
@@ -294,9 +295,9 @@ main .seccion-info {
       list-style: none; }
       main .seccion-info .pedidos div ul li {
         text-align: center; }
-    main .seccion-info .pedidos .enlace-web a {
+    main .seccion-info .pedidos .enlace-web h3 a {
       color: #000000; }
-      main .seccion-info .pedidos .enlace-web a:hover {
+      main .seccion-info .pedidos .enlace-web h3 a:hover {
         color: #e08465; }
     main .seccion-info .pedidos .alerta {
       background-color: #ffffff;
@@ -494,7 +495,7 @@ main .contenedor-grid {
       border-radius: 0.3em;
       background-color: none; }
 
-/*PAGINA QUIENES SOMOS*/
+/*PAGINA QUIÉNES SOMOS*/
 .main {
   background-color: #F2E9D0;
   color: #000000;
@@ -515,20 +516,20 @@ main .contenedor-grid {
     padding: 0.8em;
     margin-left: 0.5em;
     margin-right: 0.5em; }
-    .main .contenedor .textoLargo {
+    .main .contenedor .contenedor-texto {
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
-      .main .contenedor .textoLargo .alexiaImg img {
+      .main .contenedor .contenedor-texto .alexiaImg img {
         width: 37.5em;
         height: auto;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
         border-radius: 0.3em; }
-      .main .contenedor .textoLargo .historia1 {
+      .main .contenedor .contenedor-texto .historia1 {
         margin-left: 0.5em;
         margin-right: 0.5em; }
-        .main .contenedor .textoLargo .historia1 p {
+        .main .contenedor .contenedor-texto .historia1 p {
           font-family: 'Thasadith', sans-serif;
           text-align: justify;
           font-size: 1.2em;
@@ -538,7 +539,7 @@ main .contenedor-grid {
           margin-right: none;
           margin-top: 2.5em;
           font-weight: 600; }
-        .main .contenedor .textoLargo .historia1 h2 {
+        .main .contenedor .contenedor-texto .historia1 h2 {
           text-align: right;
           font-size: 1.2em;
           font-family: "Thasadith", sans-serif;
@@ -590,7 +591,7 @@ header {
   text-align: center;
   font-size: 2em;
   padding: 0.1em;
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Thasadith", sans-serif;
   color: #ffffff;
   background-color: rgba(224, 133, 103, 0.596);
   border-radius: 0.2em; }
@@ -632,7 +633,6 @@ header {
       opacity: 0.8; }
 
 /*SECCIONES*/
-/*SECTION 1*/
 .section1 {
   margin-right: 4em;
   margin-left: 4em;
@@ -690,8 +690,6 @@ header {
     font-size: 2.4em;
     padding: 0.5em;
     font-family: "Thasadith", sans-serif; }
-  .section2 .boton-ver {
-    text-align: center; }
   .section2 .divs-destacados {
     display: flex;
     flex-direction: row;
@@ -736,6 +734,8 @@ header {
           background-color: #E79E85;
           font-family: "Thasadith", sans-serif;
           color: #ffffff; }
+  .section2 .boton-ver {
+    text-align: center; }
 
 /* SECCION PEDIDO/MEDIO DE PAGO*/
 .grid-contenedor {
@@ -781,7 +781,7 @@ header {
   margin-bottom: 10em;
   padding: 2em; }
   .seccion-contenido .conoce-delicias {
-    font-family: 'Thasadith', sans-serif; }
+    font-family: "Thasadith", sans-serif; }
     .seccion-contenido .conoce-delicias h5 {
       color: #ffffff; }
     .seccion-contenido .conoce-delicias p {
@@ -873,32 +873,32 @@ footer {
   font-weight: 400; }
   footer .menuFinal ul {
     list-style: none; }
-  footer .menuFinal a {
-    color: #ffffff;
-    font-family: "Thasadith", sans-serif;
-    text-align: justify;
-    text-decoration: none; }
-    footer .menuFinal a:hover {
-      text-decoration: underline; }
-    footer .menuFinal a:active {
-      color: black; }
+    footer .menuFinal ul li a {
+      color: #ffffff;
+      font-family: "Thasadith", sans-serif;
+      text-align: justify;
+      text-decoration: none; }
+      footer .menuFinal ul li a:hover {
+        text-decoration: underline; }
+      footer .menuFinal ul li a:active {
+        color: #000000; }
   footer div h5 {
     font-weight: 400; }
   footer div p a {
     text-decoration: none;
     color: #ffffff; }
     footer div p a:hover {
-      color: black; }
-  footer .logoFinal {
+      color: #000000; }
+  footer div .logoFinal {
     width: 7.5em;
     height: 7.5em; }
-  footer .tamaño {
+  footer div .tamaño {
     width: 1.5em;
     height: 1.5em;
-    margin-right: 1rem;
+    margin-right: 1em;
     opacity: 0.6; }
-    footer .tamaño:hover {
-      margin-right: 1rem;
+    footer div .tamaño:hover {
+      margin-right: 1em;
       opacity: 1; }
 
 /*MEDIA QUERIES*/
@@ -969,12 +969,6 @@ footer {
       font-size: 1.4em; }
       footer .menuFinal ul li a:hover {
         padding: 0.1em; }
-    footer .contacto {
-      margin-top: 2em; }
-      footer .contacto h5 {
-        font-size: 1.4em; }
-      footer .contacto p {
-        font-size: 1.3em; }
     footer div a .logoFinal {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
@@ -989,15 +983,18 @@ footer {
       font-size: 1.3em; }
   .galeria {
     display: none; }
-  .main .contenedor .textoLargo {
+  .main .contenedor .contenedor-texto {
     flex-wrap: wrap; }
-    .main .contenedor .textoLargo .alexiaImg img {
+    .main .contenedor .contenedor-texto .alexiaImg img {
       max-width: 100%; }
-    .main .contenedor .textoLargo .historia1 p {
+    .main .contenedor .contenedor-texto .historia1 p {
       font-size: 1.3em;
       line-height: 1.9em; }
   .cuerpo {
     padding: 1em; }
+    .cuerpo .botones-limp-env .limpiar {
+      margin-top: 0.3em;
+      margin-bottom: 0.3em; }
   main .seccion-contenido .conoce2 {
     text-align: center; }
   main .contenedor-grid {
@@ -1017,7 +1014,7 @@ footer {
     text-align: center;
     background-color: #ffffff; }
     header .header-nav {
-      padding-right: 0.75rem; }
+      padding-right: 0.75em; }
       header .header-nav div .menuPrincipal {
         border-top-right-radius: 1em;
         border-bottom-right-radius: 1em; }
@@ -1033,8 +1030,6 @@ footer {
     margin-left: 2em; }
   .contenedor-carrusel .contenedor-principal div p {
     font-size: 1.2em; }
-  .botonesPrincipales {
-    margin-bottom: 5em; }
   .section1 {
     margin-right: 1em;
     margin-left: 1em;
@@ -1089,13 +1084,6 @@ footer {
         text-align: center;
         margin-right: 2em;
         font-size: 1.5em; }
-    footer .contacto {
-      margin-top: 2em;
-      margin-bottom: 2em; }
-      footer .contacto h5 {
-        font-size: 1.4em; }
-      footer .contacto p {
-        font-size: 1.3em; }
     footer div a .logoFinal {
       margin-top: 2em;
       margin-bottom: 2em;
@@ -1108,24 +1096,24 @@ footer {
       margin-bottom: 1em; }
     footer div p {
       font-size: 1.3em; }
-  .galeria-imagenes {
+  .galeria .galeria-imagenes {
     display: flex;
     flex-wrap: wrap; }
-    .galeria-imagenes div {
+    .galeria .galeria-imagenes div {
       padding: 1em; }
-      .galeria-imagenes div img {
+      .galeria .galeria-imagenes div img {
         width: 26em;
         height: 26em; }
   .cuerpo {
     padding: 1em; }
-  .main .contenedor .textoLargo {
+  .main .contenedor .contenedor-texto {
     flex-wrap: wrap; }
-    .main .contenedor .textoLargo .alexiaImg img {
+    .main .contenedor .contenedor-texto .alexiaImg img {
       max-width: 100%; }
-    .main .contenedor .textoLargo .historia1 {
+    .main .contenedor .contenedor-texto .historia1 {
       margin-right: 0.5em;
       margin-left: 0.5em; }
-      .main .contenedor .textoLargo .historia1 p {
+      .main .contenedor .contenedor-texto .historia1 p {
         font-size: 1.3em;
         line-height: 1.9em; }
   main .seccion-contenido .conoce2 {
@@ -1195,14 +1183,14 @@ footer {
     margin-bottom: 6em; }
     .section3 .clientes-divs .card-cliente {
       width: 18.75em; }
-  .main .contenedor .textoLargo {
+  .main .contenedor .contenedor-texto {
     flex-wrap: wrap; }
-    .main .contenedor .textoLargo .alexiaImg img {
+    .main .contenedor .contenedor-texto .alexiaImg img {
       max-width: 100%; }
-    .main .contenedor .textoLargo .historia1 {
+    .main .contenedor .contenedor-texto .historia1 {
       margin-right: 0.5em;
       margin-left: 0.5em; }
-      .main .contenedor .textoLargo .historia1 p {
+      .main .contenedor .contenedor-texto .historia1 p {
         font-size: 1.3em;
         line-height: 1.9em; } }
 
@@ -1266,13 +1254,13 @@ footer {
       .section3 .clientes-divs .card-cliente .cliente {
         width: 9em;
         height: 9em; }
-  .main .contenedor .textoLargo {
+  .main .contenedor .contenedor-texto {
     flex-wrap: wrap; }
-    .main .contenedor .textoLargo .alexiaImg img {
+    .main .contenedor .contenedor-texto .alexiaImg img {
       max-width: 100%; }
-    .main .contenedor .textoLargo .historia1 {
+    .main .contenedor .contenedor-texto .historia1 {
       margin-right: 0.5em;
       margin-left: 0.5em; }
-      .main .contenedor .textoLargo .historia1 p {
+      .main .contenedor .contenedor-texto .historia1 p {
         font-size: 1.5em;
         line-height: 1.9em; } }

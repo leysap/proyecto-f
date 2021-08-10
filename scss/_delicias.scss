@@ -18,7 +18,7 @@
 @mixin flex ($justify){
     display: flex;
     flex-direction: row;
-    justify-content: $justify    
+    justify-content: $justify;    
 }
 @mixin margin($topp, $bott, $rightt, $leftt) {
     margin-top: $topp;
@@ -47,8 +47,7 @@
             @include background($colorfooter);
             @include margin(1em,1em ,1em ,1em );
             @include pad-br(0.8em,0.5em );
-            text-align: center;
-            font-size: 2em;
+            @include fonts($thasadith,2em ,center );
         }
         .galeria{
             .galeria-imagenes{

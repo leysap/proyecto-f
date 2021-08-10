@@ -1,7 +1,7 @@
 {
-  "name": "proyecto-final",
+  "name": "aliveri-pasteleria",
   "version": "1.0.0",
-  "description": "Página oficial de Aliveri Pasteleria,conocerás en detalle a todos nuestros productos que podremos ofrecer a todos nuestros clientes amantes de lo dulce",
+  "description": "Página oficial de Aliveri Pasteleria, conocerás en detalle a todos nuestros productos que podremos ofrecer a todos nuestros clientes amantes de lo dulce",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
