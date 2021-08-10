@@ -1006,7 +1006,10 @@ footer {
       border-bottom: 2px solid #e08465; }
     main .contenedor-grid .medios {
       border-right: none;
-      border-bottom: 2px solid #e08465; } }
+      border-bottom: 2px solid #e08465;
+      margin-top: 2em; }
+    main .contenedor-grid .sitio {
+      margin-top: 2em; } }
 
 @media (min-width: 480px) and (max-width: 800px) {
   header {

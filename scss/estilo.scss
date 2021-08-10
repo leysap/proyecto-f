@@ -575,6 +575,10 @@ footer{
             }
             .medios{
                @include grid();
+               margin-top: 2em;
+            }
+            .sitio{
+                margin-top: 2em;
             }
         }
     }
