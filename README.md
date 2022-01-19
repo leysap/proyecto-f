@@ -17,5 +17,3 @@ Dejo un resumen de lo que se aplicó en la página web:
 
 - Mi amiga me facilitó todas las imágenes que ella ha sacado a sus tortas/tartas,etc. Me indicó todo el contenido que quería que estuviera en la página pudiendo realizarle un diseño específico, obteniendo resultados muy bien logrados.
 
-Gracias por visitar la página. 
-Que tenga un buen día.
