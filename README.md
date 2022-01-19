@@ -1,4 +1,4 @@
-Hola! Mi nombre es Leysa Pozo. Bienvenidos a la página de Aliveri Pastelería, creada para mi mejor amiga repostera Alexia Simosis.
+Hola! Mi nombre es Leysa Pozo. Bienvenidos a la página de Aliveri Pastelería, creada para mi mejor amiga repostera Alexia.
 Dentro de la página web conocerás en detalle a cada uno de sus productos, sus precios, sus tamaños y mucho más!.
 
 Dejo un resumen de lo que se aplicó en la página web:
